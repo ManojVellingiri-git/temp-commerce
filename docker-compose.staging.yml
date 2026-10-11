@@ -1,0 +1,123 @@
+# ========================================================
+# Staging Docker Compose Configuration
+# FreshCart Grocery E-Commerce Application
+# ========================================================
+version: '3.8'
+
+services:
+  # ------------------------------------------------------
+  # Database Service: MongoDB (Private Network Only)
+  # ------------------------------------------------------
+  mongodb:
+    image: mongo:7.0
+    container_name: freshcart-staging-mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME:-staging_admin}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD:-staging_admin_password_change_me}
+      MONGO_INITDB_DATABASE: grocery_db
+    volumes:
+      - mongodb_staging_data:/data/db
+    networks:
+      - backend-net
+    # Port 27017 is strictly unexposed to host or public internet
+    healthcheck:
+      test: ["CMD-SHELL", "mongosh --quiet --eval \"db.adminCommand('ping')\" -u $${MONGO_INITDB_ROOT_USERNAME} -p $${MONGO_INITDB_ROOT_PASSWORD} --authenticationDatabase admin || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  # ------------------------------------------------------
+  # Backend API Service: Node.js / Express
+  # ------------------------------------------------------
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: freshcart-staging-backend
+    restart: unless-stopped
+    environment:
+      NODE_ENV: staging
+      PORT: 5001
+      CLIENT_URL: ${CLIENT_URL:-https://staging.grocery.local,http://localhost:3000}
+      MONGODB_URI: ${MONGODB_URI:-mongodb://staging_admin:staging_admin_password_change_me@mongodb:27017/grocery_db?authSource=admin}
+      JWT_SECRET: ${JWT_SECRET:-staging_jwt_secret_please_set_in_env_file_32chars}
+      RAZORPAY_KEY_ID: ${RAZORPAY_KEY_ID:-rzp_test_placeholder_key_id}
+      RAZORPAY_KEY_SECRET: ${RAZORPAY_KEY_SECRET:-placeholder_secret_must_be_set}
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    networks:
+      - backend-net
+      - frontend-net
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:5001/api/health || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+  # ------------------------------------------------------
+  # Frontend Web Service: React SPA on Hardened Nginx
+  # ------------------------------------------------------
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+      args:
+        REACT_APP_API_URL: ${REACT_APP_API_URL:-/api}
+    container_name: freshcart-staging-frontend
+    restart: unless-stopped
+    networks:
+      - frontend-net
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:80/healthz || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  # ------------------------------------------------------
+  # Gateway / Reverse Proxy: Nginx with HTTPS Termination
+  # ------------------------------------------------------
+  gateway:
+    image: nginx:1.27-alpine
+    container_name: freshcart-staging-gateway
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/gateway.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+    depends_on:
+      frontend:
+        condition: service_healthy
+      backend:
+        condition: service_healthy
+    networks:
+      - frontend-net
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:80/health-proxy || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+# ------------------------------------------------------
+# Isolated Network Architecture
+# ------------------------------------------------------
+networks:
+  backend-net:
+    driver: bridge
+    internal: true
+  frontend-net:
+    driver: bridge
+
+# ------------------------------------------------------
+# Persistent Volume Storage
+# ------------------------------------------------------
+volumes:
+  mongodb_staging_data:
+    driver: local
