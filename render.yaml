@@ -1,0 +1,49 @@
+# ========================================================
+# Render Blueprint Specification
+# FreshCart Grocery E-Commerce Application
+# ========================================================
+services:
+  # ------------------------------------------------------
+  # Backend Web Service (Node.js / Express / MongoDB)
+  # ------------------------------------------------------
+  - type: web
+    name: temp-commerce-api
+    runtime: node
+    plan: free
+    region: oregon
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: CLIENT_URL
+        value: https://temp-commerce.onrender.com
+      - key: JWT_SECRET
+        generateValue: true
+      - key: MONGODB_URI
+        sync: false
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+
+  # ------------------------------------------------------
+  # Frontend Static Site (React Single Page App)
+  # ------------------------------------------------------
+  - type: static
+    name: temp-commerce
+    plan: free
+    region: oregon
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./build
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://temp-commerce-api.onrender.com/api

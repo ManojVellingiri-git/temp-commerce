@@ -1,63 +1,44 @@
-<h1 align="center"> Grocery React</h1>
+# FreshCart — Full-Stack Grocery E-Commerce Application
 
-<p float="left">
-  <img src="./src/Demoimages/01.png"  width = 45%/>
-  <img src="./src/Demoimages/02.png"  width = 45%/>
-  <img src="./src/Demoimages/03.png"  width = 45%/>
-  <img src="./src/Demoimages/04.png"  width = 45%/>
-  <img src="./src/Demoimages/05.png"  width = 45%/>
-  <img src="./src/Demoimages/06.png"  width = 45%/>
-  <img src="./src/Demoimages/07.png"  width = 45%/>
-  <img src="./src/Demoimages/08.png"  width = 45%/>
-  <img src="./src/Demoimages/09.png"  width = 45%/>
-  <img src="./src/Demoimages/10.png"  width = 45%/>
-  <img src="./src/Demoimages/11.png"  width = 45%/>
-  <img src="./src/Demoimages/12.png"  width = 45%/>
-  <img src="./src/Demoimages/13.png"  width = 45%/>
-  <!-- <img src="."  width = 45%/>
-  <img src="."  width = 45%/>
-  <img src="."  width = 45%/> -->
-</p>
+[![Deployed on Render](https://img.shields.io/badge/Render-Deployed%20Live-brightgreen?logo=render&logoColor=white)](https://temp-commerce.onrender.com)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-temp--commerce-blue?logo=github)](https://github.com/ManojVellingiri-git/temp-commerce)
 
+- 🌐 **Live Frontend Website:** [https://temp-commerce.onrender.com](https://temp-commerce.onrender.com)
+- ⚡ **Live Backend API Service:** [https://temp-commerce-api.onrender.com](https://temp-commerce-api.onrender.com)
+- 📦 **GitHub Repository:** [https://github.com/ManojVellingiri-git/temp-commerce](https://github.com/ManojVellingiri-git/temp-commerce)
 
-<div class="theme-description">
-                        <p>FreshCart is a beautiful eCommerce React.js template specially designed for multipurpose shops like mega stores, grocery stores, supermarkets, organic shops, and online stores selling products. You can build an impactful store website for your online shop or other similar businesses without grounding things up. Moreover, its clean, minimal, and beautiful design with 100% responsive layouts will hook the visitors at first sight.</p>
-<h3>eCommerce Features:</h3>
-<ul>
-<li>Built on top of Bootstrap5,Bootstrap4 and some React.js Hooks</li>
-<li>Clean and minimal design</li>
-<li>25+ eCommerce store pages</li>
-<li>3 Home pages</li>
-<li>3 Different headers</li>
-<li>eCommerce Shop Pages
-<ul>
-<li>Shop Listing</li>
-<li>Shop Single</li>
-<li>Shop Grid</li>
-<li>Shop List</li>
-<li>Shop Filter</li>
-<li>Shopping cart,</li>
-<li>Shop Wishlist</li>
-<li>Shop Checkout</li>
-<li>Mini Cart page</li>
-<li>Quick Popup Design</li>
-<li>Customer Reviews</li>
-<li>Grid &amp; List layout</li>
-<li>Mega menu dropdown</li>
-</ul>
-</li>
-<li>Multi-vendor Store page design</li>
-<li>Profile/Account Settings pages
-<ul>
-<li>Order Details</li>
-<li>Account Settings</li>
-<li>Payment Settings</li>
-<li>Address</li>
-<li>Notification</li>
-</ul>
-</li>
-<li>Cross-browser compatibility</li>
-<li>Fully responsive</li>
-<li>W3C valid code</li>
-<li>Well Documented.</li>
-</ul>
+---
+
+## 🚀 1-Click Deployment on Render
+
+This repository includes a **Render Blueprint** (`render.yaml`) that configures both the frontend React Single Page Application and the Node.js Express API.
+
+### Steps to Deploy on Render:
+1. Open the **[Render Dashboard](https://dashboard.render.com/)**.
+2. Click **New +** > **Blueprint**.
+3. Select your repository: **`ManojVellingiri-git/temp-commerce`**.
+4. Set your **`MONGODB_URI`** connection string (from MongoDB Atlas or cloud provider).
+5. Click **Apply** — Render automatically builds and deploys both services:
+   - **Frontend Static Site:** `temp-commerce` -> [https://temp-commerce.onrender.com](https://temp-commerce.onrender.com)
+   - **Backend Web Service:** `temp-commerce-api` -> [https://temp-commerce-api.onrender.com](https://temp-commerce-api.onrender.com)
+
+---
+
+## 📱 Features & Highlights
+
+FreshCart is a modern full-stack e-commerce application designed for grocery and supermarket shopping:
+
+- **100% Mobile Responsive:** Tested and optimized across mobile, tablet, and desktop viewports (320px–1440px).
+- **Authentication & Roles:** JWT authentication with customer accounts and role-protected Admin Dashboard.
+- **Product Catalog & Search:** Filter by category, price, and rating with list/grid view switching.
+- **Cart & Wishlist:** Persistent offcanvas cart drawer, responsive checkout, and wishlist management.
+- **Razorpay Payments:** Integrated payment gateway with test-mode support.
+- **Docker Staging Support:** Production-ready multi-container configuration with Nginx reverse proxy gateway.
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** React 18, React Router v6, Bootstrap 5.3.3, Vanilla CSS
+- **Backend:** Node.js, Express 5, MongoDB 7 / Mongoose, JWT, Razorpay
+- **Infrastructure:** Docker Compose, Nginx Gateway, Render Blueprint
