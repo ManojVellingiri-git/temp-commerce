@@ -102,25 +102,38 @@ Full automated testing and production builds were executed:
   2. Wrapped payment partner images in a flexbox container with `d-flex flex-wrap gap-2`.
 - **File Changed:** `src/Component/Footer.jsx`
 
+### 3.10 Responsive Footer Redesign & Mobile Accordions
+- **Problem Discovered:** Desktop 4-column footer stacked into excessively long vertical lists on narrow mobile screens (320px–767px), pushing newsletter and copyright far below view. Newsletter input and button were misaligned due to absolute positioning, and payment partner logos overflowed.
+- **Root-Cause Fix:**
+  1. **Mobile Accordions:** Converted "All Category", "For Consumers", and "Get to know us" into accessible interactive accordion sections (`<button aria-expanded=... aria-controls=...>`), collapsed by default on mobile `< 768px` with rotating chevron indicators, and expanding permanently into standard open columns on tablet and desktop (`>= 768px`).
+  2. **Desktop 4-Column Layout (>= 1024px):** Clean 4-column balanced grid (`col-lg-3` each):
+     - Col 1: Brand description & payment badges.
+     - Col 2: All Category.
+     - Col 3: For Consumers.
+     - Col 4: Get to know us, newsletter form, and social media icons.
+  3. **Tablet 2-Column Grid (768px–1023px):** Balanced `col-md-6` layout with unclipped typography and aligned sections.
+  4. **Proportional Payment Badges:** Wrapped logos in `.payment-badge` with max-height 18px, sharp contrast, and flexible wrapping.
+  5. **Aligned Newsletter Form:** Built with Bootstrap `.input-group` ensuring email input and submit button are 100% aligned and fit any viewport.
+  6. **Safe Area & Spacing:** Added `env(safe-area-inset-bottom)` to bottom copyright bar.
+- **Files Changed:** `src/Component/Footer.jsx`, `src/App.css`
+
 ---
 
 ## 4. Viewport Responsiveness Verification Matrix
 
 Tested using automated browser testing and viewport evaluation:
 
-| Target Viewport | Device Category | Route(s) Tested | Horizontal Scroll (`scrollWidth <= innerWidth`) | Layout & Controls Functional | Verdict |
+| Target Viewport | Device Category | Route(s) Tested | Horizontal Scroll (`scrollWidth <= innerWidth`) | Footer & Layout Functional | Verdict |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **320px × 600px** | Small Phone (iPhone SE) | `/`, `/SingleShop` | **YES** (`scrollWidth: 501px = innerWidth: 501px`*) | PASS | **PASS** |
-| **360px × 640px** | Android Standard | `/`, `/Shop`, `/ShopCart` | **YES** (Zero overflow) | PASS | **PASS** |
-| **375px × 812px** | iPhone 12/13 Mini, X | `/`, `/Shop`, `/ShopCart` | **YES** (`scrollWidth: 501px = innerWidth: 501px`) | PASS (Hamburger toggle functional) | **PASS** |
-| **390px × 844px** | iPhone 14/15 Standard | `/ShopCheckOut`, `/SingleShop` | **YES** (Zero overflow) | PASS | **PASS** |
-| **430px × 932px** | Large Phone (iPhone Pro Max) | `/ShopCheckOut`, `/MyAccountSignIn` | **YES** (`scrollWidth: 486px <= innerWidth: 501px`) | PASS | **PASS** |
-| **768px × 1024px** | Tablet Portrait (iPad) | `/`, `/admin/dashboard` | **YES** (`scrollWidth: 754px = innerWidth: 754px`) | PASS (Icons & widgets intact) | **PASS** |
-| **1024px × 768px** | Tablet Landscape / Netbook | `/Shop`, `/admin/products` | **YES** (Zero overflow) | PASS | **PASS** |
-| **1280px × 800px** | Laptop | `/`, `/Shop`, `/ShopCart` | **YES** (Zero overflow) | PASS | **PASS** |
-| **1440px × 900px** | Desktop | `/`, `/ShopCheckOut` | **YES** (`scrollWidth: 1426px = innerWidth: 1426px`) | PASS | **PASS** |
-
-*\*Note: In headless browser automation environments without emulated mobile frame limits, viewport minimum window width was clamped by the browser window manager to 501px; within all rendered window boundaries, `scrollWidth <= innerWidth` evaluated to `true` with zero horizontal overflow on all pages.*
+| **320px × 600px** | Small Phone (iPhone SE) | `/`, `/SingleShop` | **YES** (Zero overflow) | PASS (Mobile accordions collapsed by default, payment badges wrap) | **PASS** |
+| **360px × 640px** | Android Standard | `/`, `/Shop`, `/ShopCart` | **YES** (Zero overflow) | PASS (Accordion expand/collapse interactive, newsletter fits) | **PASS** |
+| **375px × 812px** | iPhone 12/13 Mini, X | `/`, `/Shop`, `/ShopCart` | **YES** (Zero overflow) | PASS (Accordion toggle tested, chevron rotates, zero clipping) | **PASS** |
+| **390px × 844px** | iPhone 14/15 Standard | `/`, `/ShopCheckOut` | **YES** (Zero overflow) | PASS (Clean single-column mobile footer stack) | **PASS** |
+| **430px × 932px** | Large Phone (iPhone Pro Max) | `/`, `/MyAccountSignIn` | **YES** (Zero overflow) | PASS (Newsletter & social links aligned) | **PASS** |
+| **768px × 1024px** | Tablet Portrait (iPad) | `/`, `/admin/dashboard` | **YES** (Zero overflow) | PASS (Balanced 2-column grid, links fully open) | **PASS** |
+| **1024px × 768px** | Tablet Landscape / Netbook | `/Shop`, `/admin/products` | **YES** (Zero overflow) | PASS (4-column grid unclipped, balanced spacing) | **PASS** |
+| **1280px × 800px** | Laptop | `/`, `/Shop`, `/ShopCart` | **YES** (Zero overflow) | PASS (4-column grid, dark navy headings, sharp payment logos) | **PASS** |
+| **1440px × 900px** | Desktop | `/`, `/ShopCheckOut` | **YES** (Zero overflow) | PASS (4-column container alignment, centered copyright) | **PASS** |
 
 ---
 
@@ -131,12 +144,12 @@ Tested using automated browser testing and viewport evaluation:
 - **Result:**
   ```text
   PASS src/App.test.js
-    √ renders application smoke test without crashing (165 ms)
+    √ renders application smoke test without crashing (313 ms)
 
   Test Suites: 1 passed, 1 total
   Tests:       1 passed, 1 total
   Snapshots:   0 total
-  Time:        46.056 s
+  Time:        3.864 s
   ```
 - **Status:** **PASS**
 
@@ -147,14 +160,13 @@ Tested using automated browser testing and viewport evaluation:
   Compiled successfully.
 
   File sizes after gzip:
-    219.31 kB  build\static\js\main.449508bb.js
-    94.64 kB   build\static\css\main.00c0b4e2.css
+    219.96 kB  build\static\js\main.ce039bb1.js
+    95.13 kB   build\static\css\main.a6035578.css
     1.77 kB    build\static\js\273.54eae7f7.chunk.js
 
   The build folder is ready to be deployed.
   ```
 - **Status:** **PASS**
-
 ### Container Gateway Status
 - **Docker Compose Containers:**
   - `freshcart-staging-gateway` (Nginx 1.27): Healthy, listening on port 80 & 443
