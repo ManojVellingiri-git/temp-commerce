@@ -74,11 +74,9 @@ const dropdownData = [
 
 const ShopListCol = () => {
   // loading
-  const [loaderStatus, setLoaderStatus] = useState(true);
+  const [loaderStatus, setLoaderStatus] = useState(false);
   useEffect(() => {
-    setTimeout(() => {
-      setLoaderStatus(false);
-    }, 1000);
+    setLoaderStatus(false);
   }, []);
 
   function Dropdown() {
@@ -92,7 +90,7 @@ const ShopListCol = () => {
       }
     };
     // loading
-    // const [loaderStatus, setLoaderStatus] = useState(true);
+    // const [loaderStatus, setLoaderStatus] = useState(false);
     // useEffect(() => {
     //   setTimeout(() => {
     //     setLoaderStatus(false);

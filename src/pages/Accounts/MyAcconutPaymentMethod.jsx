@@ -11,11 +11,9 @@ import ScrollToTop from "../ScrollToTop";
 
 const MyAcconutPaymentMethod = () => {
   // loading
-  const [loaderStatus, setLoaderStatus] = useState(true);
+  const [loaderStatus, setLoaderStatus] = useState(false);
   useEffect(() => {
-    setTimeout(() => {
-      setLoaderStatus(false);
-    }, 1500);
+    setLoaderStatus(false);
   }, []);
 
   return (

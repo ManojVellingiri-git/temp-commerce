@@ -16,7 +16,7 @@ const ShopWishList = () => {
 
 
    // loading
-   const [loaderStatus, setLoaderStatus] = useState(true);
+   const [loaderStatus, setLoaderStatus] = useState(false);
    const { wishlist, removeFromWishlist } = useWishlist();
    const { addToCart } = useCart();
    
@@ -31,9 +31,7 @@ const ShopWishList = () => {
      });
    };
    useEffect(() => {
-     setTimeout(() => {
-       setLoaderStatus(false);
-     }, 1500);
+     setLoaderStatus(false);
    }, []);
  
   return (

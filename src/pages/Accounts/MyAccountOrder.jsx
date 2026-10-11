@@ -6,7 +6,7 @@ import ScrollToTop from "../ScrollToTop";
 import { getOrders } from "../../services/api";
 
 const MyAccountOrder = () => {
-  const [loaderStatus, setLoaderStatus] = useState(true);
+  const [loaderStatus, setLoaderStatus] = useState(false);
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {

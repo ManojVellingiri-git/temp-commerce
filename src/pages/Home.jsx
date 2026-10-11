@@ -201,11 +201,9 @@ const Home = () => {
     autoplaySpeed: 2000,
   };
   // loading
-  const [loaderStatus, setLoaderStatus] = useState(true);
+  const [loaderStatus, setLoaderStatus] = useState(false);
   useEffect(() => {
-    setTimeout(() => {
-      setLoaderStatus(false);
-    }, 1500);
+    setLoaderStatus(false);
   }, []);
 
   return (

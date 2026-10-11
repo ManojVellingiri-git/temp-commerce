@@ -15,12 +15,10 @@ const ShopCart = () => {
    const navigate = useNavigate();
 
    // loading
-   const [loaderStatus, setLoaderStatus] = useState(true);
+   const [loaderStatus, setLoaderStatus] = useState(false);
    const { cart, removeFromCart, increaseQuantity, decreaseQuantity, setQuantity, calculateSubtotal, calculateDiscount, calculateDeliveryFee, calculateTax, calculateGrandTotal, clearCart } = useCart();
    useEffect(() => {
-     setTimeout(() => {
-       setLoaderStatus(false);
-     }, 1500);
+     setLoaderStatus(false);
    }, []);
  
   return (

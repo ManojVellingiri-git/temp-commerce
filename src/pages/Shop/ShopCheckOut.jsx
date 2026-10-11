@@ -7,7 +7,7 @@ import { useAuth } from "../../context/AuthContext";
 import { createPaymentOrder, verifyPayment } from "../../services/api";
 
 const ShopCheckOut = () => {
-   const [loaderStatus, setLoaderStatus] = useState(true);
+   const [loaderStatus, setLoaderStatus] = useState(false);
    const [paymentProcessing, setPaymentProcessing] = useState(false);
    const [paymentError, setPaymentError] = useState("");
    const { cart, clearCart } = useCart();
@@ -23,9 +23,7 @@ const ShopCheckOut = () => {
    });
 
    useEffect(() => {
-     setTimeout(() => {
-       setLoaderStatus(false);
-     }, 1000);
+     setLoaderStatus(false);
    }, []);
 
    const loadRazorpayScript = () => {

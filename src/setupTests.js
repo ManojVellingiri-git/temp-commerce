@@ -19,6 +19,17 @@ Object.defineProperty(window, 'matchMedia', {
   }),
 });
 
+// Polyfill IntersectionObserver for Jest and react-awesome-reveal
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+  takeRecords() {
+    return [];
+  }
+};
+
 // Mock ESM-only Swiper components for Jest environment
 jest.mock('swiper/react', () => ({
   Swiper: ({ children }) => <div data-testid="mock-swiper">{children}</div>,
