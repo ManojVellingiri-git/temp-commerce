@@ -125,7 +125,7 @@ const App = () => {
           {/* Footer Elements */}
           <Route path="/Faq" element={<FAQ />} />
           <Route path="/Coupons" element={<Navigate to="/Shop" replace />} />
-          <Route path="/Careers" element={<Careers />} />
+          <Route path="/Careers" element={<Navigate to="/Shop" replace />} />
           <Route path="/helpcenter" element={<HelpCenter />} />
         </Route>
         </Routes>

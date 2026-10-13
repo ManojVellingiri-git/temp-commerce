@@ -201,12 +201,7 @@ const Footer = () => {
                 className={`footer-accordion-body ${openSections.consumers ? "is-open" : ""}`}
               >
                 <ul className="footer-link list-unstyled mb-0">
-                  <li>
-                    <Link to="/Careers">
-                      <i className="fa fa-angle-right me-1 text-muted" aria-hidden="true" />
-                      Careers
-                    </Link>
-                  </li>
+
 
                   <li>
                     <Link to="/MyAccountOrder">
