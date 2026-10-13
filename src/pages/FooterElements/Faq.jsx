@@ -28,9 +28,9 @@ const FAQ = () => {
         "After placing your order, go to your profile > 'My Orders' to see live updates and order history.",
     },
     {
-      question: "Is there a minimum order value for free delivery?",
+      question: "How does grocery delivery work?",
       answer:
-        "Yes, orders above ₹499 qualify for free delivery. A small delivery charge applies for smaller orders.",
+        "We deliver fresh groceries directly to your doorstep with standard delivery fees calculated at checkout.",
     },
   ];
 

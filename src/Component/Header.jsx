@@ -34,7 +34,7 @@ const Header = () => {
     <div>
       <div className="border-bottom bg-light py-1">
         <div className="container d-flex justify-content-between align-items-center">
-          <span className="small text-muted text-truncate">Free Delivery on Orders Over ₹499</span>
+          <span className="small text-muted text-truncate">Fresh Groceries Delivered Directly to Your Doorstep</span>
           <div className="d-none d-lg-flex align-items-center gap-3">
             <Link to="/helpcenter" className="text-muted small text-decoration-none">Help Center</Link>
             <Link to="/Contact" className="text-muted small text-decoration-none">Contact Us</Link>
@@ -677,15 +677,6 @@ const Header = () => {
           />
         </div>
         <div className="offcanvas-body">
-          {calculateSubtotal() >= brandConfig.shipping.freeDeliveryThreshold ? (
-            <div className="alert alert-success" role="alert">
-              You’ve got FREE delivery. Start checkout now!
-            </div>
-          ) : (
-            <div className="alert alert-danger" role="alert">
-              Add ₹{brandConfig.shipping.freeDeliveryThreshold - calculateSubtotal()} more to get FREE delivery.
-            </div>
-          )}
           <div>
             <div className="py-3">
               <ul className="list-group list-group-flush">

@@ -271,12 +271,11 @@ const Home = () => {
                           }}
                         >
                           <div className="ps-lg-12 py-lg-16 col-xxl-5 col-md-7 py-6 py-md-14 px-4 px-md-8 text-xs-center">
-                            <span className="badge text-bg-warning">
-                              Free Shipping - orders over ₹499
+                            <span className="badge text-bg-success">
+                              Doorstep Delivery
                             </span>
                             <h2 className="text-dark fw-bold mt-3 mt-md-4" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.75rem)' }}>
-                              Free Shipping on <br /> orders over{" "}
-                              <span className="text-primary">₹499</span>
+                              Fast & Reliable <br /> Doorstep Delivery
                             </h2>
                             <p className="lead fs-6 fs-md-5">
                               Enjoy fast and reliable doorstep delivery on all

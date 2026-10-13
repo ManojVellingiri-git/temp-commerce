@@ -66,16 +66,6 @@ const ShopCart = () => {
               <div className="row">
                 <div className="col-lg-8 col-md-7">
                   <div className="py-3">
-                    {/* alert */}
-                    {calculateSubtotal() >= brandConfig.shipping.freeDeliveryThreshold ? (
-                      <div className="alert alert-success p-2" role="alert">
-                        You’ve got FREE delivery. Start <Link to="/ShopCheckOut" className="alert-link">checkout now!</Link>
-                      </div>
-                    ) : (
-                      <div className="alert alert-danger p-2" role="alert">
-                        Add ₹{brandConfig.shipping.freeDeliveryThreshold - calculateSubtotal()} more to get FREE delivery.
-                      </div>
-                    )}
                     <ul className="list-group list-group-flush">
                       {cart.length === 0 ? (
                         <li className="list-group-item py-5 px-0 text-center border-top">
