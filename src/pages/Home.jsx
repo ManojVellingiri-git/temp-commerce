@@ -1,5 +1,4 @@
 import slider1 from "../images/slide-1.jpg";
-import abouticon from "../images/about-icons-1.svg";
 import slider2 from "../images/slider-2.jpg";
 import adbanner1 from "../images/ad-banner-1.jpg";
 import adbanner2 from "../images/ad-banner-2.jpg";
@@ -280,11 +279,11 @@ const Home = () => {
                         >
                           <div className="ps-lg-12 py-lg-16 col-xxl-5 col-md-7 py-6 py-md-14 px-4 px-md-8 text-xs-center">
                             <span className="badge text-bg-warning">
-                              Free Shipping - orders over $100
+                              Free Shipping - orders over ₹499
                             </span>
                             <h2 className="text-dark fw-bold mt-3 mt-md-4" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.75rem)' }}>
                               Free Shipping on <br /> orders over{" "}
-                              <span className="text-primary">$100</span>
+                              <span className="text-primary">₹499</span>
                             </h2>
                             <p className="lead fs-6 fs-md-5">
                               Free Shipping to First-Time Customers Only, After
@@ -327,48 +326,6 @@ const Home = () => {
               </section>
             </>
             <>
-              <section className="mt-8">
-                {/* contianer */}
-                <div className="container ">
-                  <div className="row">
-                    {/* col */}
-                    <Slide direction="down">
-                      <div className="col-12">
-                        {/* cta */}
-                        <div className="bg-light d-lg-flex justify-content-between align-items-center py-6 py-lg-3 px-8 rounded-3 text-center text-lg-start">
-                          {/* img */}
-                          <div className="d-lg-flex align-items-center">
-                            <img
-                              src={abouticon}
-                              alt="about-icon"
-                              className="img-fluid"
-                            />
-                            {/* text */}
-                            <div className="ms-lg-4">
-                              <h1 className="fs-2 mb-1">
-                                Welcome to {brandConfig.name}
-                              </h1>
-                              <span>
-                                Download the app get free food &amp;{" "}
-                                <span className="text-primary">$30</span> off on
-                                your first order.
-                              </span>
-                            </div>
-                          </div>
-                          <div className="mt-3 mt-lg-0">
-                            {/* btn */}
-                            <Link to="#" className="btn btn-dark">
-                              Download {brandConfig.name} App
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </Slide>
-                  </div>
-                </div>
-              </section>
-            </>
-            <>
               {/* section */}
               <section className="mt-8">
                 <div className="container">
@@ -391,7 +348,7 @@ const Home = () => {
                                 personal care{" "}
                               </h3>
                               <div className="mt-4 mb-5 fs-5">
-                                <p className="mb-0">Max cashback: $12</p>
+                                <p className="mb-0">Max cashback: ₹100</p>
                                 <span>
                                   Code:{" "}
                                   <span className="fw-bold text-dark">
@@ -1077,9 +1034,9 @@ const Home = () => {
                                   </h2>
                                   <div className="d-flex justify-content-between align-items-center mt-3">
                                     <div>
-                                      <span className="text-dark">$13</span>{" "}
+                                      <span className="text-dark">₹13</span>{" "}
                                       <span className="text-decoration-line-through text-muted">
-                                        $18
+                                        ₹18
                                       </span>
                                     </div>
                                     <div>
@@ -1191,9 +1148,9 @@ const Home = () => {
                                   </h2>
                                   <div className="d-flex justify-content-between align-items-center mt-3">
                                     <div>
-                                      <span className="text-dark">$13</span>{" "}
+                                      <span className="text-dark">₹13</span>{" "}
                                       <span className="text-decoration-line-through text-muted">
-                                        $18
+                                        ₹18
                                       </span>
                                     </div>
                                     <div>
@@ -1305,9 +1262,9 @@ const Home = () => {
                                   </h2>
                                   <div className="d-flex justify-content-between align-items-center mt-3">
                                     <div>
-                                      <span className="text-dark">$13</span>{" "}
+                                      <span className="text-dark">₹13</span>{" "}
                                       <span className="text-decoration-line-through text-muted">
-                                        $18
+                                        ₹18
                                       </span>
                                     </div>
                                     <div>
@@ -1419,9 +1376,9 @@ const Home = () => {
                                   </h2>
                                   <div className="d-flex justify-content-between align-items-center mt-3">
                                     <div>
-                                      <span className="text-dark">$13</span>{" "}
+                                      <span className="text-dark">₹13</span>{" "}
                                       <span className="text-decoration-line-through text-muted">
-                                        $18
+                                        ₹18
                                       </span>
                                     </div>
                                     <div>

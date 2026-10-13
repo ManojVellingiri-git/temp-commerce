@@ -32,8 +32,8 @@ const Coupons = () => {
                                 <tr key={coupon.id}>
                                     <td><span className="badge bg-light text-dark border fw-bold px-2 py-1 fs-6">{coupon.code}</span></td>
                                     <td>{coupon.type}</td>
-                                    <td>{coupon.type === 'Percentage' ? `${coupon.amount}%` : `$${coupon.amount}`}</td>
-                                    <td>${coupon.minOrder}</td>
+                                    <td>{coupon.type === 'Percentage' ? `${coupon.amount}%` : `₹${coupon.amount}`}</td>
+                                    <td>₹{coupon.minOrder}</td>
                                     <td>
                                         <div className="small">
                                             <div>Start: {coupon.startDate}</div>

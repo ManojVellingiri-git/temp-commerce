@@ -73,7 +73,7 @@ const Products = () => {
                                         </div>
                                     </td>
                                     <td>{product.category}</td>
-                                    <td>${product.price}</td>
+                                    <td>₹{product.price}</td>
                                     <td>{product.discount > 0 ? `${product.discount}%` : '-'}</td>
                                     <td>
                                         {product.stock ? (

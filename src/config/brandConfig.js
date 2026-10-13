@@ -25,6 +25,8 @@ export const brandConfig = {
   website: "https://tempgrocery.com",
   shipping: {
     freeDeliveryThreshold: 499,
-    deliveryFee: 50
+    deliveryFee: 50,
+    currency: "₹",
+    currencyCode: "INR"
   }
 };

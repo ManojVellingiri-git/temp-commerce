@@ -16,7 +16,7 @@ const Analytics = () => {
             
             <div className="row g-4 mb-4">
                 <div className="col-12 col-md-6 col-lg-3">
-                    <StatCard title="Revenue" value={`$${mockStats.totalSales.toLocaleString()}`} icon="bi-currency-dollar" color="success" trend={12.5} />
+                    <StatCard title="Revenue" value={`₹${mockStats.totalSales.toLocaleString()}`} icon="bi-currency-rupee" color="success" trend={12.5} />
                 </div>
                 <div className="col-12 col-md-6 col-lg-3">
                     <StatCard title="Orders" value={mockStats.totalOrders} icon="bi-cart" color="primary" trend={5.2} />
@@ -25,7 +25,7 @@ const Analytics = () => {
                     <StatCard title="Customers" value={mockStats.totalCustomers} icon="bi-people" color="info" trend={8.1} />
                 </div>
                 <div className="col-12 col-md-6 col-lg-3">
-                    <StatCard title="Avg. Order Value" value={`$${(mockStats.totalSales / mockStats.totalOrders).toFixed(2)}`} icon="bi-bag-check" color="warning" trend={2.4} />
+                    <StatCard title="Avg. Order Value" value={`₹${(mockStats.totalSales / mockStats.totalOrders).toFixed(2)}`} icon="bi-bag-check" color="warning" trend={2.4} />
                 </div>
             </div>
 

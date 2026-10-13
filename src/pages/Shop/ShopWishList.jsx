@@ -135,7 +135,7 @@ const ShopWishList = () => {
                                   <small>{item.price}</small>
                                 </div>
                               </td>
-                              <td className="align-middle">$\{item.price}</td>
+                              <td className="align-middle">₹{item.price}</td>
                               <td className="align-middle">
                                 <span className="badge bg-success">In Stock</span>
                               </td>

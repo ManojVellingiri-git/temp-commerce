@@ -451,9 +451,9 @@ const ShopGridCol3 = () => {
                               {/* price */}
                               <div className="d-flex justify-content-between align-items-center mt-3">
                                 <div>
-                                  <span className="text-dark">$18</span>{" "}
+                                  <span className="text-dark">₹18</span>{" "}
                                   <span className="text-decoration-line-through text-muted">
-                                    $24
+                                    ₹24
                                   </span>
                                 </div>
                                 {/* btn */}
@@ -570,7 +570,7 @@ const ShopGridCol3 = () => {
                               {/* price */}
                               <div className="d-flex justify-content-between align-items-center mt-3">
                                 <div>
-                                  <span className="text-dark">$24</span>
+                                  <span className="text-dark">₹24</span>
                                 </div>
                                 {/* btn */}
                                 <div>
@@ -683,9 +683,9 @@ const ShopGridCol3 = () => {
                               {/* price */}
                               <div className="d-flex justify-content-between align-items-center mt-3">
                                 <div>
-                                  <span className="text-dark">$32</span>{" "}
+                                  <span className="text-dark">₹32</span>{" "}
                                   <span className="text-decoration-line-through text-muted">
-                                    $35
+                                    ₹35
                                   </span>
                                 </div>
                                 {/* btn */}
@@ -802,9 +802,9 @@ const ShopGridCol3 = () => {
                               {/* price */}
                               <div className="d-flex justify-content-between align-items-center mt-3">
                                 <div>
-                                  <span className="text-dark">$3</span>{" "}
+                                  <span className="text-dark">₹3</span>{" "}
                                   <span className="text-decoration-line-through text-muted">
-                                    $5
+                                    ₹5
                                   </span>
                                 </div>
                                 {/* btn */}
@@ -917,9 +917,9 @@ const ShopGridCol3 = () => {
                               </div>
                               <div className="d-flex justify-content-between mt-4">
                                 <div>
-                                  <span className="text-dark">$13</span>{" "}
+                                  <span className="text-dark">₹13</span>{" "}
                                   <span className="text-decoration-line-through text-muted">
-                                    $18
+                                    ₹18
                                   </span>
                                 </div>
                                 {/* btn */}
@@ -1037,9 +1037,9 @@ const ShopGridCol3 = () => {
                               {/* price */}
                               <div className="d-flex justify-content-between align-items-center mt-3">
                                 <div>
-                                  <span className="text-dark">$18</span>{" "}
+                                  <span className="text-dark">₹18</span>{" "}
                                   <span className="text-decoration-line-through text-muted">
-                                    $24
+                                    ₹24
                                   </span>
                                 </div>
                                 {/* btn */}
@@ -1153,7 +1153,7 @@ const ShopGridCol3 = () => {
                               {/* price */}
                               <div className="d-flex justify-content-between align-items-center mt-3">
                                 <div>
-                                  <span className="text-dark">$24</span>
+                                  <span className="text-dark">₹24</span>
                                 </div>
                                 {/* btn */}
                                 <div>
@@ -1264,9 +1264,9 @@ const ShopGridCol3 = () => {
                               {/* price */}
                               <div className="d-flex justify-content-between align-items-center mt-3">
                                 <div>
-                                  <span className="text-dark">$32</span>{" "}
+                                  <span className="text-dark">₹32</span>{" "}
                                   <span className="text-decoration-line-through text-muted">
-                                    $35
+                                    ₹35
                                   </span>
                                 </div>
                                 {/* btn */}
@@ -1380,9 +1380,9 @@ const ShopGridCol3 = () => {
                               {/* price */}
                               <div className="d-flex justify-content-between align-items-center mt-3">
                                 <div>
-                                  <span className="text-dark">$3</span>{" "}
+                                  <span className="text-dark">₹3</span>{" "}
                                   <span className="text-decoration-line-through text-muted">
-                                    $5
+                                    ₹5
                                   </span>
                                 </div>
                                 {/* btn */}
@@ -1495,9 +1495,9 @@ const ShopGridCol3 = () => {
                               </div>
                               <div className="d-flex justify-content-between mt-4">
                                 <div>
-                                  <span className="text-dark">$13</span>{" "}
+                                  <span className="text-dark">₹13</span>{" "}
                                   <span className="text-decoration-line-through text-muted">
-                                    $18
+                                    ₹18
                                   </span>
                                 </div>
                                 {/* btn */}

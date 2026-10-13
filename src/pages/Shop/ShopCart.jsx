@@ -73,7 +73,7 @@ const ShopCart = () => {
                       </div>
                     ) : (
                       <div className="alert alert-danger p-2" role="alert">
-                        Add $\{brandConfig.shipping.freeDeliveryThreshold - calculateSubtotal()} more to get FREE delivery.
+                        Add ₹{brandConfig.shipping.freeDeliveryThreshold - calculateSubtotal()} more to get FREE delivery.
                       </div>
                     )}
                     <ul className="list-group list-group-flush">
@@ -146,10 +146,10 @@ const ShopCart = () => {
                                 </div>
                               </div>
                               <div className="col-sm-3 col-md-3 col-lg-3 text-end d-none d-sm-block">
-                                <span className="fw-bold">${(item.price * item.quantity).toFixed(2)}</span>
+                                <span className="fw-bold">₹{(item.price * item.quantity).toFixed(2)}</span>
                                 {item.originalPrice && item.originalPrice > item.price && (
                                   <div className="text-decoration-line-through text-muted small">
-                                    ${(item.originalPrice * item.quantity).toFixed(2)}
+                                    ₹{(item.originalPrice * item.quantity).toFixed(2)}
                                   </div>
                                 )}
                               </div>
@@ -175,10 +175,10 @@ const ShopCart = () => {
                                   </button>
                                 </div>
                                 <div className="text-end">
-                                  <span className="fw-bold">${(item.price * item.quantity).toFixed(2)}</span>
+                                  <span className="fw-bold">₹{(item.price * item.quantity).toFixed(2)}</span>
                                   {item.originalPrice && item.originalPrice > item.price && (
                                     <small className="text-decoration-line-through text-muted ms-2">
-                                      ${(item.originalPrice * item.quantity).toFixed(2)}
+                                      ₹{(item.originalPrice * item.quantity).toFixed(2)}
                                     </small>
                                   )}
                                 </div>
@@ -215,33 +215,33 @@ const ShopCart = () => {
                             <div className="me-auto">
                               <div>Item Subtotal</div>
                             </div>
-                            <span>$\{calculateSubtotal().toFixed(2)}</span>
+                            <span>₹{calculateSubtotal().toFixed(2)}</span>
                           </li>
                           <li className="list-group-item d-flex justify-content-between align-items-start">
                             <div className="me-auto">
                               <div>Delivery Fee</div>
                             </div>
-                            <span>$\{calculateDeliveryFee().toFixed(2)}</span>
+                            <span>₹{calculateDeliveryFee().toFixed(2)}</span>
                           </li>
                           <li className="list-group-item d-flex justify-content-between align-items-start">
                             <div className="me-auto">
                               <div>Tax (5%)</div>
                             </div>
-                            <span>$\{calculateTax().toFixed(2)}</span>
+                            <span>₹{calculateTax().toFixed(2)}</span>
                           </li>
                           {calculateDiscount() > 0 && (
                             <li className="list-group-item d-flex justify-content-between align-items-start">
                               <div className="me-auto">
                                 <div>Discount</div>
                               </div>
-                              <span className="text-success">-$\{calculateDiscount().toFixed(2)}</span>
+                              <span className="text-success">-₹{calculateDiscount().toFixed(2)}</span>
                             </li>
                           )}
                           <li className="list-group-item d-flex justify-content-between align-items-start">
                             <div className="me-auto">
                               <div className="fw-bold">Grand Total</div>
                             </div>
-                            <span className="fw-bold">$\{calculateGrandTotal().toFixed(2)}</span>
+                            <span className="fw-bold">₹{calculateGrandTotal().toFixed(2)}</span>
                           </li>
                         </ul>
                       </div>
@@ -253,7 +253,7 @@ const ShopCart = () => {
                           type="button"
                           onClick={() => navigate('/ShopCheckOut')}
                         >
-                          Go to Checkout <span className="fw-bold">$\{calculateGrandTotal().toFixed(2)}</span>
+                          Go to Checkout <span className="fw-bold">₹{calculateGrandTotal().toFixed(2)}</span>
                         </button>
                       </div>
                       {/* text */}

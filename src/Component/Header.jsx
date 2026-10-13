@@ -709,7 +709,7 @@ const Header = () => {
             </div>
           ) : (
             <div className="alert alert-danger" role="alert">
-              Add $\{brandConfig.shipping.freeDeliveryThreshold - calculateSubtotal()} more to get FREE delivery.
+              Add ₹{brandConfig.shipping.freeDeliveryThreshold - calculateSubtotal()} more to get FREE delivery.
             </div>
           )}
           <div>
@@ -778,11 +778,11 @@ const Header = () => {
                             </button>
                           </div>
                           <div className="fw-bold small">
-                            ${(item.price * item.quantity).toFixed(2)}
+                            ₹{(item.price * item.quantity).toFixed(2)}
                           </div>
                           {item.originalPrice && item.originalPrice > item.price && (
                             <span className="text-decoration-line-through text-muted small d-block">
-                              ${(item.originalPrice * item.quantity).toFixed(2)}
+                              ₹{(item.originalPrice * item.quantity).toFixed(2)}
                             </span>
                           )}
                         </div>
@@ -797,7 +797,7 @@ const Header = () => {
                 to="/ShopCheckOut"
                 className="btn btn-primary btn-lg d-flex justify-content-between align-items-center"
               >
-                Go to Checkout <span className="fw-bold">$\{calculateSubtotal().toFixed(2)}</span>
+                Go to Checkout <span className="fw-bold">₹{calculateSubtotal().toFixed(2)}</span>
               </Link>
             </div>
           </div>
@@ -855,70 +855,70 @@ const Header = () => {
                       className="list-group-item d-flex justify-content-between align-items-center px-2 py-3 list-group-item-action active"
                     >
                       <span>Alabama</span>
-                      <span>Min:$20</span>
+                      <span>Min:₹20</span>
                     </Link>
                     <Link
                       to="#"
                       className="list-group-item d-flex justify-content-between align-items-center px-2 py-3 list-group-item-action"
                     >
                       <span>Alaska</span>
-                      <span>Min:$30</span>
+                      <span>Min:₹30</span>
                     </Link>
                     <Link
                       to="#"
                       className="list-group-item d-flex justify-content-between align-items-center px-2 py-3 list-group-item-action"
                     >
                       <span>Arizona</span>
-                      <span>Min:$50</span>
+                      <span>Min:₹50</span>
                     </Link>
                     <Link
                       to="#"
                       className="list-group-item d-flex justify-content-between align-items-center px-2 py-3 list-group-item-action"
                     >
                       <span>California</span>
-                      <span>Min:$29</span>
+                      <span>Min:₹29</span>
                     </Link>
                     <Link
                       to="#"
                       className="list-group-item d-flex justify-content-between align-items-center px-2 py-3 list-group-item-action"
                     >
                       <span>Colorado</span>
-                      <span>Min:$80</span>
+                      <span>Min:₹80</span>
                     </Link>
                     <Link
                       to="#"
                       className="list-group-item d-flex justify-content-between align-items-center px-2 py-3 list-group-item-action"
                     >
                       <span>Florida</span>
-                      <span>Min:$90</span>
+                      <span>Min:₹90</span>
                     </Link>
                     <Link
                       to="#"
                       className="list-group-item d-flex justify-content-between align-items-center px-2 py-3 list-group-item-action"
                     >
                       <span>Arizona</span>
-                      <span>Min:$50</span>
+                      <span>Min:₹50</span>
                     </Link>
                     <Link
                       to="#"
                       className="list-group-item d-flex justify-content-between align-items-center px-2 py-3 list-group-item-action"
                     >
                       <span>California</span>
-                      <span>Min:$29</span>
+                      <span>Min:₹29</span>
                     </Link>
                     <Link
                       to="#"
                       className="list-group-item d-flex justify-content-between align-items-center px-2 py-3 list-group-item-action"
                     >
                       <span>Colorado</span>
-                      <span>Min:$80</span>
+                      <span>Min:₹80</span>
                     </Link>
                     <Link
                       to="#"
                       className="list-group-item d-flex justify-content-between align-items-center px-2 py-3 list-group-item-action"
                     >
                       <span>Florida</span>
-                      <span>Min:$90</span>
+                      <span>Min:₹90</span>
                     </Link>
                   </div>
                 </div>

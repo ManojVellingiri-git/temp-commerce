@@ -112,10 +112,10 @@ const ProductCard = ({ product }) => {
           </div>
           <div className="d-flex justify-content-between align-items-center mt-3">
             <div>
-              <span className="text-dark">${product.price}</span>{" "}
+              <span className="text-dark">₹{product.price}</span>{" "}
               {product.originalPrice && (
                 <span className="text-decoration-line-through text-muted">
-                  ${product.originalPrice}
+                  ₹{product.originalPrice}
                 </span>
               )}
             </div>

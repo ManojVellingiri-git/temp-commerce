@@ -12,7 +12,7 @@ const Dashboard = () => {
             
             <div className="row g-4 mb-4">
                 <div className="col-12 col-md-6 col-lg-3">
-                    <StatCard title="Total Sales" value={`$${mockStats.totalSales.toLocaleString()}`} icon="bi-currency-dollar" color="success" trend={12.5} />
+                    <StatCard title="Total Sales" value={`₹${mockStats.totalSales.toLocaleString()}`} icon="bi-currency-rupee" color="success" trend={12.5} />
                 </div>
                 <div className="col-12 col-md-6 col-lg-3">
                     <StatCard title="Total Orders" value={mockStats.totalOrders} icon="bi-cart" color="primary" trend={5.2} />
@@ -85,7 +85,7 @@ const Dashboard = () => {
                                     <td>{order.customer}</td>
                                     <td>{order.date}</td>
                                     <td>{order.items}</td>
-                                    <td>${order.amount.toFixed(2)}</td>
+                                    <td>₹{order.amount.toFixed(2)}</td>
                                     <td>{order.payment}</td>
                                     <td><StatusBadge status={order.status} /></td>
                                     <td>

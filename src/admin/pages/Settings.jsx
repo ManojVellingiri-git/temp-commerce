@@ -94,11 +94,11 @@ const Settings = () => {
                                 <div className="card-body">
                                     <div className="row g-3">
                                         <div className="col-md-6">
-                                            <label className="form-label">Base Delivery Fee ($)</label>
+                                            <label className="form-label">Base Delivery Fee (₹)</label>
                                             <input type="number" className="form-control" defaultValue="50" />
                                         </div>
                                         <div className="col-md-6">
-                                            <label className="form-label">Free Delivery Threshold ($)</label>
+                                            <label className="form-label">Free Delivery Threshold (₹)</label>
                                             <input type="number" className="form-control" defaultValue="499" />
                                         </div>
                                     </div>

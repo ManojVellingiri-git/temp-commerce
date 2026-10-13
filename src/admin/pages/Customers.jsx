@@ -42,7 +42,7 @@ const Customers = () => {
                                     <td>{customer.email}</td>
                                     <td>{customer.phone}</td>
                                     <td>{customer.orders}</td>
-                                    <td>${customer.spent.toFixed(2)}</td>
+                                    <td>₹{customer.spent.toFixed(2)}</td>
                                     <td>{customer.lastOrder}</td>
                                     <td><StatusBadge status={customer.status} /></td>
                                     <td>

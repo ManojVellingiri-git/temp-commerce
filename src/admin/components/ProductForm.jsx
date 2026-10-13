@@ -96,11 +96,11 @@ const ProductForm = ({ isEdit, initialData }) => {
                         <div className="card-body">
                             <div className="row">
                                 <div className="col-md-4 mb-3">
-                                    <label className="form-label">Regular Price ($)</label>
+                                    <label className="form-label">Regular Price (₹)</label>
                                     <input type="number" step="0.01" className="form-control" name="price" value={formData.price} onChange={handleChange} required />
                                 </div>
                                 <div className="col-md-4 mb-3">
-                                    <label className="form-label">Original Price ($)</label>
+                                    <label className="form-label">Original Price (₹)</label>
                                     <input type="number" step="0.01" className="form-control" name="originalPrice" value={formData.originalPrice} onChange={handleChange} />
                                 </div>
                                 <div className="col-md-4 mb-3">
