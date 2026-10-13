@@ -339,292 +339,26 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="row ">
-                      {/* col */}
-                      <div className="col-lg-2 col-md-4 col-6 fade-zoom">
-                        <Zoom>
-                          <div className="text-center mb-10">
-                            {/* img */}
-                            <Link to="#">
-                              <img
-                                src={dairybreadeggs}
-                                alt="dairy-bread-eggs"
-                                className="card-image rounded-circle"
-                              />
-                            </Link>
-                            {/* text */}
-                            <div className="mt-4">
-                              <h5 className="fs-6 mb-0">
-                                {" "}
-                                <Link to="#" className="text-inherit">
-                                  Dairy, Bread &amp; Eggs
-                                </Link>
+                    <div className="row g-3 g-md-4 justify-content-center">
+                      {categories.map((cat) => (
+                        <div key={cat.id} className="col-lg-2 col-md-3 col-sm-4 col-6">
+                          <div className="text-center mb-3">
+                            <Link to="/Shop" className="text-decoration-none text-dark d-block p-2 rounded-3">
+                              <div className="category-img-wrap mb-2">
+                                <img
+                                  src={cat.image}
+                                  alt={cat.name}
+                                  className="card-image rounded-circle"
+                                  style={{ width: "80px", height: "80px", objectFit: "cover" }}
+                                />
+                              </div>
+                              <h5 className="fs-6 mb-0 text-inherit text-truncate">
+                                {cat.name}
                               </h5>
-                            </div>
-                          </div>
-                        </Zoom>
-                      </div>
-                      {/* col */}
-                      <div className="col-lg-2 col-md-4 col-6 fade-zoom">
-                        <Zoom>
-                          <div className="text-center mb-10">
-                            {/* img */}
-                            <Link to="#">
-                              <img
-                                src={fruitsvegetables}
-                                alt="fruits-vegetables"
-                                className="card-image rounded-circle"
-                              />
                             </Link>
-                            <div className="mt-4">
-                              {/* text */}
-                              <h5 className="fs-6 mb-0">
-                                {" "}
-                                <Link to="#" className="text-inherit">
-                                  Fruits &amp; Vegetables
-                                </Link>
-                              </h5>
-                            </div>
                           </div>
-                        </Zoom>
-                      </div>
-                      {/* col */}
-                      <div className="col-lg-2 col-md-4 col-6 fade-zoom">
-                        <Zoom>
-                          <div className="text-center mb-10">
-                            {/* img */}
-                            <Link to="#">
-                              <img
-                                src={snackmunchies}
-                                alt="snack-munchies"
-                                className="card-image rounded-circle"
-                              />
-                            </Link>
-                            {/* text */}
-                            <div className="mt-4">
-                              <h5 className="fs-6 mb-0">
-                                {" "}
-                                <Link to="#" className="text-inherit">
-                                  Snack &amp; Munchies
-                                </Link>
-                              </h5>
-                            </div>
-                          </div>
-                        </Zoom>
-                      </div>
-                      {/* col */}
-                      <div className="col-lg-2 col-md-4 col-6 fade-zoom">
-                        <Zoom>
-                          <div className="text-center mb-10">
-                            {/* img */}
-                            <Link to="#">
-                              <img
-                                src={bakerybiscuits}
-                                alt="bakery-biscuits"
-                                className="card-image rounded-circle"
-                              />
-                            </Link>
-                            {/* text */}
-                            <div className="mt-4">
-                              <h5 className="fs-6 mb-0">
-                                {" "}
-                                <Link to="#" className="text-inherit">
-                                  Bakery &amp; Biscuits
-                                </Link>
-                              </h5>
-                            </div>
-                          </div>
-                        </Zoom>
-                      </div>
-                      {/* col */}
-                      <div className="col-lg-2 col-md-4 col-6 fade-zoom">
-                        <Zoom>
-                          <div className="text-center mb-10">
-                            {/* img */}
-                            <Link to="#">
-                              <img
-                                src={instantfood}
-                                alt="instant-food"
-                                className="card-image rounded-circle"
-                              />
-                            </Link>
-                            {/* text */}
-                            <div className="mt-4">
-                              <h5 className="fs-6 mb-0">
-                                {" "}
-                                <Link to="#" className="text-inherit">
-                                  Instant Food
-                                </Link>
-                              </h5>
-                            </div>
-                          </div>
-                        </Zoom>
-                      </div>
-                      {/* col */}
-                      <div className="col-lg-2 col-md-4 col-6 fade-zoom">
-                        <Zoom>
-                          <div className="text-center mb-10">
-                            {/* img */}
-                            <Link to="#">
-                              <img
-                                src={teacoffeedrinks}
-                                alt="tea-coffee-drinks"
-                                className="card-image rounded-circle"
-                              />
-                            </Link>
-                            {/* text */}
-                            <div className="mt-4">
-                              <h5 className="fs-6 mb-0">
-                                <Link to="#" className="text-inherit">
-                                  Tea, Coffee &amp; Drinks
-                                </Link>
-                              </h5>
-                            </div>
-                          </div>
-                        </Zoom>
-                      </div>
-                      {/* col */}
-                      <div className="col-lg-2 col-md-4 col-6 fade-zoom">
-                        <Zoom>
-                          <div className="text-center mb-10">
-                            {/* img */}
-                            <Link to="#">
-                              <img
-                                src={colddrinksjuices}
-                                alt="cold-drinks-juices"
-                                className="card-image rounded-circle"
-                              />
-                            </Link>
-                            {/* text */}
-                            <div className="mt-4">
-                              <h5 className="fs-6 mb-0">
-                                <Link to="#" className="text-inherit">
-                                  Cold Drinks &amp; Juices
-                                </Link>
-                              </h5>
-                            </div>
-                          </div>
-                        </Zoom>
-                      </div>
-                      {/* col */}
-                      <div className="col-lg-2 col-md-4 col-6 fade-zoom">
-                        <Zoom>
-                          <div className="text-center mb-10">
-                            {/* img */}
-                            <Link to="#">
-                              <img
-                                src={chickenmeatfish}
-                                alt="chicken-meat-fish"
-                                className="card-image rounded-circle"
-                              />
-                            </Link>
-                            {/* text */}
-                            <div className="mt-4">
-                              <h5 className="fs-6 mb-0">
-                                <Link to="#" className="text-inherit">
-                                  Chicken, Meat &amp; Fish
-                                </Link>
-                              </h5>
-                            </div>
-                          </div>
-                        </Zoom>
-                      </div>
-                      {/* col */}
-                      <div className="col-lg-2 col-md-4 col-6 fade-zoom">
-                        {/* text */}
-                        <Zoom>
-                          <div className="text-center mb-10">
-                            {/* img */}
-                            <Link to="#">
-                              <img
-                                src={babycare}
-                                alt="baby-care"
-                                className="card-image rounded-circle"
-                              />
-                            </Link>
-                            {/* text */}
-                            <div className="mt-4">
-                              <h5 className="fs-6 mb-0">
-                                {" "}
-                                <Link to="#" className="text-inherit">
-                                  Baby Care
-                                </Link>
-                              </h5>
-                            </div>
-                          </div>
-                        </Zoom>
-                      </div>
-                      {/* col */}
-                      <div className="col-lg-2 col-md-4 col-6 fade-zoom">
-                        <Zoom>
-                          <div className="text-center mb-10">
-                            {/* img */}
-                            <Link to="#">
-                              <img
-                                src={cleaningessentials}
-                                alt="cleaning-essentials"
-                                className="card-image rounded-circle"
-                              />
-                            </Link>
-                            {/* img */}
-                            <div className="mt-4">
-                              <h5 className="fs-6 mb-0">
-                                {" "}
-                                <Link to="#" className="text-inherit">
-                                  Cleaning Essentials
-                                </Link>
-                              </h5>
-                            </div>
-                          </div>
-                        </Zoom>
-                      </div>
-                      {/* col */}
-                      <div className="col-lg-2 col-md-4 col-6 fade-zoom">
-                        <Zoom>
-                          <div className="text-center mb-10">
-                            {/* img */}
-                            <Link to="#">
-                              <img
-                                src={petcare}
-                                alt="pet-care"
-                                className="card-image rounded-circle"
-                              />
-                            </Link>
-                            {/* text */}
-                            <div className="mt-4">
-                              <h5 className="fs-6 mb-0">
-                                {" "}
-                                <Link to="#" className="text-inherit">
-                                  Pet Care
-                                </Link>
-                              </h5>
-                            </div>
-                          </div>
-                        </Zoom>
-                      </div>
-                      {/* col */}
-                      <div className="col-lg-2 col-md-4 col-6 fade-zoom">
-                        <Zoom>
-                          <div className="text-center mb-10">
-                            {/* img */}
-                            <Link to="#">
-                              <img
-                                src={attaricedal}
-                                alt="atta-rice-dal"
-                                className="card-image rounded-circle"
-                              />
-                            </Link>
-                            {/* text */}
-                            <div className="mt-4">
-                              <h5 className="fs-6 mb-0">
-                                <Link to="#" className="text-inherit">
-                                  Atta, Rice &amp; Dal
-                                </Link>
-                              </h5>
-                            </div>
-                          </div>
-                        </Zoom>
-                      </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -651,8 +385,8 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="row row-cols-1 row-cols-md-3 g-4">
-                    <div className="col-md-3 fade-in-left">
+                  <div className="row g-4 align-items-stretch">
+                    <div className="col-12 col-lg-3">
                       <div
                         className=" pt-8 px-8 rounded-3"
                         style={{
@@ -675,7 +409,7 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-md-9 ">
+                    <div className="col-12 col-lg-9">
                       <div className="image-itemss">
                         <Slider {...settings1}>
                           <div className="images swiper-slide px-4 ">
@@ -1080,7 +814,7 @@ const Home = () => {
                     className="row justify-content-center  g-4"
                     style={{ textAlign: "center" }}
                   >
-                    <div className="col-md-3 col-sm-6 fade-zoom ">
+                    <div className="col-12 col-sm-6 col-lg-3 ">
                       <Zoom>
                         <div className="shadow-effect">
                           <div className="wt-icon-box-wraper center p-a25 p-b50 m-b30 bdr-1 bdr-gray bdr-solid corner-radius step-icon-box bg-white v-icon-effect">
@@ -1102,7 +836,7 @@ const Home = () => {
                         </div>
                       </Zoom>
                     </div>
-                    <div className="col-md-3 col-sm-12 fade-zoom">
+                    <div className="col-12 col-sm-6 col-lg-3">
                       <Zoom>
                         <div className="shadow-effect">
                           <div className="wt-icon-box-wraper center p-a25 p-b50 m-b30 bdr-1 bdr-gray bdr-solid corner-radius step-icon-box bg-white v-icon-effect">
@@ -1123,7 +857,7 @@ const Home = () => {
                         </div>
                       </Zoom>
                     </div>
-                    <div className="col-md-3 col-sm-12 fade-zoom">
+                    <div className="col-12 col-sm-6 col-lg-3">
                       <Zoom>
                         <div className="shadow-effect">
                           <div className="wt-icon-box-wraper center p-a25 p-b50 m-b30 bdr-1 bdr-gray bdr-solid corner-radius step-icon-box bg-white v-icon-effect">
@@ -1146,7 +880,7 @@ const Home = () => {
                         </div>
                       </Zoom>
                     </div>
-                    <div className="col-md-3 col-sm-12 fade-zoom">
+                    <div className="col-12 col-sm-6 col-lg-3">
                       <Zoom>
                         <div className="shadow-effect">
                           <div className="wt-icon-box-wraper center p-a25 p-b50 m-b30 bdr-1 bdr-gray bdr-solid corner-radius step-icon-box bg-white v-icon-effect">

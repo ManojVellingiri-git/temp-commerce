@@ -169,16 +169,16 @@ const ShopCart = () => {
                       )}
                     </ul>
                     {/* btn */}
-                    <div className="d-flex justify-content-between mt-4">
-                      <Link to="/Shop" className="btn btn-primary">
-                        Continue Shopping
-                      </Link>
-                      {cart.length > 0 && (
+                    {cart.length > 0 && (
+                      <div className="d-flex justify-content-between mt-4">
+                        <Link to="/Shop" className="btn btn-primary">
+                          Continue Shopping
+                        </Link>
                         <button className="btn btn-dark" onClick={clearCart}>
                           Clear Cart
                         </button>
-                      )}
-                    </div>
+                      </div>
+                    )}
                   </div>
                 </div>
                 {/* sidebar */}

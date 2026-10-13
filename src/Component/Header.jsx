@@ -15,6 +15,10 @@ const Header = () => {
 
 
   const [isOpen, setIsOpen] = useState(false);
+  const [activeMobileDropdown, setActiveMobileDropdown] = useState(null);
+  const toggleMobileDropdown = (name) => {
+    setActiveMobileDropdown(prev => prev === name ? null : name);
+  };
   const { cart, getCartCount, calculateSubtotal, removeFromCart, increaseQuantity, decreaseQuantity, setQuantity } = useCart();
   const { user, isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
@@ -46,7 +50,7 @@ const Header = () => {
         <div className="container">
           {/* Brand */}
           <Link className="navbar-brand me-2 me-lg-4" to="/" onClick={() => setIsOpen(false)}>
-            <h2 style={{ color: brandConfig.colors.primary, fontWeight: 'bold', margin: 0, padding: 0 }}>
+            <h2 style={{ color: brandConfig.colors.primary, fontWeight: 'bold', margin: 0, padding: 0, fontSize: 'clamp(1.2rem, 4vw, 1.75rem)' }}>
               {brandConfig.name}
             </h2>
           </Link>
@@ -101,8 +105,8 @@ const Header = () => {
                   <ul className="dropdown-menu dropdown-menu-end shadow-sm">
                     {!isAuthenticated ? (
                       <>
-                        <li><Link className="dropdown-item" to="/MyAccountSignIn" onClick={() => setIsOpen(false)}>Sign In</Link></li>
-                        <li><Link className="dropdown-item" to="/MyAccountSignUp" onClick={() => setIsOpen(false)}>Sign Up</Link></li>
+                        <li><Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/MyAccountSignIn" onClick={() => setIsOpen(false)}>Sign In</Link></li>
+                        <li><Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/MyAccountSignUp" onClick={() => setIsOpen(false)}>Sign Up</Link></li>
                       </>
                     ) : (
                       <>
@@ -110,8 +114,8 @@ const Header = () => {
                         {user?.role === 'admin' && (
                           <li><Link className="dropdown-item text-primary" to="/admin/dashboard" onClick={() => setIsOpen(false)}>Admin Dashboard</Link></li>
                         )}
-                        <li><Link className="dropdown-item" to="/MyAccountOrder" onClick={() => setIsOpen(false)}>My Orders</Link></li>
-                        <li><Link className="dropdown-item" to="/MyAccountSetting" onClick={() => setIsOpen(false)}>Settings</Link></li>
+                        <li><Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/MyAccountOrder" onClick={() => setIsOpen(false)}>My Orders</Link></li>
+                        <li><Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/MyAccountSetting" onClick={() => setIsOpen(false)}>Settings</Link></li>
                         <li><hr className="dropdown-divider" /></li>
                         <li><button className="dropdown-item text-danger" onClick={() => { handleLogout(); setIsOpen(false); }}>Logout</button></li>
                       </>
@@ -190,15 +194,20 @@ const Header = () => {
           <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="mobile_nav">
         <ul className="navbar-nav mr-auto mt-2 mt-lg-0 float-md-right"></ul>
         <ul className="navbar-nav navbar-light">
-          <li className="nav-item dmenu dropdown">
+          <li className={`nav-item dmenu dropdown ${activeMobileDropdown === 'departments' ? 'show' : ''}`}>
               <Link
                 className="nav-link dropdown-toggle"
                 to="#!"
-                id="navbarDropdown"
+                id="navbarDropdownDepartments"
                 role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
+                data-bs-toggle="dropdown"
+                aria-expanded={activeMobileDropdown === 'departments'}
+                onClick={(e) => {
+                  if (window.innerWidth < 992) {
+                    e.preventDefault();
+                    toggleMobileDropdown('departments');
+                  }
+                }}
               >
                 <span className="me-1">
                   <svg
@@ -222,28 +231,28 @@ const Header = () => {
                 All Departments
               </Link>
               <div
-                className="dropdown-menu sm-menu"
-                aria-labelledby="navbarDropdown"
+                className={`dropdown-menu sm-menu ${activeMobileDropdown === 'departments' ? 'show' : ''}`}
+                aria-labelledby="navbarDropdownDepartments"
               >
-                <Link className="dropdown-item" to="/Shop">
+                <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                   Dairy, Bread &amp; Eggs
                 </Link>
-                <Link className="dropdown-item" to="/Shop">
+                <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                   Snacks &amp; Munchies
                 </Link>
-                <Link className="dropdown-item" to="/Shop">
+                <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                   Fruits &amp; Vegetables
                 </Link>
-                <Link className="dropdown-item" to="/Shop">
+                <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                   Cold Drinks &amp; Juices
                 </Link>
-                <Link className="dropdown-item" to="/Shop">
+                <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                   Breakfast &amp; Instant Food
                 </Link>
-                <Link className="dropdown-item" to="/Shop">
+                <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                   Bakery &amp; Biscuits
                 </Link>
-                <Link className="dropdown-item" to="/Shop">
+                <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                   Chicken, Meat &amp; Fish
                 </Link>
               </div>
@@ -253,66 +262,76 @@ const Header = () => {
               Home
             </Link>
           </li>
-          <li className="nav-item dmenu dropdown">
+          <li className={`nav-item dmenu dropdown ${activeMobileDropdown === 'about' ? 'show' : ''}`}>
             <Link
               className="nav-link dropdown-toggle"
               to="#"
-              id="navbarDropdown"
+              id="navbarDropdownAbout"
               role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-expanded={activeMobileDropdown === 'about'}
+              onClick={(e) => {
+                if (window.innerWidth < 992) {
+                  e.preventDefault();
+                  toggleMobileDropdown('about');
+                }
+              }}
             >
               About
             </Link>
             <div
-              className="dropdown-menu sm-menu"
-              aria-labelledby="navbarDropdown"
+              className={`dropdown-menu sm-menu ${activeMobileDropdown === 'about' ? 'show' : ''}`}
+              aria-labelledby="navbarDropdownAbout"
             >
-              <Link className="dropdown-item" to="/Blog">
+              <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Blog">
                 Blog
               </Link>
-              {/* <Link className="dropdown-item" to="pages/blog-single.html">
+              {/* <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="pages/blog-single.html">
                     Blog Single
                   </Link> */}
-              <Link className="dropdown-item" to="/BlogCategory">
+              <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/BlogCategory">
                 Blog Category
               </Link>
-              <Link className="dropdown-item" to="/AboutUs">
+              <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/AboutUs">
                 About us
               </Link>
-              {/* <Link className="dropdown-item" to="pages/404error.html">
+              {/* <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="pages/404error.html">
                     404 Error
                   </Link> */}
-              <Link className="dropdown-item" to="/Contact">
+              <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Contact">
                 Contact
               </Link>
             </div>
           </li>
 
-          <li className="nav-item dmenu dropdown">
+          <li className={`nav-item dmenu dropdown ${activeMobileDropdown === 'shop' ? 'show' : ''}`}>
             <Link
               className="nav-link dropdown-toggle"
               to="#"
-              id="navbarDropdown"
+              id="navbarDropdownShop"
               role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-expanded={activeMobileDropdown === 'shop'}
+              onClick={(e) => {
+                if (window.innerWidth < 992) {
+                  e.preventDefault();
+                  toggleMobileDropdown('shop');
+                }
+              }}
             >
               Shop
             </Link>
             <div
-              className="dropdown-menu sm-menu"
-              aria-labelledby="navbarDropdown"
+              className={`dropdown-menu sm-menu ${activeMobileDropdown === 'shop' ? 'show' : ''}`}
+              aria-labelledby="navbarDropdownShop"
             >
-              <Link className="dropdown-item" to="/Shop">
+              <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                 Shop
               </Link>
-              <Link className="dropdown-item" to="/ShopCart">
+              <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/ShopCart">
                 Shop Cart
               </Link>
-              <Link className="dropdown-item" to="/ShopCheckOut">
+              <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/ShopCheckOut">
                 Shop Checkout
               </Link>
             </div>
@@ -338,7 +357,7 @@ const Header = () => {
                     Blog
                   </Link>
                   <div>
-                    <Link className="dropdown-item" to="pages/blog-single.html">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="pages/blog-single.html">
                       Blog Single
                     </Link>
                     <Link
@@ -347,33 +366,39 @@ const Header = () => {
                     >
                       Blog Category
                     </Link>
-                    <Link className="dropdown-item" to="pages/about.html">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="pages/about.html">
                       About us
                     </Link>
-                    <Link className="dropdown-item" to="pages/404error.html">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="pages/404error.html">
                       404 Error
                     </Link>
-                    <Link className="dropdown-item" to="pages/contact.html">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="pages/contact.html">
                       Contact
                     </Link>
                   </div>
                 </div>
               </li> */}
 
-          <li className="nav-item dropdown megamenu-li dmenu">
+          <li className={`nav-item dropdown megamenu-li dmenu ${activeMobileDropdown === 'services' ? 'show' : ''}`}>
             <Link
               className="nav-link dropdown-toggle"
               to="/Shop"
-              id="dropdown01"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
+              id="dropdownServices"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded={activeMobileDropdown === 'services'}
+              onClick={(e) => {
+                if (window.innerWidth < 992) {
+                  e.preventDefault();
+                  toggleMobileDropdown('services');
+                }
+              }}
             >
               All Services
             </Link>
             <div
-              className="dropdown-menu megamenu sm-menu border-top"
-              aria-labelledby="dropdown01"
+              className={`dropdown-menu megamenu sm-menu border-top ${activeMobileDropdown === 'services' ? 'show' : ''}`}
+              aria-labelledby="dropdownServices"
             >
               <div className="row">
                 <div className="col-sm-6 col-lg-3 border-right mb-4">
@@ -381,28 +406,28 @@ const Header = () => {
                     <h6 className="text-primary ps-3">
                       Dairy, Bread &amp; Eggs
                     </h6>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Butter
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Milk Drinks
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Curd &amp; Yogurt
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Eggs
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Buns &amp; Bakery
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Cheese
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Condensed Milk
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Dairy Products
                     </Link>
                   </div>
@@ -412,33 +437,33 @@ const Header = () => {
                     <h6 className="text-primary ps-3">
                       Breakfast &amp; Instant Food
                     </h6>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Breakfast Cereal
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       {" "}
                       Noodles, Pasta &amp; Soup
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Frozen Veg Snacks
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       {" "}
                       Frozen Non-Veg Snacks
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       {" "}
                       Vermicelli
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       {" "}
                       Instant Mixes
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       {" "}
                       Batter
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       {" "}
                       Fruit and Juices
                     </Link>
@@ -449,28 +474,28 @@ const Header = () => {
                     <h6 className="text-primary ps-3">
                       Cold Drinks &amp; Juices
                     </h6>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Soft Drinks
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Fruit Juices
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Coldpress
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Water &amp; Ice Cubes
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Soda &amp; Mixers
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Health Drinks
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Herbal Drinks
                     </Link>
-                    <Link className="dropdown-item" to="/Shop">
+                    <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/Shop">
                       Milk Drinks
                     </Link>
                   </div>
@@ -504,30 +529,35 @@ const Header = () => {
             </div>
           </li>
 
-          <li className="nav-item dmenu dropdown">
+          <li className={`nav-item dmenu dropdown ${activeMobileDropdown === 'account' ? 'show' : ''}`}>
             <Link
               className="nav-link dropdown-toggle"
               to="#!"
-              id="navbarDropdown"
+              id="navbarDropdownAccount"
               role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-expanded={activeMobileDropdown === 'account'}
+              onClick={(e) => {
+                if (window.innerWidth < 992) {
+                  e.preventDefault();
+                  toggleMobileDropdown('account');
+                }
+              }}
             >
               Account
             </Link>
             <div
-              className="dropdown-menu sm-menu"
-              aria-labelledby="navbarDropdown"
+              className={`dropdown-menu sm-menu ${activeMobileDropdown === 'account' ? 'show' : ''}`}
+              aria-labelledby="navbarDropdownAccount"
             >
               <div>
                 <div>
                   {!isAuthenticated ? (
                     <>
-                      <Link className="dropdown-item" to="/MyAccountSignIn">
+                      <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/MyAccountSignIn">
                         Sign in
                       </Link>
-                      <Link className="dropdown-item" to="/MyAccountSignUp">
+                      <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/MyAccountSignUp">
                         Signup
                       </Link>
                       <Link
@@ -544,13 +574,13 @@ const Header = () => {
                           Admin Dashboard
                         </Link>
                       )}
-                      <Link className="dropdown-item" to="/MyAccountOrder">
+                      <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/MyAccountOrder">
                         Orders
                       </Link>
-                      <Link className="dropdown-item" to="/MyAccountSetting">
+                      <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/MyAccountSetting">
                         Settings
                       </Link>
-                      <Link className="dropdown-item" to="/MyAccountAddress">
+                      <Link className="dropdown-item" onClick={() => setIsOpen(false)} to="/MyAccountAddress">
                         Address
                       </Link>
                       <button
@@ -745,11 +775,7 @@ const Header = () => {
                           <div className="fw-bold small">
                             ₹{(item.price * item.quantity).toFixed(2)}
                           </div>
-                          {item.originalPrice && item.originalPrice > item.price && (
-                            <span className="text-decoration-line-through text-muted small d-block">
-                              ₹{(item.originalPrice * item.quantity).toFixed(2)}
-                            </span>
-                          )}
+                          
                         </div>
                       </div>
                     </li>

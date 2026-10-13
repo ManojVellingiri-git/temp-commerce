@@ -28771,19 +28771,12 @@ li {
 
 
 
-.section-head h1:after {
-  color: hsla(0, 0%, 82%, 0.3);
-  content: attr(data-title);
-  font-size: 48px;
-  font-weight: 900;
-  left: 50%;
-  position: absolute;
-  text-transform: uppercase;
-  top: 580px;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 100%;
-  z-index: -1;
+.section-head {
+  position: relative;
+}
+.section-head h1:after,
+.section-head h3:after {
+  display: none !important;
 }
 .separator {
   align-items: center;
@@ -28861,7 +28854,7 @@ li {
   visibility: visible;
 }
 .dropdown-menu {
-  max-height: 400px; /* Adjust based on your design */
+  max-height: 400px;
   overflow-y: auto;
 }
 
@@ -28892,13 +28885,11 @@ li {
   font-size: 14px;
 }
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
-  /* background: #1ebdc2; */
   transition: 0.3s;
 }
 .dropdown-item:focus, .dropdown-item:hover {
   color: #0aad0a;
   text-decoration: none;
-  /* background-color: #1ebdc2 !important; */
 }
 .sm-menu{
   border-radius: 0px;
@@ -28929,7 +28920,6 @@ li {
   width: 100%;
   left: 0;
   right: 0;
-  /* padding: 15px; */
 }
 .megamenu h6{
   margin-left: 21px;
@@ -28937,20 +28927,54 @@ li {
 .megamenu i{
   width: 20px;
 }
- /* Custom styles for dropdown hover effect */
- /* Custom styles for dropdown hover effect */
-.nav-item .dropdown-menu {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease, visibility 0s linear 0.5s;
-  visibility: hidden;
+
+/* Responsive Navigation Dropdowns */
+@media (min-width: 992px) {
+  .nav-item .dropdown-menu {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    visibility: hidden;
+  }
+  .nav-item:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    visibility: visible;
+  }
 }
 
-.nav-item:hover .dropdown-menu {
-  display: block;
-  opacity: 1;
-  transition: opacity 0.5s ease;
-  visibility: visible;
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .navbar-nav .dropdown-menu {
+    position: static !important;
+    float: none !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+    background-color: #f8fafc !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding-left: 1rem !important;
+    display: none;
+  }
+  .navbar-nav .dropdown-menu.show {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .megamenu {
+    position: static !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    max-height: 350px;
+    overflow-y: auto;
+  }
 }
 
 /* Responsive enhancements for mobile and tablet */
@@ -30461,3 +30485,113 @@ background-color: #f3f6ff;
 .support-btn:hover {
   background-color: #1b5e20;
 }
+
+/* =========================================================
+   PHASE 13: RESPONSIVE & ACCESSIBILITY AUDIT ENHANCEMENTS
+   ========================================================= */
+
+/* Prevent horizontal page overflow on all viewports */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw;
+  width: 100%;
+}
+
+/* Improved Touch Targets for Mobile Devices */
+@media (max-width: 767.98px) {
+  .btn,
+  .nav-link,
+  .dropdown-item,
+  .form-control,
+  .form-select {
+    min-height: 42px;
+  }
+
+  .btn-sm {
+    min-height: 34px;
+    padding: 0.35rem 0.65rem;
+  }
+}
+
+/* Equal Height Responsive Product Cards */
+.card-product {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  border-radius: 0.75rem !important;
+  border: 1px solid #e2e8f0 !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #fff;
+}
+
+.card-product:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06) !important;
+}
+
+.card-product .card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+}
+
+.product-card-img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.card-product:hover .product-card-img {
+  transform: scale(1.04);
+}
+
+.product-card-title {
+  font-size: 0.9rem !important;
+  line-height: 1.3 !important;
+  min-height: 2.35rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-card-action-bar {
+  margin-top: auto !important;
+  padding-top: 0.5rem;
+}
+
+/* Category Grid Item Scaling */
+.category-img-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.category-img-wrap:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive Table Wrappers for Mobile / Tablet */
+.table-responsive {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Header Compact Scaling on Ultra-Narrow (320px) */
+@media (max-width: 360px) {
+  .navbar-brand h2 {
+    font-size: 1.25rem !important;
+  }
+  .navbar-toggler {
+    padding: 0.2rem 0.4rem !important;
+  }
+}
+
+/* Desktop container centering to prevent ultra-wide stretching */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+

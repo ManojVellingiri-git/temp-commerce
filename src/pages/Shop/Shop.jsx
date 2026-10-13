@@ -21,6 +21,7 @@ import ProductCard from "../../Component/ProductCard";
 
 function Dropdown() {
   const [openDropdowns, setOpenDropdowns] = useState([]);
+  const [showFilters, setShowFilters] = useState(false);
 
   const toggleDropdown = (index) => {
     if (openDropdowns.includes(index)) {
@@ -61,9 +62,22 @@ color="#0aad0a"
       
 
       <div className="row">
+        {/* Mobile Filter Toggle Button */}
+        <div className="col-12 d-md-none mb-3">
+          <button 
+            type="button" 
+            className="btn btn-outline-success w-100 d-flex justify-content-between align-items-center py-2"
+            onClick={() => setShowFilters(!showFilters)}
+            aria-expanded={showFilters}
+          >
+            <span><i className="bi bi-funnel me-2"></i>{showFilters ? "Hide Filters" : "Filter Products & Categories"}</span>
+            <i className={`bi bi-chevron-${showFilters ? 'up' : 'down'}`}></i>
+          </button>
+        </div>
+
         {/* Vertical Dropdowns Column */}
-        <h5 className="mb-3 mt-8">Categories</h5>
-        <div className="col-md-3">
+        <div className={`col-lg-3 col-md-4 ${showFilters ? 'd-block' : 'd-none d-md-block'}`}>
+          <h5 className="mb-3 mt-md-8">Categories</h5>
           {dropdownData.map((dropdown, index) => (
             <ul className="nav flex-column" key={index}>
               <li className="nav-item">
@@ -209,7 +223,7 @@ color="#0aad0a"
               {/* Banner Content */}
               <div className="position-absolute p-5 py-8">
                 <h3 className="mb-0">Fresh Fruits </h3>
-                <p>Get Upto 25% Off</p>
+                <p>100% Organic & Fresh</p>
                 <Link to="#" className="btn btn-dark">
                   Shop Now
                   <i className="feather-icon icon-arrow-right ms-1" />

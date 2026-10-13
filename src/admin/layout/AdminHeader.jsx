@@ -8,7 +8,7 @@ const AdminHeader = ({ setSidebarOpen }) => {
 
     const handleLogout = () => {
         logout();
-        navigate("/Grocery-react/");
+        navigate("/");
     };
     return (
         <header className="admin-header bg-white shadow-sm p-3 d-flex justify-content-between align-items-center position-sticky top-0 z-1030">
@@ -29,7 +29,7 @@ const AdminHeader = ({ setSidebarOpen }) => {
                         <li><span className="dropdown-item-text text-muted small">{user?.email}</span></li>
                         <li><Link className="dropdown-item" to="/admin/settings">Settings</Link></li>
                         <li><hr className="dropdown-divider" /></li>
-                        <li><Link className="dropdown-item" to="/Grocery-react/">Back to Store</Link></li>
+                        <li><Link className="dropdown-item" to="/">Back to Store</Link></li>
                         <li><button className="dropdown-item text-danger" onClick={handleLogout}>Logout</button></li>
                     </ul>
                 </div>

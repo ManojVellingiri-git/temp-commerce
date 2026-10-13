@@ -33,15 +33,15 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="col fade-zoom">
-      <div className="card card-product">
-        <div className="card-body">
-          <div className="text-center position-relative">
-            <Link to={`/ProductSingle`}>
+    <div className="col">
+      <div className="card card-product shadow-sm">
+        <div className="card-body p-2 p-sm-3">
+          <div className="text-center position-relative mb-2">
+            <Link to="/Shop">
               <img
                 src={product.image}
                 alt={product.name}
-                className="mb-3 img-fluid"
+                className="img-fluid product-card-img"
               />
             </Link>
             <div className="card-product-action">
@@ -50,6 +50,7 @@ const ProductCard = ({ product }) => {
                 className="btn-action"
                 data-bs-toggle="modal"
                 data-bs-target="#quickViewModal"
+                aria-label="Quick View"
               >
                 <i
                   className="bi bi-eye"
@@ -64,53 +65,57 @@ const ProductCard = ({ product }) => {
                 data-bs-toggle="tooltip"
                 data-bs-html="true"
                 title="Compare"
+                aria-label="Compare"
               >
                 <i className="bi bi-arrow-left-right" />
               </Link>
             </div>
           </div>
           <div className="text-small mb-1">
-            <Link to="#!" className="text-decoration-none text-muted">
-              <small>{product.category}</small>
+            <Link to="/Shop" className="text-decoration-none text-muted">
+              <small className="text-truncate d-block">{product.category}</small>
             </Link>
           </div>
-          <h2 className="fs-6">
+          <h2 className="fs-6 product-card-title mb-1">
             <Link
-              to="/ProductSingle"
+              to="/Shop"
               className="text-inherit text-decoration-none"
             >
               {product.name}
             </Link>
           </h2>
-          <div className="text-warning">
-            <small>
-              {renderStars(product.rating)}
-            </small>{" "}
-            <span className="text-muted small">{product.rating} ({product.reviews})</span>
+          <div className="text-warning small mb-2 d-flex align-items-center flex-wrap gap-1">
+            <span className="me-1">{renderStars(product.rating)}</span>
+            <span className="text-muted">({product.reviews})</span>
           </div>
-          <div className="d-flex justify-content-between align-items-center mt-3">
+          <div className="d-flex justify-content-between align-items-center product-card-action-bar">
             <div>
-              <span className="text-dark">₹{product.price}</span>
+              <span className="text-dark fw-bold fs-6">₹{product.price}</span>
             </div>
             <div>
-              <Link to="#" className="btn btn-primary btn-sm" onClick={handleAddClick}>
+              <button
+                type="button"
+                className="btn btn-primary btn-sm px-2 py-1 d-inline-flex align-items-center"
+                onClick={handleAddClick}
+                aria-label={`Add ${product.name} to cart`}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width={16}
-                  height={16}
+                  width={14}
+                  height={14}
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth={2}
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="feather feather-plus"
+                  className="feather feather-plus me-1"
                 >
                   <line x1={12} y1={5} x2={12} y2={19} />
                   <line x1={5} y1={12} x2={19} y2={12} />
-                </svg>{" "}
+                </svg>
                 Add
-              </Link>
+              </button>
             </div>
           </div>
         </div>
