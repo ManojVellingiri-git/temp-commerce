@@ -42,3 +42,6 @@ certs/
 nginx/certs/
 ssl/
 docker/nginx/certs/
+
+# helper scripts
+scripts/
