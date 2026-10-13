@@ -124,7 +124,7 @@ const App = () => {
           <Route path="/AboutUs" element={<AboutUs />} />
           {/* Footer Elements */}
           <Route path="/Faq" element={<FAQ />} />
-          <Route path="/Coupons" element={<Coupons />} />
+          <Route path="/Coupons" element={<Navigate to="/Shop" replace />} />
           <Route path="/Careers" element={<Careers />} />
           <Route path="/helpcenter" element={<HelpCenter />} />
         </Route>

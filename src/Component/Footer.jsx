@@ -207,12 +207,7 @@ const Footer = () => {
                       Careers
                     </Link>
                   </li>
-                  <li>
-                    <Link to="/Coupons">
-                      <i className="fa fa-angle-right me-1 text-muted" aria-hidden="true" />
-                      Promos &amp; coupons
-                    </Link>
-                  </li>
+
                   <li>
                     <Link to="/MyAccountOrder">
                       <i className="fa fa-angle-right me-1 text-muted" aria-hidden="true" />

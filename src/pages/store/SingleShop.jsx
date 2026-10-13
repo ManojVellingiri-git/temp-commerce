@@ -413,10 +413,6 @@ const SingleShop = () => {
                           <div className="card card-product">
                             <div className="card-body">
                               <div className="text-center position-relative">
-                                {/* badge */}
-                                <div className="position-absolute top-0 start-0">
-                                  <span className="badge bg-danger">Sale</span>
-                                </div>
                                 <Link to="#!">
                                   {/* img */}
                                   <img
@@ -938,10 +934,6 @@ const SingleShop = () => {
                           <div className="card card-product">
                             <div className="card-body">
                               <div className="text-center position-relative">
-                                {/* badge */}
-                                <div className="position-absolute top-0 start-0">
-                                  <span className="badge bg-danger">Sale</span>
-                                </div>
                                 <Link to="#!">
                                   {/* img */}
                                   <img

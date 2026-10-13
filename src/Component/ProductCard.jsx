@@ -37,11 +37,6 @@ const ProductCard = ({ product }) => {
       <div className="card card-product">
         <div className="card-body">
           <div className="text-center position-relative">
-            {product.badge && (
-              <div className="position-absolute top-0 start-0">
-                <span className={`badge bg-${product.badge.type}`}>{product.badge.text}</span>
-              </div>
-            )}
             <Link to={`/ProductSingle`}>
               <img
                 src={product.image}
@@ -95,12 +90,7 @@ const ProductCard = ({ product }) => {
           </div>
           <div className="d-flex justify-content-between align-items-center mt-3">
             <div>
-              <span className="text-dark">₹{product.price}</span>{" "}
-              {product.originalPrice && (
-                <span className="text-decoration-line-through text-muted">
-                  ₹{product.originalPrice}
-                </span>
-              )}
+              <span className="text-dark">₹{product.price}</span>
             </div>
             <div>
               <Link to="#" className="btn btn-primary btn-sm" onClick={handleAddClick}>

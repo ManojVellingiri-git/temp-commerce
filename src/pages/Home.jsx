@@ -247,9 +247,6 @@ const Home = () => {
                           }}
                         >
                           <div className="ps-lg-12 py-lg-16 col-xxl-5 col-md-7 py-6 py-md-14 px-4 px-md-8 text-xs-center">
-                            <span className="badge text-bg-warning">
-                              Opening Sale Discount 50%
-                            </span>
                             <h2 className="text-dark fw-bold mt-3 mt-md-4" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.75rem)' }}>
                               SuperMarket Daily <br /> Fresh Grocery
                             </h2>
@@ -282,8 +279,8 @@ const Home = () => {
                               <span className="text-primary">₹499</span>
                             </h2>
                             <p className="lead fs-6 fs-md-5">
-                              Free Shipping to First-Time Customers Only, After
-                              promotions and discounts are applied.
+                              Enjoy fast and reliable doorstep delivery on all
+                              fresh grocery orders across your city.
                             </p>
                             <Link to="/Shop" className="btn btn-dark mt-2 mt-md-3">
                               Shop Now{" "}
@@ -321,111 +318,7 @@ const Home = () => {
                 </div>
               </section>
             </>
-            <>
-              {/* section */}
-              <section className="mt-8">
-                <div className="container">
-                  {/* row */}
-                  <div className="row">
-                    <div className="col-lg-4 col-md-6 col-12 fade-in-left">
-                      <Slide direction="left">
-                        <div className=" banner mb-3">
-                          {/* Banner Content */}
-                          <div className="position-relative">
-                            {/* Banner Image */}
-                            <img
-                              src={adbanner1}
-                              alt="ad-banner"
-                              className="img-fluid rounded-3 w-100"
-                            />
-                            <div className="banner-text">
-                              <h3 className="mb-0 fw-bold">
-                                10% cashback on <br />
-                                personal care{" "}
-                              </h3>
-                              <div className="mt-4 mb-5 fs-5">
-                                <p className="mb-0">Max cashback: ₹100</p>
-                                <span>
-                                  Code:{" "}
-                                  <span className="fw-bold text-dark">
-                                    CARE12
-                                  </span>
-                                </span>
-                              </div>
-                              <Link to="#" className="btn btn-dark">
-                                Shop Now
-                              </Link>
-                            </div>
-                            {/* Banner Content */}
-                          </div>
-                        </div>
-                      </Slide>
-                    </div>
 
-                    <div className="col-lg-4 col-md-6  col-12 slide-in-top">
-                      <Zoom>
-                        <div className="banner mb-3 ">
-                          {/* Banner Content */}
-                          <div className="position-relative">
-                            {/* Banner Image */}
-                            <img
-                              src={adbanner2}
-                              alt="ad-banner-2"
-                              className="img-fluid rounded-3 w-100"
-                            />
-                            <div className="banner-text">
-                              {/* Banner Content */}
-                              <h3 className=" fw-bold mb-2">
-                                Say yes to <br />
-                                season’s fresh{" "}
-                              </h3>
-                              <p className="fs-5">
-                                Refresh your day <br />
-                                the fruity way
-                              </p>
-                              <Link to="#" className="btn btn-dark mt-2">
-                                Shop Now
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </Zoom>
-                    </div>
-                    <div className="col-lg-4 col-12 fade-in-left ">
-                      <Slide direction="right">
-                        <div className="banner mb-3">
-                          <div className="banner-img">
-                            {/* Banner Image */}
-                            <img
-                              src={adbanner3}
-                              alt="ad-banner-3"
-                              className="img-fluid rounded-3 w-100"
-                            />
-                            {/* Banner Content */}
-                            <div className="banner-text">
-                              <h3 className="fs-2 fw-bold lh-1 mb-2">
-                                When in doubt,
-                                <br />
-                                eat ice cream{" "}
-                              </h3>
-                              <p className="fs-5">
-                                Enjoy a scoop of
-                                <br />
-                                summer today
-                              </p>
-                              <Link to="#" className="btn btn-dark">
-                                Shop Now
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </Slide>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              {/* section */}
-            </>
             <>
               {/* section category */}
               <section className="my-lg-14 my-8">
@@ -739,68 +632,7 @@ const Home = () => {
               </section>
               {/* section */}
             </>
-            <>
-              <section>
-                <div className="container ">
-                  <div className="row">
-                    <div className="col-12 col-lg-6 mb-3 mb-lg-0  fade-in-left">
-                      <Slide direction="left">
-                        <div>
-                          <div
-                            className="py-10 px-8 rounded-3"
-                            style={{
-                              background: `url(${grocerybanner}) no-repeat`,
-                              backgroundSize: "cover",
-                              backgroundPosition: "center",
-                            }}
-                          >
-                            <div>
-                              <h3 className="fw-bold mb-1">
-                                Fruits &amp; Vegetables
-                              </h3>
-                              <p className="mb-4">
-                                Get Upto <span className="fw-bold">30%</span>{" "}
-                                Off
-                              </p>
-                              <Link to="#!" className="btn btn-dark">
-                                Shop Now
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </Slide>
-                    </div>
-                    <div className="col-12 col-lg-6 fade-in-left ">
-                      <Slide direction="right">
-                        <div>
-                          <div
-                            className="py-10 px-8 rounded-3"
-                            style={{
-                              background: `url(${grocerybanner2}) no-repeat`,
-                              backgroundSize: "cover",
-                              backgroundPosition: "center",
-                            }}
-                          >
-                            <div>
-                              <h3 className="fw-bold mb-1">
-                                Freshly Baked Buns
-                              </h3>
-                              <p className="mb-4">
-                                Get Upto <span className="fw-bold">25%</span>{" "}
-                                Off
-                              </p>
-                              <Link to="#!" className="btn btn-dark">
-                                Shop Now
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </Slide>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </>
+
             <>
               <ProductItem />
             </>
@@ -835,7 +667,7 @@ const Home = () => {
                             100% Organic Coffee Beans.
                           </h3>
                           <p className="text-white">
-                            Get the best deal before close.
+                            Freshly roasted, delivered fast.
                           </p>
                           <Link to="#!" className="btn btn-primary">
                             Shop Now{" "}
@@ -903,10 +735,7 @@ const Home = () => {
                                   </h2>
                                   <div className="d-flex justify-content-between align-items-center mt-3">
                                     <div>
-                                      <span className="text-dark">₹13</span>{" "}
-                                      <span className="text-decoration-line-through text-muted">
-                                        ₹18
-                                      </span>
+                                      <span className="text-dark">₹13</span>
                                     </div>
                                     <div>
                                       <small className="text-warning">
@@ -942,12 +771,7 @@ const Home = () => {
                                       Add to cart{" "}
                                     </Link>
                                   </div>
-                                  <div className="d-flex justify-content-start text-center mt-3">
-                                    <div
-                                      className="deals-countdown w-100"
-                                      data-countdown="2022/11/11 00:00:00"
-                                    />
-                                  </div>
+
                                 </div>
                               </div>
                             </div>
@@ -1008,10 +832,7 @@ const Home = () => {
                                   </h2>
                                   <div className="d-flex justify-content-between align-items-center mt-3">
                                     <div>
-                                      <span className="text-dark">₹13</span>{" "}
-                                      <span className="text-decoration-line-through text-muted">
-                                        ₹18
-                                      </span>
+                                      <span className="text-dark">₹13</span>
                                     </div>
                                     <div>
                                       <small className="text-warning">
@@ -1047,12 +868,7 @@ const Home = () => {
                                       Add to cart{" "}
                                     </Link>
                                   </div>
-                                  <div className="d-flex justify-content-start text-center mt-3">
-                                    <div
-                                      className="deals-countdown w-100"
-                                      data-countdown="2022/11/11 00:00:00"
-                                    />
-                                  </div>
+
                                 </div>
                               </div>
                             </div>
@@ -1113,10 +929,7 @@ const Home = () => {
                                   </h2>
                                   <div className="d-flex justify-content-between align-items-center mt-3">
                                     <div>
-                                      <span className="text-dark">₹13</span>{" "}
-                                      <span className="text-decoration-line-through text-muted">
-                                        ₹18
-                                      </span>
+                                      <span className="text-dark">₹13</span>
                                     </div>
                                     <div>
                                       <small className="text-warning">
@@ -1152,12 +965,7 @@ const Home = () => {
                                       Add to cart{" "}
                                     </Link>
                                   </div>
-                                  <div className="d-flex justify-content-start text-center mt-3">
-                                    <div
-                                      className="deals-countdown w-100"
-                                      data-countdown="2022/11/11 00:00:00"
-                                    />
-                                  </div>
+
                                 </div>
                               </div>
                             </div>
@@ -1218,10 +1026,7 @@ const Home = () => {
                                   </h2>
                                   <div className="d-flex justify-content-between align-items-center mt-3">
                                     <div>
-                                      <span className="text-dark">₹13</span>{" "}
-                                      <span className="text-decoration-line-through text-muted">
-                                        ₹18
-                                      </span>
+                                      <span className="text-dark">₹13</span>
                                     </div>
                                     <div>
                                       <small className="text-warning">
@@ -1257,12 +1062,7 @@ const Home = () => {
                                       Add to cart{" "}
                                     </Link>
                                   </div>
-                                  <div className="d-flex justify-content-start text-center mt-3">
-                                    <div
-                                      className="deals-countdown w-100"
-                                      data-countdown="2022/11/11 00:00:00"
-                                    />
-                                  </div>
+
                                 </div>
                               </div>
                             </div>
@@ -1335,12 +1135,12 @@ const Home = () => {
                             </div>
                             <div className="icon-content">
                               <h3 className="h5 mb-3">
-                                Best Prices &amp; Offers
+                                Fresh &amp; Quality Sourced
                               </h3>
                               <p>
-                                Cheaper prices than your local supermarket,
-                                great cashback offers to top it off. Get best
-                                pricess &amp; offers.
+                                Handpicked fresh items sourced directly from
+                                trusted local farms and certified suppliers.
+                                Always premium quality.
                               </p>
                             </div>
                           </div>

@@ -373,12 +373,6 @@ const ShopListCol = () => {
                                 {/* col */}
                                 <div className="col-md-4 col-12">
                                   <div className="text-center position-relative ">
-                                    <div className=" position-absolute top-0">
-                                      {/* badge */}{" "}
-                                      <span className="badge bg-danger">
-                                        Sale
-                                      </span>
-                                    </div>
                                     <Link to="#!">
                                       {/* img */}
                                       <img
@@ -424,10 +418,7 @@ const ShopListCol = () => {
                                   <div className=" mt-6">
                                     {/* price */}
                                     <div>
-                                      <span className="text-dark">₹18</span>{" "}
-                                      <span className="text-decoration-line-through text-muted">
-                                        ₹24
-                                      </span>
+                                      <span className="text-dark">₹18</span>
                                     </div>
                                     {/* btn */}
                                     <div className="mt-3">
@@ -604,12 +595,6 @@ const ShopListCol = () => {
                               <div className=" row align-items-center">
                                 <div className="col-md-4 col-12">
                                   <div className="text-center position-relative">
-                                    <div className=" position-absolute top-0">
-                                      {/* badge */}{" "}
-                                      <span className="badge bg-success">
-                                        14%
-                                      </span>
-                                    </div>
                                     <Link to="#!">
                                       {/* img */}
                                       <img
@@ -766,10 +751,7 @@ const ShopListCol = () => {
                                   <div className=" mt-6">
                                     {/* price */}
                                     <div>
-                                      <span className="text-dark">₹3</span>{" "}
-                                      <span className="text-decoration-line-through text-muted">
-                                        ₹9
-                                      </span>
+                                      <span className="text-dark">₹3</span>
                                     </div>
                                     {/* btn */}
                                     <div className="mt-3">
@@ -880,10 +862,7 @@ const ShopListCol = () => {
                                   <div className=" mt-6">
                                     {/* price */}
                                     <div>
-                                      <span className="text-dark">₹13</span>{" "}
-                                      <span className="text-decoration-line-through text-muted">
-                                        ₹19
-                                      </span>
+                                      <span className="text-dark">₹13</span>
                                     </div>
                                     {/* btn */}
                                     <div className="mt-3">

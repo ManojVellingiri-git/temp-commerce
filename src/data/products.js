@@ -16,10 +16,10 @@ export const products = [
     category: "Snack & Munchies",
     image: product1,
     price: 18,
-    originalPrice: 24,
+    originalPrice: null,
     rating: 4.5,
     reviews: 149,
-    badge: { type: "danger", text: "Sale" }
+    badge: null
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ export const products = [
     originalPrice: null,
     rating: 4.5,
     reviews: 25,
-    badge: { type: "success", text: "14%" }
+    badge: null
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ export const products = [
     category: "Bakery & Biscuits",
     image: product3,
     price: 32,
-    originalPrice: 35,
+    originalPrice: null,
     rating: 5,
     reviews: 469,
     badge: null
@@ -49,10 +49,10 @@ export const products = [
     category: "Snack & Munchies",
     image: product4,
     price: 3,
-    originalPrice: 5,
+    originalPrice: null,
     rating: 3.5,
     reviews: 456,
-    badge: { type: "danger", text: "Hot" }
+    badge: null
   },
   {
     id: 5,
@@ -60,7 +60,7 @@ export const products = [
     category: "Instant Food",
     image: product5,
     price: 13,
-    originalPrice: 18,
+    originalPrice: null,
     rating: 4.5,
     reviews: 39,
     badge: null
@@ -71,10 +71,10 @@ export const products = [
     category: "Dairy, Bread & Eggs",
     image: product6,
     price: 18,
-    originalPrice: 24,
+    originalPrice: null,
     rating: 4.5,
     reviews: 189,
-    badge: { type: "danger", text: "Sale" }
+    badge: null
   },
   {
     id: 7,
@@ -93,10 +93,10 @@ export const products = [
     category: "Instant Food",
     image: product8,
     price: 32,
-    originalPrice: 35,
+    originalPrice: null,
     rating: 4,
     reviews: 90,
-    badge: { type: "success", text: "14%" }
+    badge: null
   },
   {
     id: 9,
@@ -104,7 +104,7 @@ export const products = [
     category: "Snack & Munchies",
     image: product9,
     price: 3,
-    originalPrice: 5,
+    originalPrice: null,
     rating: 4.5,
     reviews: 67,
     badge: null
@@ -115,7 +115,7 @@ export const products = [
     category: "Dairy, Bread & Eggs",
     image: product10,
     price: 13,
-    originalPrice: 18,
+    originalPrice: null,
     rating: 3,
     reviews: 12,
     badge: null

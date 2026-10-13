@@ -34,7 +34,7 @@ const Header = () => {
     <div>
       <div className="border-bottom bg-light py-1">
         <div className="container d-flex justify-content-between align-items-center">
-          <span className="small text-muted text-truncate">Super Value Deals - Save more with coupons</span>
+          <span className="small text-muted text-truncate">Free Delivery on Orders Over ₹499</span>
           <div className="d-none d-lg-flex align-items-center gap-3">
             <Link to="/helpcenter" className="text-muted small text-decoration-none">Help Center</Link>
             <Link to="/Contact" className="text-muted small text-decoration-none">Contact Us</Link>
@@ -487,8 +487,8 @@ const Header = () => {
                     />
                     <div className="position-absolute ps-6 mt-8">
                       <h5 className=" mb-0 ">
-                        Dont miss this <br />
-                        offer today.
+                        Fresh Daily <br />
+                        Groceries.
                       </h5>
                       <Link
                         to="/Shop"
@@ -794,7 +794,7 @@ const Header = () => {
                     Choose your Delivery Location
                   </h5>
                   <p className="mb-0 small">
-                    Enter your address and we will specify the offer you
+                    Enter your address and we will specify the delivery options for your
                     area.{" "}
                   </p>
                 </div>

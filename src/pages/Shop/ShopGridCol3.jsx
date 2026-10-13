@@ -371,9 +371,6 @@ const ShopGridCol3 = () => {
                             <div className="card-body">
                               {/* badge */}
                               <div className="text-center position-relative ">
-                                <div className=" position-absolute top-0 start-0">
-                                  <span className="badge bg-danger">Sale</span>
-                                </div>
                                 <Link to="#!">
                                   {/* img */}
                                   <img
@@ -442,10 +439,7 @@ const ShopGridCol3 = () => {
                               {/* price */}
                               <div className="d-flex justify-content-between align-items-center mt-3">
                                 <div>
-                                  <span className="text-dark">₹18</span>{" "}
-                                  <span className="text-decoration-line-through text-muted">
-                                    ₹24
-                                  </span>
+                                  <span className="text-dark">₹18</span>
                                 </div>
                                 {/* btn */}
                                 <div>
@@ -481,9 +475,6 @@ const ShopGridCol3 = () => {
                           <div className="card card-product">
                             <div className="card-body">
                               <div className="text-center position-relative">
-                                <div className=" position-absolute top-0 start-0">
-                                  <span className="badge bg-success">14%</span>
-                                </div>
                                 <Link to="#!">
                                   {/* img */}
                                   <img
@@ -656,10 +647,7 @@ const ShopGridCol3 = () => {
                               {/* price */}
                               <div className="d-flex justify-content-between align-items-center mt-3">
                                 <div>
-                                  <span className="text-dark">₹32</span>{" "}
-                                  <span className="text-decoration-line-through text-muted">
-                                    ₹35
-                                  </span>
+                                  <span className="text-dark">₹32</span>
                                 </div>
                                 {/* btn */}
                                 <div>
@@ -695,9 +683,6 @@ const ShopGridCol3 = () => {
                           <div className="card card-product">
                             <div className="card-body">
                               <div className="text-center position-relative">
-                                <div className=" position-absolute top-0">
-                                  <span className="badge bg-danger">hot</span>
-                                </div>
                                 <Link to="#!">
                                   {/* img */}
                                   <img
@@ -766,10 +751,7 @@ const ShopGridCol3 = () => {
                               {/* price */}
                               <div className="d-flex justify-content-between align-items-center mt-3">
                                 <div>
-                                  <span className="text-dark">₹3</span>{" "}
-                                  <span className="text-decoration-line-through text-muted">
-                                    ₹5
-                                  </span>
+                                  <span className="text-dark">₹3</span>
                                 </div>
                                 {/* btn */}
                                 <div>
@@ -872,10 +854,7 @@ const ShopGridCol3 = () => {
                               </div>
                               <div className="d-flex justify-content-between mt-4">
                                 <div>
-                                  <span className="text-dark">₹13</span>{" "}
-                                  <span className="text-decoration-line-through text-muted">
-                                    ₹18
-                                  </span>
+                                  <span className="text-dark">₹13</span>
                                 </div>
                                 {/* btn */}
                                 <div>
@@ -912,9 +891,6 @@ const ShopGridCol3 = () => {
                             <div className="card-body">
                               {/* badge */}
                               <div className="text-center position-relative ">
-                                <div className=" position-absolute top-0 start-0">
-                                  <span className="badge bg-danger">Sale</span>
-                                </div>
                                 <Link to="#!">
                                   {/* img */}
                                   <img
@@ -983,10 +959,7 @@ const ShopGridCol3 = () => {
                               {/* price */}
                               <div className="d-flex justify-content-between align-items-center mt-3">
                                 <div>
-                                  <span className="text-dark">₹18</span>{" "}
-                                  <span className="text-decoration-line-through text-muted">
-                                    ₹24
-                                  </span>
+                                  <span className="text-dark">₹18</span>
                                 </div>
                                 {/* btn */}
                                 <div>
@@ -1192,10 +1165,7 @@ const ShopGridCol3 = () => {
                               {/* price */}
                               <div className="d-flex justify-content-between align-items-center mt-3">
                                 <div>
-                                  <span className="text-dark">₹32</span>{" "}
-                                  <span className="text-decoration-line-through text-muted">
-                                    ₹35
-                                  </span>
+                                  <span className="text-dark">₹32</span>
                                 </div>
                                 {/* btn */}
                                 <div>
@@ -1299,10 +1269,7 @@ const ShopGridCol3 = () => {
                               {/* price */}
                               <div className="d-flex justify-content-between align-items-center mt-3">
                                 <div>
-                                  <span className="text-dark">₹3</span>{" "}
-                                  <span className="text-decoration-line-through text-muted">
-                                    ₹5
-                                  </span>
+                                  <span className="text-dark">₹3</span>
                                 </div>
                                 {/* btn */}
                                 <div>
@@ -1405,10 +1372,7 @@ const ShopGridCol3 = () => {
                               </div>
                               <div className="d-flex justify-content-between mt-4">
                                 <div>
-                                  <span className="text-dark">₹13</span>{" "}
-                                  <span className="text-decoration-line-through text-muted">
-                                    ₹18
-                                  </span>
+                                  <span className="text-dark">₹13</span>
                                 </div>
                                 {/* btn */}
                                 <div>

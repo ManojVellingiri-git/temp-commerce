@@ -147,11 +147,6 @@ const ShopCart = () => {
                               </div>
                               <div className="col-sm-3 col-md-3 col-lg-3 text-end d-none d-sm-block">
                                 <span className="fw-bold">₹{(item.price * item.quantity).toFixed(2)}</span>
-                                {item.originalPrice && item.originalPrice > item.price && (
-                                  <div className="text-decoration-line-through text-muted small">
-                                    ₹{(item.originalPrice * item.quantity).toFixed(2)}
-                                  </div>
-                                )}
                               </div>
                               {/* Mobile-only Controls & Price Stacked Row */}
                               <div className="col-12 d-flex d-sm-none justify-content-between align-items-center mt-2 pt-2 border-top">
@@ -176,11 +171,6 @@ const ShopCart = () => {
                                 </div>
                                 <div className="text-end">
                                   <span className="fw-bold">₹{(item.price * item.quantity).toFixed(2)}</span>
-                                  {item.originalPrice && item.originalPrice > item.price && (
-                                    <small className="text-decoration-line-through text-muted ms-2">
-                                      ₹{(item.originalPrice * item.quantity).toFixed(2)}
-                                    </small>
-                                  )}
                                 </div>
                               </div>
                             </div>
@@ -229,14 +219,7 @@ const ShopCart = () => {
                             </div>
                             <span>₹{calculateTax().toFixed(2)}</span>
                           </li>
-                          {calculateDiscount() > 0 && (
-                            <li className="list-group-item d-flex justify-content-between align-items-start">
-                              <div className="me-auto">
-                                <div>Discount</div>
-                              </div>
-                              <span className="text-success">-₹{calculateDiscount().toFixed(2)}</span>
-                            </li>
-                          )}
+
                           <li className="list-group-item d-flex justify-content-between align-items-start">
                             <div className="me-auto">
                               <div className="fw-bold">Grand Total</div>
@@ -267,39 +250,7 @@ const ShopCart = () => {
                         </small>
                       </p>
                       {/* heading */}
-                      <div className="mt-8">
-                        <h2 className="h5 mb-3">Add Promo or Gift Card</h2>
-                        <form onSubmit={(e) => { e.preventDefault(); alert("Coupon applied!"); }}>
-                          <div className="mb-2">
-                            {/* input */}
-                            <label
-                              htmlFor="giftcard"
-                              className="form-label sr-only"
-                            >
-                              Email address
-                            </label>
-                            <input
-                              type="text"
-                              className="form-control"
-                              id="giftcard"
-                              placeholder="Promo or Gift Card"
-                            />
-                          </div>
-                          {/* btn */}
-                          <div className="d-grid">
-                            <button
-                              type="submit"
-                              className="btn btn-outline-dark mb-1"
-                            >
-                              Redeem
-                            </button>
-                          </div>
-                          <p className="text-muted mb-0">
-                            {" "}
-                            <small>Terms &amp; Conditions apply</small>
-                          </p>
-                        </form>
-                      </div>
+
                     </div>
                   </div>
                 </div>
