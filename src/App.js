@@ -3,7 +3,7 @@ import React from "react";
 // css
 import "./App.css";
 // browserrouter 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 // Components
 import Header from './Component/Header';
 import Footer from "./Component/Footer";
@@ -24,9 +24,7 @@ import ShopCart from "./pages/Shop/ShopCart";
 import ShopCheckOut from "./pages/Shop/ShopCheckOut";
 import OrderSuccess from "./pages/Shop/OrderSuccess";
 import ShopWishList from "./pages/Shop/ShopWishList";
-// Store pages
-import StoreList from "./pages/store/StoreList";
-import SingleShop from "./pages/store/SingleShop";
+
 // Account pages
 import MyAccountOrder from "./pages/Accounts/MyAccountOrder";
 import MyAccountSetting from "./pages/Accounts/MyAcconutSetting";
@@ -103,9 +101,9 @@ const App = () => {
           <Route path="/ShopWishList" element={<ShopWishList />} />
           
           <Route path="/ShopCart" element={<ShopCart />} />
-          {/* Store pages */}
-          <Route path="/StoreList" element={<StoreList />} />
-          <Route path="/SingleShop" element={<SingleShop />} />
+          {/* Store routes redirected */}
+          <Route path="/StoreList" element={<Navigate to="/Shop" replace />} />
+          <Route path="/SingleShop" element={<Navigate to="/Shop" replace />} />
           {/* Accounts pages */}
           <Route element={<ProtectedRoute />}>
             <Route path="/order-success/:orderId" element={<OrderSuccess />} />

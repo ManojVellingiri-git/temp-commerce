@@ -1563,7 +1563,7 @@ const Home = () => {
                               <p>
                                 Get your order delivered to your doorstep at the
                                 earliest from {brandConfig.name} pickup
-                                 stores near you.
+                                 hubs near you.
                               </p>
                             </div>
                           </div>

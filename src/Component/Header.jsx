@@ -344,33 +344,6 @@ const Header = () => {
             </div>
           </li>
 
-          <li className="nav-item dmenu dropdown">
-            <Link
-              className="nav-link dropdown-toggle"
-              to="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Stores
-            </Link>
-            <div
-              className="dropdown-menu sm-menu"
-              aria-labelledby="navbarDropdown"
-            >
-              <Link className="dropdown-item" to="/StoreList">
-                Store List
-              </Link>
-              {/* <Link className="dropdown-item" to="pages/store-grid.html">
-                    Store Grid
-                  </Link> */}
-              <Link className="dropdown-item" to="/SingleShop">
-                Single Store
-              </Link>
-            </div>
-          </li>
           {/* <li className="nav-item dmenu dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
