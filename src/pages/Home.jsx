@@ -17,10 +17,6 @@ import fruitsvegetables from "../images/fruits-vegetables.png";
 import dairybreadeggs from "../images/dairy-bread-eggs.png";
 import grocerybanner from "../images/grocery-banner.png";
 import grocerybanner2 from "../images/grocery-banner-2.jpg";
-import map from "../images/map.png";
-import iphone from "../images/iphone-2.png";
-import googleplay from "../images/googleplay-btn.svg";
-import appstore from "../images/appstore-btn.svg";
 import bannerdeal from "../images/banner-deal1.jpg";
 import product11 from "../images/product-img-11.jpg";
 import product12 from "../images/product-img-12.jpg";
@@ -808,125 +804,7 @@ const Home = () => {
             <>
               <ProductItem />
             </>
-            <>
-              {/* cta section */}
-              <section>
-                <div
-                  className="container"
-                  style={{
-                    background: `url(${map})no-repeat`,
-                    backgroundSize: "cover",
-                  }}
-                >
-                  {/* <hr className="my-lg-14 my-8"> */}
-                  {/* row */}
-                  <div className="row align-items-center text-center justify-content-center">
-                    <div className=" col-lg-6 col-md-6 fade-in-left">
-                      <Slide direction="left">
-                        <div className="mb-6">
-                          <div className="mb-7">
-                            {/* heading */}
-                            <h1>Get the {brandConfig.name} app</h1>
-                            <h5 className="mb-0">
-                              We will send you a link, open it on your phone to
-                              download the app.
-                            </h5>
-                          </div>
-                          <div className="mb-5">
-                            {/* form check */}
-                            <div className="form-check form-check-inline">
-                              <input
-                                className="form-check-input"
-                                type="radio"
-                                name="flexRadioDefault"
-                                id="flexRadioDefault1"
-                              />
-                              <label
-                                className="form-check-label"
-                                htmlFor="flexRadioDefault1"
-                              >
-                                Email
-                              </label>
-                            </div>
-                            {/* form check */}
-                            <div className="form-check form-check-inline">
-                              <input
-                                className="form-check-input"
-                                type="radio"
-                                name="flexRadioDefault"
-                                id="flexRadioDefault2"
-                                defaultChecked
-                              />
-                              <label
-                                className="form-check-label"
-                                htmlFor="flexRadioDefault2"
-                              >
-                                Phone
-                              </label>
-                            </div>
-                            {/* form */}
-                            {/* <form className="row g-3 mt-2">
-
-          
-          <div className="col-6 ">
             
-            <input type="text" className="form-control" placeholder="Phone">
-          </div>
-           
-          <div className="col-6">
-            <button type="submit" className="btn btn-primary mb-3">Share app link</button>
-          </div>
-        </form> */}
-                          </div>
-                          <div>
-                            {/* app */}
-                            {/* <small>Download app from</small> */}
-                            <ul className="list-inline mb-0 mt-2 ">
-                              {/* list item */}
-                              <li className="list-inline-item">
-                                {/* img */}
-                                <Link to="#!">
-                                  {" "}
-                                  <img
-                                    src={appstore}
-                                    alt="appstore"
-                                    style={{ width: 140 }}
-                                  />
-                                </Link>
-                              </li>
-                              <li className="list-inline-item">
-                                {/* img */}
-                                <Link to="#!">
-                                  {" "}
-                                  <img
-                                    src={googleplay}
-                                    alt="googleplay"
-                                    style={{ width: 140 }}
-                                  />
-                                </Link>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </Slide>
-                    </div>
-                    <div className=" offset-lg-2 col-lg-4 col-md-6 fade-zoom">
-                      <Slide direction="right">
-                        <div className="text-lg-start">
-                          {/* img */}
-                          <img
-                            src={iphone}
-                            alt="iphone"
-                            className=" img-fluid"
-                          />
-                        </div>
-                      </Slide>
-                    </div>
-                  </div>
-                  {/* <hr className="my-lg-14 my-8"> */}
-                </div>
-              </section>
-            </>
             <>
               <section>
                 <div className="container">
