@@ -8,7 +8,6 @@ import productimage4 from '../images/product-img-4.jpg'
 import productimage5 from '../images/product-img-5.jpg'
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
-import { useWishlist } from "../context/WishlistContext";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
@@ -17,7 +16,6 @@ const Header = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   const { cart, getCartCount, calculateSubtotal, removeFromCart, increaseQuantity, decreaseQuantity, setQuantity } = useCart();
-  const { getWishlistCount } = useWishlist();
   const { user, isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
   
@@ -71,28 +69,7 @@ const Header = () => {
           {/* Action Icons & Toggler (Unified on all viewports, visible mobile, tablet, and desktop) */}
           <div className="d-flex align-items-center ms-auto">
             <div className="list-inline mb-0 d-flex align-items-center gap-2 gap-sm-3 me-2 me-lg-3">
-              {/* Wishlist */}
-              <div className="list-inline-item m-0">
-                <Link to="/ShopWishList" className="text-muted position-relative p-1 d-inline-block" title="Wishlist">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={22}
-                    height={22}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="feather feather-heart"
-                  >
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                  </svg>
-                  <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
-                    {getWishlistCount()}
-                  </span>
-                </Link>
-              </div>
+
 
               {/* User Dropdown */}
               <div className="list-inline-item m-0">
@@ -331,9 +308,6 @@ const Header = () => {
             >
               <Link className="dropdown-item" to="/Shop">
                 Shop
-              </Link>
-              <Link className="dropdown-item" to="/ShopWishList">
-                Shop Wishlist
               </Link>
               <Link className="dropdown-item" to="/ShopCart">
                 Shop Cart

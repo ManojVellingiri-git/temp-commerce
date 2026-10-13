@@ -445,15 +445,6 @@ const ShopListCol = () => {
                                         />
                                       </Link>
                                       <Link
-                                        to="shop-wishlist.html"
-                                        className="btn btn-icon btn-sm btn-outline-gray-400 text-muted"
-                                        data-bs-toggle="tooltip"
-                                        data-bs-html="true"
-                                        title="Wishlist"
-                                      >
-                                        <i className="bi bi-heart" />
-                                      </Link>
-                                      <Link
                                         to="#!"
                                         className="btn btn-icon btn-sm btn-outline-gray-400 text-muted"
                                         data-bs-toggle="tooltip"
@@ -563,15 +554,6 @@ const ShopListCol = () => {
                                           data-bs-html="true"
                                           title="Quick View"
                                         />
-                                      </Link>
-                                      <Link
-                                        to="shop-wishlist.html"
-                                        className="btn btn-icon btn-sm btn-outline-gray-400 text-muted"
-                                        data-bs-toggle="tooltip"
-                                        data-bs-html="true"
-                                        title="Wishlist"
-                                      >
-                                        <i className="bi bi-heart" />
                                       </Link>
                                       <Link
                                         to="#!"
@@ -691,15 +673,6 @@ const ShopListCol = () => {
                                         />
                                       </Link>
                                       <Link
-                                        to="shop-wishlist.html"
-                                        className="btn btn-icon btn-sm btn-outline-gray-400 text-muted"
-                                        data-bs-toggle="tooltip"
-                                        data-bs-html="true"
-                                        title="Wishlist"
-                                      >
-                                        <i className="bi bi-heart" />
-                                      </Link>
-                                      <Link
                                         to="#!"
                                         className="btn btn-icon btn-sm btn-outline-gray-400 text-muted"
                                         data-bs-toggle="tooltip"
@@ -814,15 +787,6 @@ const ShopListCol = () => {
                                         />
                                       </Link>
                                       <Link
-                                        to="shop-wishlist.html"
-                                        className="btn btn-icon btn-sm btn-outline-gray-400 text-muted"
-                                        data-bs-toggle="tooltip"
-                                        data-bs-html="true"
-                                        title="Wishlist"
-                                      >
-                                        <i className="bi bi-heart" />
-                                      </Link>
-                                      <Link
                                         to="#!"
                                         className="btn btn-icon btn-sm btn-outline-gray-400 text-muted"
                                         data-bs-toggle="tooltip"
@@ -935,15 +899,6 @@ const ShopListCol = () => {
                                           data-bs-html="true"
                                           title="Quick View"
                                         />
-                                      </Link>
-                                      <Link
-                                        to="shop-wishlist.html"
-                                        className="btn btn-icon btn-sm btn-outline-gray-400 text-muted"
-                                        data-bs-toggle="tooltip"
-                                        data-bs-html="true"
-                                        title="Wishlist"
-                                      >
-                                        <i className="bi bi-heart" />
                                       </Link>
                                       <Link
                                         to="#!"

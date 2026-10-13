@@ -398,15 +398,6 @@ const ShopGridCol3 = () => {
                                     />
                                   </Link>
                                   <Link
-                                    to="shop-wishlist.html"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
-                                  </Link>
-                                  <Link
                                     to="#!"
                                     className="btn-action"
                                     data-bs-toggle="tooltip"
@@ -521,15 +512,6 @@ const ShopGridCol3 = () => {
                                     className="btn-action"
                                     data-bs-toggle="tooltip"
                                     data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
                                     title="Compare"
                                   >
                                     <i className="bi bi-arrow-left-right" />
@@ -628,15 +610,6 @@ const ShopGridCol3 = () => {
                                       data-bs-html="true"
                                       title="Quick View"
                                     />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -753,15 +726,6 @@ const ShopGridCol3 = () => {
                                     className="btn-action"
                                     data-bs-toggle="tooltip"
                                     data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
                                     title="Compare"
                                   >
                                     <i className="bi bi-arrow-left-right" />
@@ -863,15 +827,6 @@ const ShopGridCol3 = () => {
                                       data-bs-html="true"
                                       title="Quick View"
                                     />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -982,15 +937,6 @@ const ShopGridCol3 = () => {
                                       data-bs-html="true"
                                       title="Quick View"
                                     />
-                                  </Link>
-                                  <Link
-                                    to="shop-wishlist.html"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -1104,15 +1050,6 @@ const ShopGridCol3 = () => {
                                     className="btn-action"
                                     data-bs-toggle="tooltip"
                                     data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
                                     title="Compare"
                                   >
                                     <i className="bi bi-arrow-left-right" />
@@ -1211,15 +1148,6 @@ const ShopGridCol3 = () => {
                                       data-bs-html="true"
                                       title="Quick View"
                                     />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -1331,15 +1259,6 @@ const ShopGridCol3 = () => {
                                     className="btn-action"
                                     data-bs-toggle="tooltip"
                                     data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
                                     title="Compare"
                                   >
                                     <i className="bi bi-arrow-left-right" />
@@ -1441,15 +1360,6 @@ const ShopGridCol3 = () => {
                                       data-bs-html="true"
                                       title="Quick View"
                                     />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"

@@ -445,15 +445,6 @@ const SingleShop = () => {
                                     className="btn-action"
                                     data-bs-toggle="tooltip"
                                     data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
                                     title="Compare"
                                   >
                                     <i className="bi bi-arrow-left-right" />
@@ -560,15 +551,6 @@ const SingleShop = () => {
                                     className="btn-action"
                                     data-bs-toggle="tooltip"
                                     data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
                                     title="Compare"
                                   >
                                     <i className="bi bi-arrow-left-right" />
@@ -665,15 +647,6 @@ const SingleShop = () => {
                                       data-bs-html="true"
                                       title="Quick View"
                                     />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -785,15 +758,6 @@ const SingleShop = () => {
                                     className="btn-action"
                                     data-bs-toggle="tooltip"
                                     data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
                                     title="Compare"
                                   >
                                     <i className="bi bi-arrow-left-right" />
@@ -893,15 +857,6 @@ const SingleShop = () => {
                                       data-bs-html="true"
                                       title="Quick View"
                                     />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -1015,15 +970,6 @@ const SingleShop = () => {
                                     className="btn-action"
                                     data-bs-toggle="tooltip"
                                     data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
                                     title="Compare"
                                   >
                                     <i className="bi bi-arrow-left-right" />
@@ -1130,15 +1076,6 @@ const SingleShop = () => {
                                     className="btn-action"
                                     data-bs-toggle="tooltip"
                                     data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
                                     title="Compare"
                                   >
                                     <i className="bi bi-arrow-left-right" />
@@ -1235,15 +1172,6 @@ const SingleShop = () => {
                                       data-bs-html="true"
                                       title="Quick View"
                                     />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"
@@ -1353,15 +1281,6 @@ const SingleShop = () => {
                                     className="btn-action"
                                     data-bs-toggle="tooltip"
                                     data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
                                     title="Compare"
                                   >
                                     <i className="bi bi-arrow-left-right" />
@@ -1461,15 +1380,6 @@ const SingleShop = () => {
                                       data-bs-html="true"
                                       title="Quick View"
                                     />
-                                  </Link>
-                                  <Link
-                                    to="#!"
-                                    className="btn-action"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-html="true"
-                                    title="Wishlist"
-                                  >
-                                    <i className="bi bi-heart" />
                                   </Link>
                                   <Link
                                     to="#!"

@@ -879,15 +879,6 @@ const Home = () => {
                                         className="btn-action"
                                         data-bs-toggle="tooltip"
                                         data-bs-html="true"
-                                        title="Wishlist"
-                                      >
-                                        <i className="bi bi-heart" />
-                                      </Link>
-                                      <Link
-                                        to="#!"
-                                        className="btn-action"
-                                        data-bs-toggle="tooltip"
-                                        data-bs-html="true"
                                         title="Compare"
                                       >
                                         <i className="bi bi-arrow-left-right" />
@@ -993,15 +984,6 @@ const Home = () => {
                                         className="btn-action"
                                         data-bs-toggle="tooltip"
                                         data-bs-html="true"
-                                        title="Wishlist"
-                                      >
-                                        <i className="bi bi-heart" />
-                                      </Link>
-                                      <Link
-                                        to="#!"
-                                        className="btn-action"
-                                        data-bs-toggle="tooltip"
-                                        data-bs-html="true"
                                         title="Compare"
                                       >
                                         <i className="bi bi-arrow-left-right" />
@@ -1107,15 +1089,6 @@ const Home = () => {
                                         className="btn-action"
                                         data-bs-toggle="tooltip"
                                         data-bs-html="true"
-                                        title="Wishlist"
-                                      >
-                                        <i className="bi bi-heart" />
-                                      </Link>
-                                      <Link
-                                        to="#!"
-                                        className="btn-action"
-                                        data-bs-toggle="tooltip"
-                                        data-bs-html="true"
                                         title="Compare"
                                       >
                                         <i className="bi bi-arrow-left-right" />
@@ -1215,15 +1188,6 @@ const Home = () => {
                                           data-bs-html="true"
                                           title="Quick View"
                                         />
-                                      </Link>
-                                      <Link
-                                        to="#!"
-                                        className="btn-action"
-                                        data-bs-toggle="tooltip"
-                                        data-bs-html="true"
-                                        title="Wishlist"
-                                      >
-                                        <i className="bi bi-heart" />
                                       </Link>
                                       <Link
                                         to="#!"

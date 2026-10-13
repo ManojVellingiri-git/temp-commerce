@@ -2,11 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2';
 import { useCart } from "../context/CartContext";
-import { useWishlist } from "../context/WishlistContext";
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
-  const { toggleWishlist, isInWishlist } = useWishlist();
 
   const handleAddClick = (e) => {
     e.preventDefault();
@@ -18,11 +16,6 @@ const ProductCard = ({ product }) => {
       showConfirmButton: false,
       timer: 1500,
     });
-  };
-
-  const handleWishlistClick = (e) => {
-    e.preventDefault();
-    toggleWishlist(product);
   };
 
   const renderStars = (rating) => {
@@ -69,16 +62,6 @@ const ProductCard = ({ product }) => {
                   data-bs-html="true"
                   title="Quick View"
                 />
-              </Link>
-              <Link
-                to="#"
-                className="btn-action"
-                data-bs-toggle="tooltip"
-                data-bs-html="true"
-                title={isInWishlist(product.id) ? "Remove from Wishlist" : "Wishlist"}
-                onClick={handleWishlistClick}
-              >
-                <i className={`bi ${isInWishlist(product.id) ? 'bi-heart-fill text-danger' : 'bi-heart'}`} />
               </Link>
               <Link
                 to="#"

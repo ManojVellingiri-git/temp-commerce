@@ -23,7 +23,6 @@ import ShopListCol from "./pages/Shop/ShopListCol";
 import ShopCart from "./pages/Shop/ShopCart";
 import ShopCheckOut from "./pages/Shop/ShopCheckOut";
 import OrderSuccess from "./pages/Shop/OrderSuccess";
-import ShopWishList from "./pages/Shop/ShopWishList";
 
 // Account pages
 import MyAccountOrder from "./pages/Accounts/MyAccountOrder";
@@ -98,7 +97,7 @@ const App = () => {
           <Route path="/Shop" element={<Shop />} />
           <Route path="/ShopGridCol3" element={<ShopGridCol3 />} />
           <Route path="/ShopListCol" element={<ShopListCol />} />
-          <Route path="/ShopWishList" element={<ShopWishList />} />
+          <Route path="/ShopWishList" element={<Navigate to="/Shop" replace />} />
           
           <Route path="/ShopCart" element={<ShopCart />} />
           {/* Store routes redirected */}
