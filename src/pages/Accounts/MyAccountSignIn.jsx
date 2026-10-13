@@ -24,7 +24,7 @@ const MyAccountSignIn = () => {
         if (user.role === 'admin') {
             navigate('/admin/dashboard');
         } else {
-            navigate('/Grocery-react/');
+            navigate('/');
         }
     } catch (err) {
         setError(err.message || 'Login failed');

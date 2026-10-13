@@ -74,7 +74,7 @@ const OrderSuccess = () => {
                             <Link to="/MyAccountOrder" className="btn btn-primary">
                                 View My Orders
                             </Link>
-                            <Link to="/Grocery-react/" className="btn btn-outline-primary">
+                            <Link to="/Shop" className="btn btn-outline-primary">
                                 Continue Shopping
                             </Link>
                         </div>

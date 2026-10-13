@@ -21,7 +21,7 @@ const MyAccountSignUp = () => {
     setLoading(true);
     try {
         await register({ name: `${firstName} ${lastName}`, email, password });
-        navigate('/Grocery-react/');
+        navigate('/');
     } catch (err) {
         setError(err.message || 'Registration failed');
     } finally {

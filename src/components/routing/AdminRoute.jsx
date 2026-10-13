@@ -10,11 +10,11 @@ const AdminRoute = () => {
     }
 
     if (!isAuthenticated) {
-        return <Navigate to="/Grocery-react/shop/MyAccountSignIn" replace />;
+        return <Navigate to="/MyAccountSignIn" replace />;
     }
 
     if (!isAdmin) {
-        return <Navigate to="/Grocery-react/" replace />;
+        return <Navigate to="/" replace />;
     }
 
     return <Outlet />;
