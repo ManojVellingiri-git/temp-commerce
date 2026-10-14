@@ -65,7 +65,7 @@ app.get(['/health', '/api/health'], (req, res) => {
         timestamp: new Date().toISOString(),
         uptime: Math.floor(process.uptime()),
         environment: process.env.NODE_ENV || 'staging',
-        database: {
+        database: typeof connectDB.getDbState === 'function' ? connectDB.getDbState() : {
             status: isDbConnected ? 'connected' : 'disconnected',
             readyState: mongoose.connection.readyState
         }
