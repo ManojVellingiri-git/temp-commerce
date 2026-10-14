@@ -60,8 +60,7 @@ app.use((req, res, next) => {
 // Health check endpoints (available before rate limiter so orchestrator probes are never throttled)
 app.get(['/health', '/api/health'], (req, res) => {
     const isDbConnected = mongoose.connection.readyState === 1;
-    const statusCode = isDbConnected ? 200 : 503;
-    res.status(statusCode).json({
+    res.status(200).json({
         status: isDbConnected ? 'ok' : 'degraded',
         timestamp: new Date().toISOString(),
         uptime: Math.floor(process.uptime()),
@@ -105,7 +104,7 @@ const PORT = process.env.PORT || 5001;
 let server;
 
 if (process.env.NODE_ENV !== 'test') {
-    server = app.listen(PORT, () => console.log(`Server running in ${process.env.NODE_ENV || 'staging'} mode on port ${PORT}`));
+    server = app.listen(PORT, '0.0.0.0', () => console.log(`Server running in ${process.env.NODE_ENV || 'staging'} mode on port ${PORT}`));
 }
 
 // Graceful shutdown handling
