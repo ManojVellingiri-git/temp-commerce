@@ -1,0 +1,27 @@
+{
+  "totalExtractedRows": 867,
+  "validRows": 760,
+  "duplicateCandidateRows": 76,
+  "nonStandardBarcodeRows": 30,
+  "invalidIncompleteRows": 1,
+  "missingBarcodeRows": 0,
+  "uniqueBarcodes": 827,
+  "categoriesIdentified": {
+    "Oils, Vinegar & Condiments": 31,
+    "Spices, Masalas & Seasonings": 44,
+    "General Merchandise": 99,
+    "Staples, Rice & Grains": 20,
+    "Instant Food": 20,
+    "Dairy & Refrigerated Foods": 96,
+    "Tea, Coffee & Beverages": 57,
+    "Personal Care & Hygiene": 112,
+    "Chocolates & Confectionery": 63,
+    "Household Cleaning": 34,
+    "Biscuits, Bakery & Rusk": 45,
+    "Stationery & General Merchandise": 136,
+    "Baby Care": 34,
+    "Pet Food & Care": 10,
+    "Snacks, Chips & Namkeen": 40,
+    "Frozen Foods": 26
+  }
+}

@@ -1,0 +1,6891 @@
+{
+  "batchId": "BATCH_1791999496494",
+  "timestamp": "2026-10-14T17:38:16.494Z",
+  "mode": "dry-run",
+  "target": "offline_dry_run",
+  "totalInputRows": 867,
+  "processedRows": 867,
+  "proposedInserts": 790,
+  "proposedUpdates": 0,
+  "skippedDuplicates": 76,
+  "skippedInvalid": 1,
+  "categoriesToEnsure": [
+    "Oils, Vinegar & Condiments",
+    "Spices, Masalas & Seasonings",
+    "General Merchandise",
+    "Staples, Rice & Grains",
+    "Instant Food",
+    "Dairy & Refrigerated Foods",
+    "Tea, Coffee & Beverages",
+    "Personal Care & Hygiene",
+    "Chocolates & Confectionery",
+    "Household Cleaning",
+    "Biscuits, Bakery & Rusk",
+    "Stationery & General Merchandise",
+    "Baby Care",
+    "Pet Food & Care",
+    "Snacks, Chips & Namkeen",
+    "Frozen Foods"
+  ],
+  "recordsSummary": [
+    {
+      "rowId": 1,
+      "barcode": "8907093004569",
+      "name": "Vinegar",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 2,
+      "barcode": "8906066200595",
+      "name": "ROSEMARY",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 139,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 3,
+      "barcode": "8906066200076",
+      "name": "Nutmeg Powder",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 199,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 4,
+      "barcode": "8906066200625",
+      "name": "Thyme",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 139,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 5,
+      "barcode": "8906066200540",
+      "name": "Lemogress",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 159,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 6,
+      "barcode": "8906066200571",
+      "name": "Oregano",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 109,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 7,
+      "barcode": "8906066207648",
+      "name": "Schez Chutney",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 84,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 8,
+      "barcode": "8906066200519",
+      "name": "Basil",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 139,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 9,
+      "barcode": "8906066200564",
+      "name": "Mix Herbs",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 139,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 10,
+      "barcode": "8906066200557",
+      "name": "Mint Powder",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 139,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 11,
+      "barcode": "8906066201912",
+      "name": "Garlic Powder",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 99,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 12,
+      "barcode": "8906066205101",
+      "name": "Piri-piri",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 139,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 13,
+      "barcode": "8906066201615",
+      "name": "All Purpos",
+      "category": "General Merchandise",
+      "price": 130,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 14,
+      "barcode": "8906066201721",
+      "name": "Pizz Seasoning",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 139,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 15,
+      "barcode": "8906066201738",
+      "name": "Salad Seasoning",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 159,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 16,
+      "barcode": "8906066201660",
+      "name": "Italian Seasoning",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 139,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 17,
+      "barcode": "8906066201677",
+      "name": "Garli Bread",
+      "category": "General Merchandise",
+      "price": 130,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 18,
+      "barcode": "8906066201714",
+      "name": "Pasta Seasoning",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 139,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 19,
+      "barcode": "8906066201899",
+      "name": "Onion Powder",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 99,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 20,
+      "barcode": "8906066200038",
+      "name": "Red Chil Flakes",
+      "category": "General Merchandise",
+      "price": 99,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 21,
+      "barcode": "8906066202568",
+      "name": "Piz Chil Flakes",
+      "category": "General Merchandise",
+      "price": 119,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 22,
+      "barcode": "8906066202605",
+      "name": "Black Salt",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 23,
+      "barcode": "8906066202735",
+      "name": "Pink Salt",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 89,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 24,
+      "barcode": "8906066202476",
+      "name": "Piri-piri Spice Mix",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 119,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 25,
+      "barcode": "8907316006172",
+      "name": "Pani Puri Paste",
+      "category": "General Merchandise",
+      "price": 63,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 26,
+      "barcode": "8908007864644",
+      "name": "Anjeer 250g",
+      "category": "Staples, Rice & Grains",
+      "price": 380,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 27,
+      "barcode": "8901058017687",
+      "name": "Magi75g",
+      "category": "Instant Food",
+      "price": 15,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 28,
+      "barcode": "A8906223961011A",
+      "name": "Pohaa",
+      "category": "Staples, Rice & Grains",
+      "price": 23,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 29,
+      "barcode": "8904043904054",
+      "name": "Pohaa 500g",
+      "category": "Staples, Rice & Grains",
+      "price": 63,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 30,
+      "barcode": "8906066203022",
+      "name": "Creamy Mushroom Soup",
+      "category": "Instant Food",
+      "price": 15,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 31,
+      "barcode": "8901491103794",
+      "name": "Oats400g",
+      "category": "Staples, Rice & Grains",
+      "price": 86,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 32,
+      "barcode": "8907093007393",
+      "name": "Keral Fish Curry",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 180,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 33,
+      "barcode": "8907093008291",
+      "name": "Butter Chicken Mix",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 200,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 34,
+      "barcode": "8906066205934",
+      "name": "Pasta Masala 7g",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 35,
+      "barcode": "8906066204920",
+      "name": "Veg.manchu Masala",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 36,
+      "barcode": "8906066203053",
+      "name": "Chicken.hot Soup",
+      "category": "Instant Food",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 37,
+      "barcode": "8906066203015",
+      "name": "Creamy Chicken Soup",
+      "category": "Instant Food",
+      "price": 15,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 38,
+      "barcode": "8906066203077",
+      "name": "Swt.corn Chicken Soup",
+      "category": "Instant Food",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 39,
+      "barcode": "8906066204906",
+      "name": "Pannrr Chill Masala",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 40,
+      "barcode": "8906007280969",
+      "name": "Fortune 1kg Must.oil",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 235,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 41,
+      "barcode": "8906007280945",
+      "name": "Fortune 500g Must.oil",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 123,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 42,
+      "barcode": "8901030992063",
+      "name": "Red Lab Tea 100g",
+      "category": "Tea, Coffee & Beverages",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 43,
+      "barcode": "8909106064874",
+      "name": "Tea.taj100g",
+      "category": "Tea, Coffee & Beverages",
+      "price": 80,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 44,
+      "barcode": "8901052020485",
+      "name": "Chakar.tea Gold100g",
+      "category": "Tea, Coffee & Beverages",
+      "price": 90,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 45,
+      "barcode": "8906017290989",
+      "name": "Bisler Water 1lit",
+      "category": "Tea, Coffee & Beverages",
+      "price": 90,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 46,
+      "barcode": "8909106051966",
+      "name": "Tea TAJ 250G",
+      "category": "Tea, Coffee & Beverages",
+      "price": 200,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 47,
+      "barcode": "8901030624230",
+      "name": "TAJ.DIP TEA",
+      "category": "Tea, Coffee & Beverages",
+      "price": 220,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 48,
+      "barcode": "8901030992070",
+      "name": "TEA Redlabe250g",
+      "category": "Tea, Coffee & Beverages",
+      "price": 140,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 49,
+      "barcode": "8908028493007",
+      "name": "Water 750ml",
+      "category": "Tea, Coffee & Beverages",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 50,
+      "barcode": "680569823625",
+      "name": "Homwdale 500g",
+      "category": "General Merchandise",
+      "price": 190,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 51,
+      "barcode": "8901030985584",
+      "name": "Tea 10rs",
+      "category": "Tea, Coffee & Beverages",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 52,
+      "barcode": "8908002396331",
+      "name": "Coconutoil 500ml",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 53,
+      "barcode": "8904505701269",
+      "name": "Fortune Sunfl.oil 1lit",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 54,
+      "barcode": "8909106066410",
+      "name": "Bur Coffee.10rs",
+      "category": "Tea, Coffee & Beverages",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 55,
+      "barcode": "8901058025095",
+      "name": "Sunrise Coffee Powder",
+      "category": "Tea, Coffee & Beverages",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 56,
+      "barcode": "89080863",
+      "name": "2rs Coffee Powder",
+      "category": "Tea, Coffee & Beverages",
+      "price": 2,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 57,
+      "barcode": "8903071005320",
+      "name": "Kewra.water",
+      "category": "Tea, Coffee & Beverages",
+      "price": 72,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 58,
+      "barcode": "8907093005108",
+      "name": "Apple Cider Vinegar",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 120,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 59,
+      "barcode": "8907423859200",
+      "name": "White Vinegar",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 15,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 60,
+      "barcode": "8901207062865",
+      "name": "Hajmol Imli",
+      "category": "Personal Care & Hygiene",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 61,
+      "barcode": "8901058028959",
+      "name": "Milkybar5rs",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 62,
+      "barcode": "8901071705295",
+      "name": "Llollipo",
+      "category": "Chocolates & Confectionery",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 63,
+      "barcode": "8901393027600",
+      "name": "Llollipo",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 64,
+      "barcode": "7622202818431",
+      "name": "5star 5rs",
+      "category": "Chocolates & Confectionery",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 65,
+      "barcode": "8901058875577",
+      "name": "Milkybar10rs",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 66,
+      "barcode": "8000500366776",
+      "name": "Tictac10rs",
+      "category": "Chocolates & Confectionery",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 67,
+      "barcode": "8901071705271",
+      "name": "Llollipo",
+      "category": "Chocolates & Confectionery",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 68,
+      "barcode": "7622202818400",
+      "name": "5star",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 69,
+      "barcode": "8901058022087",
+      "name": "Munch5rs",
+      "category": "Chocolates & Confectionery",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 70,
+      "barcode": "8901393018868",
+      "name": "Centerfresh 10rs",
+      "category": "Chocolates & Confectionery",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 71,
+      "barcode": "7622202815096",
+      "name": "Daiymilk10",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 72,
+      "barcode": "8901058896862",
+      "name": "Milkybarmoosh",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 73,
+      "barcode": "7622202326172",
+      "name": "Dairy Milk Rostalmond",
+      "category": "Chocolates & Confectionery",
+      "price": 98,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 74,
+      "barcode": "7622202325878",
+      "name": "Dairy Milk Choclatesilk",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 75,
+      "barcode": "8901058028966",
+      "name": "Milkybar308gm",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 137,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 76,
+      "barcode": "7622202326325",
+      "name": "Silk Ganach CholotD M",
+      "category": "Chocolates & Confectionery",
+      "price": 98,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 77,
+      "barcode": "7622202324727",
+      "name": "Dairy Milk Crackle",
+      "category": "Chocolates & Confectionery",
+      "price": 107,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 78,
+      "barcode": "7622202842269",
+      "name": "D M Slik Hazelnut",
+      "category": "General Merchandise",
+      "price": 100,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 79,
+      "barcode": "7622202271861",
+      "name": "D Mslik BUBBLY",
+      "category": "General Merchandise",
+      "price": 98,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 80,
+      "barcode": "8901058024074",
+      "name": "BAR-ONE",
+      "category": "Chocolates & Confectionery",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 81,
+      "barcode": "7622202818400",
+      "name": "5STAR 10",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 82,
+      "barcode": "7622202324871",
+      "name": "Dairy Milk FRUIT&NUTS",
+      "category": "Chocolates & Confectionery",
+      "price": 49,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 83,
+      "barcode": "7622202325878",
+      "name": "D M Chocolate",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 84,
+      "barcode": "8906002482450",
+      "name": "Snickers45g",
+      "category": "Chocolates & Confectionery",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 85,
+      "barcode": "7622202818332",
+      "name": "Dairy Milk Chocolate",
+      "category": "Chocolates & Confectionery",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 86,
+      "barcode": "7622202335518",
+      "name": "LIckables Cholote",
+      "category": "Chocolates & Confectionery",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 87,
+      "barcode": "7622202820823",
+      "name": "Fuse Chocolaty",
+      "category": "Chocolates & Confectionery",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 88,
+      "barcode": "8901058018639",
+      "name": "Milkybar",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 89,
+      "barcode": "7622202325991",
+      "name": "Bournvil 50%dark",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 90,
+      "barcode": "8901058024104",
+      "name": "Barone Chocolate 372g",
+      "category": "Chocolates & Confectionery",
+      "price": 148,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 91,
+      "barcode": "7622202335624",
+      "name": "Temptations Alm Tret",
+      "category": "Chocolates & Confectionery",
+      "price": 125,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 92,
+      "barcode": "8902618000019",
+      "name": "Woodwards",
+      "category": "Personal Care & Hygiene",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 93,
+      "barcode": "8901088712668",
+      "name": "Cocont Oil Parachute",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 94,
+      "barcode": "8901088712101",
+      "name": "J.cocont Oil Parachute",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 95,
+      "barcode": "8901088076104",
+      "name": "Cocont Oil Parachute",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 43,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 96,
+      "barcode": "89080214",
+      "name": "JASMIN OIL",
+      "category": "Personal Care & Hygiene",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 97,
+      "barcode": "89009536",
+      "name": "Amla Oil",
+      "category": "Personal Care & Hygiene",
+      "price": 18,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 98,
+      "barcode": "8901207047923",
+      "name": "Amla Oil138ml",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 53,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 99,
+      "barcode": "5792136842535",
+      "name": "Pure.olives Oil",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 180,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 100,
+      "barcode": "8901207040795",
+      "name": "Gulabari Dabue",
+      "category": "Personal Care & Hygiene",
+      "price": 54,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 101,
+      "barcode": "89009611",
+      "name": "Gulabari Dabue",
+      "category": "Personal Care & Hygiene",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 102,
+      "barcode": "8901207040443",
+      "name": "Dabu Badam Shireen",
+      "category": "Personal Care & Hygiene",
+      "price": 235,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 103,
+      "barcode": "8901207026485",
+      "name": "Almond.oil Hair",
+      "category": "Personal Care & Hygiene",
+      "price": 66,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 104,
+      "barcode": "8904505700378",
+      "name": "Jeera Rice 1kg Kohnoor",
+      "category": "Staples, Rice & Grains",
+      "price": 250,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 105,
+      "barcode": "8904010610308",
+      "name": "Palak.matt Rice 5kg",
+      "category": "Staples, Rice & Grains",
+      "price": 450,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 106,
+      "barcode": "8906007289214",
+      "name": "F.sonimasoori 5kgs",
+      "category": "General Merchandise",
+      "price": 430,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 107,
+      "barcode": "8902979012492",
+      "name": "Mano.pickle 5rs",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 108,
+      "barcode": "8902979012508",
+      "name": "Pickle 5rs",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 109,
+      "barcode": "8901725011567",
+      "name": "Homelight",
+      "category": "Household Cleaning",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 110,
+      "barcode": "8906037731660",
+      "name": "Pineapp Agarbathi",
+      "category": "Household Cleaning",
+      "price": 65,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 111,
+      "barcode": "8906037731875",
+      "name": "Pineapp Agarbathi",
+      "category": "Household Cleaning",
+      "price": 15,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 112,
+      "barcode": "8901287000092",
+      "name": "Mallika Agarbathi",
+      "category": "Household Cleaning",
+      "price": 54,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 113,
+      "barcode": "8901725098391",
+      "name": "Mach Box",
+      "category": "Household Cleaning",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 114,
+      "barcode": "8901063325791",
+      "name": "Milk Rusk200gm",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 35,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 115,
+      "barcode": "8906016491875",
+      "name": "Classic Rusk",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 116,
+      "barcode": "8901207027949",
+      "name": "Odonliu R Fresh",
+      "category": "Household Cleaning",
+      "price": 120,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 117,
+      "barcode": "8901725117306",
+      "name": "Creme Swt Lacto Pkc",
+      "category": "General Merchandise",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 118,
+      "barcode": "8901725012915",
+      "name": "Gold Kings10s",
+      "category": "Stationery & General Merchandise",
+      "price": 240,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 119,
+      "barcode": "8901725014612",
+      "name": "Gold Lightss 10s",
+      "category": "Stationery & General Merchandise",
+      "price": 240,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 120,
+      "barcode": "8901725089511",
+      "name": "Ices Bust 10s",
+      "category": "Stationery & General Merchandise",
+      "price": 240,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 121,
+      "barcode": "8901725307912",
+      "name": "Cls Connects",
+      "category": "Stationery & General Merchandise",
+      "price": 390,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 122,
+      "barcode": "8901725120610",
+      "name": "Class-doubl.bust 20s",
+      "category": "Stationery & General Merchandise",
+      "price": 480,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 123,
+      "barcode": "8901725034115",
+      "name": "Class-ulter-mild 20s",
+      "category": "Stationery & General Merchandise",
+      "price": 480,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 124,
+      "barcode": "8901725033811",
+      "name": "Class-mild 20s",
+      "category": "Stationery & General Merchandise",
+      "price": 480,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 125,
+      "barcode": "89009734",
+      "name": "Marlboro 20s",
+      "category": "Stationery & General Merchandise",
+      "price": 480,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 126,
+      "barcode": "8902953376015",
+      "name": "America Cool",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 127,
+      "barcode": "8902953376015",
+      "name": "America Red",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 128,
+      "barcode": "89008751",
+      "name": "Advance Marblb",
+      "category": "Stationery & General Merchandise",
+      "price": 115,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 129,
+      "barcode": "8906017290071",
+      "name": "Bisler 5lits H20",
+      "category": "Tea, Coffee & Beverages",
+      "price": 75,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 130,
+      "barcode": "8908000034860",
+      "name": "DOMS CHALKS",
+      "category": "Stationery & General Merchandise",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 131,
+      "barcode": "8906136382442",
+      "name": "FIGO SET SCHOL",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 132,
+      "barcode": "8906156880010",
+      "name": "CAMPHOR TABL",
+      "category": "Household Cleaning",
+      "price": 62,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 133,
+      "barcode": "8906156880003",
+      "name": "CAMPHOR TABL",
+      "category": "Household Cleaning",
+      "price": 32,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 134,
+      "barcode": "8906048271063",
+      "name": "GOPURM Turmi Powder",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 135,
+      "barcode": "8901198431107",
+      "name": "Parker Vector Pen",
+      "category": "Stationery & General Merchandise",
+      "price": 430,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 136,
+      "barcode": "8901238910005",
+      "name": "Kangar Pin",
+      "category": "Stationery & General Merchandise",
+      "price": 12,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 137,
+      "barcode": "8901860010098",
+      "name": "Fevi Kwik 5rs",
+      "category": "Stationery & General Merchandise",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 138,
+      "barcode": "8906136383654",
+      "name": "10rs Figo Pescil0.7",
+      "category": "Stationery & General Merchandise",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 139,
+      "barcode": "8901425048511",
+      "name": "10rs Figo Pescil0.5",
+      "category": "Stationery & General Merchandise",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 140,
+      "barcode": "8904142201207",
+      "name": "Calau Electr",
+      "category": "General Merchandise",
+      "price": 120,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 141,
+      "barcode": "8901425048634",
+      "name": "Camel Wax Crayon",
+      "category": "Stationery & General Merchandise",
+      "price": 35,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 142,
+      "barcode": "8901198113157",
+      "name": "Paint Colour",
+      "category": "Stationery & General Merchandise",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 143,
+      "barcode": "8901198113164",
+      "name": "Paint Colour",
+      "category": "Stationery & General Merchandise",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 144,
+      "barcode": "8901117249998",
+      "name": "Ors Apple 200ml",
+      "category": "Personal Care & Hygiene",
+      "price": 32,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 145,
+      "barcode": "8901117250000",
+      "name": "Ors Orang 200ml",
+      "category": "Personal Care & Hygiene",
+      "price": 32,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 146,
+      "barcode": "8904083307037",
+      "name": "Cheese Cubes 10N",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 3 times in inventory"
+    },
+    {
+      "rowId": 147,
+      "barcode": "8904083300595",
+      "name": "Milkybutter Chiplet 10N",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 148,
+      "barcode": "90162602",
+      "name": "RED BUL250ML",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "EAN-8 short barcode format; Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 149,
+      "barcode": "8901764241253",
+      "name": "TONIC.water",
+      "category": "Tea, Coffee & Beverages",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 150,
+      "barcode": "8902080100026",
+      "name": "Leho Soda",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 151,
+      "barcode": "757953642923",
+      "name": "RUMI Energy",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 152,
+      "barcode": "8901324055795",
+      "name": "Apsara Pencil",
+      "category": "Stationery & General Merchandise",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 153,
+      "barcode": "8901057309295",
+      "name": "Kangaro Crycler Tap",
+      "category": "Stationery & General Merchandise",
+      "price": 68,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 154,
+      "barcode": "8901425019559",
+      "name": "Watercolo 12shades",
+      "category": "Tea, Coffee & Beverages",
+      "price": 35,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 155,
+      "barcode": "8908006475339",
+      "name": "Colou-pensil 10shad",
+      "category": "Stationery & General Merchandise",
+      "price": 15,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 156,
+      "barcode": "8901860546757",
+      "name": "Fevic Mouldit Clay",
+      "category": "Stationery & General Merchandise",
+      "price": 25,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 157,
+      "barcode": "8901425048337",
+      "name": "Camelpencilsbox",
+      "category": "Stationery & General Merchandise",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 158,
+      "barcode": "8901425006283",
+      "name": "Camel WAX",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 159,
+      "barcode": "8901425006283",
+      "name": "Camel WAX",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 160,
+      "barcode": "8901425006559",
+      "name": "Camlin Coloupencil",
+      "category": "Stationery & General Merchandise",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 161,
+      "barcode": "8902635573589",
+      "name": "Wax Crayons",
+      "category": "Stationery & General Merchandise",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 162,
+      "barcode": "8901425095539",
+      "name": "Camel Drawing Kit",
+      "category": "Stationery & General Merchandise",
+      "price": 149,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 163,
+      "barcode": "8904379400954",
+      "name": "Glue Stick",
+      "category": "Stationery & General Merchandise",
+      "price": 15,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 164,
+      "barcode": "8906082931169",
+      "name": "Clay Modelling",
+      "category": "Stationery & General Merchandise",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 165,
+      "barcode": "8901198125488",
+      "name": "Luxar Stamp.pad",
+      "category": "Stationery & General Merchandise",
+      "price": 35,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 166,
+      "barcode": "8901057200523",
+      "name": "Kangat Paper Punch",
+      "category": "Stationery & General Merchandise",
+      "price": 112,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 167,
+      "barcode": "8901425001974",
+      "name": "Camel Sketchpen",
+      "category": "Stationery & General Merchandise",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 168,
+      "barcode": "8906136383845",
+      "name": "Figo Eraser Pen",
+      "category": "Stationery & General Merchandise",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 169,
+      "barcode": "8901425028742",
+      "name": "Camel Watercolou",
+      "category": "Stationery & General Merchandise",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 170,
+      "barcode": "8901057510028",
+      "name": "Kango Staplepin",
+      "category": "Stationery & General Merchandise",
+      "price": 12,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 171,
+      "barcode": "8904411801237",
+      "name": "Math Drawing Instrum",
+      "category": "Stationery & General Merchandise",
+      "price": 75,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 172,
+      "barcode": "8906082930179",
+      "name": "Stickynotes",
+      "category": "Stationery & General Merchandise",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 173,
+      "barcode": "8906082931954",
+      "name": "Modelling Clay",
+      "category": "Stationery & General Merchandise",
+      "price": 25,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 174,
+      "barcode": "8908000034365",
+      "name": "Doms Eraser",
+      "category": "Stationery & General Merchandise",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 175,
+      "barcode": "8904411802173",
+      "name": "Doms Eraser Mini",
+      "category": "Stationery & General Merchandise",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 176,
+      "barcode": "8901860634270",
+      "name": "Glue Drops",
+      "category": "Stationery & General Merchandise",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 177,
+      "barcode": "8904461900041",
+      "name": "Cutter Premi",
+      "category": "Stationery & General Merchandise",
+      "price": 15,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 178,
+      "barcode": "8904275306985",
+      "name": "Correction PEN",
+      "category": "Stationery & General Merchandise",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 179,
+      "barcode": "8906082930131",
+      "name": "STICKNOTES",
+      "category": "Stationery & General Merchandise",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 180,
+      "barcode": "8901425027721",
+      "name": "CAMLIN Scale 15CM",
+      "category": "Stationery & General Merchandise",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 181,
+      "barcode": "8901425022504",
+      "name": "Camlin Scale 30cm",
+      "category": "Stationery & General Merchandise",
+      "price": 12,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 182,
+      "barcode": "8901425076781",
+      "name": "Camlin Glue 200g",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 183,
+      "barcode": "8901860010432",
+      "name": "Flexkwik 20g",
+      "category": "Stationery & General Merchandise",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 184,
+      "barcode": "8901860020516",
+      "name": "MCL 25G",
+      "category": "Stationery & General Merchandise",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 185,
+      "barcode": "8901425089316",
+      "name": "CAML SHARPEN",
+      "category": "Stationery & General Merchandise",
+      "price": 3,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 186,
+      "barcode": "8908000034075",
+      "name": "SHARPEN",
+      "category": "Stationery & General Merchandise",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 187,
+      "barcode": "8906136380240",
+      "name": "EXAMPAD",
+      "category": "Stationery & General Merchandise",
+      "price": 180,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 188,
+      "barcode": "8906168990042",
+      "name": "CARTRIDGE V5 V7.B",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 189,
+      "barcode": "8906168990042",
+      "name": "CARTRIDGE V5 V7.D",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 190,
+      "barcode": "8906136382442",
+      "name": "FIGO SET SCHOL",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 191,
+      "barcode": "8906051078666",
+      "name": "Pen",
+      "category": "Stationery & General Merchandise",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 192,
+      "barcode": "8901765095732",
+      "name": "Pen Blue",
+      "category": "Stationery & General Merchandise",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 193,
+      "barcode": "8906136384279",
+      "name": "Hi-leads Tip",
+      "category": "General Merchandise",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 194,
+      "barcode": "8901198112365",
+      "name": "Cd Marker Black",
+      "category": "Stationery & General Merchandise",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 195,
+      "barcode": "8906136382824",
+      "name": "Blackgelpen",
+      "category": "Stationery & General Merchandise",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 196,
+      "barcode": "8901015003715",
+      "name": "Montex Pen",
+      "category": "Stationery & General Merchandise",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 197,
+      "barcode": "8906168990011",
+      "name": "V5 Blackpen",
+      "category": "Stationery & General Merchandise",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 198,
+      "barcode": "8906168990028",
+      "name": "V7 Blackpen",
+      "category": "Stationery & General Merchandise",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 199,
+      "barcode": "8901198117933",
+      "name": "Spiral Book20561",
+      "category": "Stationery & General Merchandise",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 200,
+      "barcode": "4987176137524",
+      "name": "Pamper S7",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 201,
+      "barcode": "4987176071361",
+      "name": "Pamper XL2",
+      "category": "Baby Care",
+      "price": 35,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 202,
+      "barcode": "4987176218346",
+      "name": "Pamper XL6",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 203,
+      "barcode": "4987176071323",
+      "name": "Pamper S2",
+      "category": "Baby Care",
+      "price": 18,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 204,
+      "barcode": "4987176071385",
+      "name": "Pamper M2",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 3 times in inventory"
+    },
+    {
+      "rowId": 205,
+      "barcode": "4987176071392",
+      "name": "Pamper NB2",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 206,
+      "barcode": "4987176367853",
+      "name": "WHISPER12PXL",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 207,
+      "barcode": "4987176319180",
+      "name": "WhisperXL6P",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 208,
+      "barcode": "4987176321152",
+      "name": "WhisperREG6P",
+      "category": "Personal Care & Hygiene",
+      "price": 37,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 209,
+      "barcode": "8901012165843",
+      "name": "Stayfreesecu6p",
+      "category": "Personal Care & Hygiene",
+      "price": 37,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 210,
+      "barcode": "8901012165768",
+      "name": "StayfreenighXXL6",
+      "category": "Personal Care & Hygiene",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 211,
+      "barcode": "4987176294562",
+      "name": "WhisperXL6P",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 212,
+      "barcode": "4987176324672",
+      "name": "WhisperXL10P",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 213,
+      "barcode": "4987176319517",
+      "name": "WhisperXL6P",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 214,
+      "barcode": "4987176319432",
+      "name": "WhisperXXL",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 215,
+      "barcode": "4987176336392",
+      "name": "WhisperXXXL",
+      "category": "Personal Care & Hygiene",
+      "price": 140,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 216,
+      "barcode": "4987176318435",
+      "name": "WhisperM-L",
+      "category": "Personal Care & Hygiene",
+      "price": 99,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 217,
+      "barcode": "4987176319432",
+      "name": "WhisperXXL",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 218,
+      "barcode": "8901012166482",
+      "name": "StaufreeXXL 7P",
+      "category": "General Merchandise",
+      "price": 110,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 219,
+      "barcode": "4987176195708",
+      "name": "Whisperxxxl+4",
+      "category": "Personal Care & Hygiene",
+      "price": 150,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 220,
+      "barcode": "4987176301956",
+      "name": "Whisperxxl7p",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 221,
+      "barcode": "4987176178688",
+      "name": "Pampers S30P",
+      "category": "Baby Care",
+      "price": 399,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 222,
+      "barcode": "8906156554058",
+      "name": "BHEEM PantsXXL",
+      "category": "Baby Care",
+      "price": 449,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 223,
+      "barcode": "8901138837174",
+      "name": "HIMALAYA PANTS S9",
+      "category": "Baby Care",
+      "price": 125,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 224,
+      "barcode": "4987176218346",
+      "name": "Pampers XL6P",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 225,
+      "barcode": "4987176346179",
+      "name": "Pampers XXL16P",
+      "category": "Baby Care",
+      "price": 425,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 226,
+      "barcode": "4987176346315",
+      "name": "Pampers M24P",
+      "category": "Baby Care",
+      "price": 350,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 227,
+      "barcode": "4987176346278",
+      "name": "Pampers S28P",
+      "category": "Baby Care",
+      "price": 399,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 228,
+      "barcode": "4987176318428",
+      "name": "Whisperchoice6P",
+      "category": "Personal Care & Hygiene",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 229,
+      "barcode": "4987176071453",
+      "name": "Pampers S10P",
+      "category": "Baby Care",
+      "price": 93,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 230,
+      "barcode": "8901425054444",
+      "name": "Canvas Boaed16*20",
+      "category": "Stationery & General Merchandise",
+      "price": 235,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 231,
+      "barcode": "8901425054437",
+      "name": "Canvas Boaed14*18",
+      "category": "Stationery & General Merchandise",
+      "price": 179,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 232,
+      "barcode": "818068035397",
+      "name": "BALL 9P X-MAX",
+      "category": "Stationery & General Merchandise",
+      "price": 190,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 233,
+      "barcode": "818068035281",
+      "name": "BALL 9P X-MAX",
+      "category": "Stationery & General Merchandise",
+      "price": 190,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 234,
+      "barcode": "818068035243",
+      "name": "BALL 9P X-MAX",
+      "category": "Stationery & General Merchandise",
+      "price": 190,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 235,
+      "barcode": "8904094400390",
+      "name": "Feedingbottle",
+      "category": "Baby Care",
+      "price": 110,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 236,
+      "barcode": "8808739000207",
+      "name": "Marry Christ",
+      "category": "Stationery & General Merchandise",
+      "price": 180,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 237,
+      "barcode": "6932004400248",
+      "name": "Decoration Spray",
+      "category": "Stationery & General Merchandise",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 238,
+      "barcode": "8901425054758",
+      "name": "Camlin Book80p",
+      "category": "Stationery & General Merchandise",
+      "price": 34,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 239,
+      "barcode": "5797976389103",
+      "name": "B Day Candles",
+      "category": "Stationery & General Merchandise",
+      "price": 25,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 240,
+      "barcode": "8901425031926",
+      "name": "Camel Glasspaint",
+      "category": "Stationery & General Merchandise",
+      "price": 120,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 241,
+      "barcode": "8901425054413",
+      "name": "Canvas Boaed 10*12",
+      "category": "Stationery & General Merchandise",
+      "price": 100,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 242,
+      "barcode": "8901425087237",
+      "name": "Canvas Pad",
+      "category": "Stationery & General Merchandise",
+      "price": 300,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 243,
+      "barcode": "8901425054567",
+      "name": "Canvas Boaed8*8",
+      "category": "Stationery & General Merchandise",
+      "price": 65,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 244,
+      "barcode": "8901425087442",
+      "name": "Drawingbook",
+      "category": "Stationery & General Merchandise",
+      "price": 35,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 245,
+      "barcode": "8901425081952",
+      "name": "Camlinbook4line",
+      "category": "Stationery & General Merchandise",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 246,
+      "barcode": "8901425073308",
+      "name": "Sciecebook",
+      "category": "Stationery & General Merchandise",
+      "price": 75,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 247,
+      "barcode": "8901425109021",
+      "name": "Camlinbook",
+      "category": "Stationery & General Merchandise",
+      "price": 32,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 248,
+      "barcode": "8901425055403",
+      "name": "Camlinbook",
+      "category": "Stationery & General Merchandise",
+      "price": 37,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 249,
+      "barcode": "8901425073292",
+      "name": "Camlinbook",
+      "category": "Stationery & General Merchandise",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 250,
+      "barcode": "8901425109687",
+      "name": "Camlinbook",
+      "category": "Stationery & General Merchandise",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 251,
+      "barcode": "8901425073421",
+      "name": "Camlinbook",
+      "category": "Stationery & General Merchandise",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 252,
+      "barcode": "8901425054772",
+      "name": "Camlinbook",
+      "category": "Stationery & General Merchandise",
+      "price": 35,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 253,
+      "barcode": "8901425112397",
+      "name": "Camlinbook",
+      "category": "Stationery & General Merchandise",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 254,
+      "barcode": "8901425058909",
+      "name": "Camlinbook",
+      "category": "Stationery & General Merchandise",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 255,
+      "barcode": "8901425107133",
+      "name": "Camel Litte Brush",
+      "category": "Stationery & General Merchandise",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 256,
+      "barcode": "4987176071385",
+      "name": "PampersM2",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 3 times in inventory"
+    },
+    {
+      "rowId": 257,
+      "barcode": "4987176356895",
+      "name": "PampersXXL2P",
+      "category": "Baby Care",
+      "price": 44,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 258,
+      "barcode": "4987176071347",
+      "name": "PampersL2P",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 259,
+      "barcode": "4987176215017",
+      "name": "PampersM12P",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 3 times in inventory"
+    },
+    {
+      "rowId": 260,
+      "barcode": "8901138837181",
+      "name": "HIMAL. PANTS M9P",
+      "category": "Baby Care",
+      "price": 150,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 261,
+      "barcode": "4987176071446",
+      "name": "Pamper NB10P",
+      "category": "Baby Care",
+      "price": 93,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 262,
+      "barcode": "4987176141743",
+      "name": "Pamper S15P",
+      "category": "Baby Care",
+      "price": 199,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 263,
+      "barcode": "4987176215017",
+      "name": "Pamper M11P",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 3 times in inventory"
+    },
+    {
+      "rowId": 264,
+      "barcode": "4987176137500",
+      "name": "Pamper NB8P",
+      "category": "Baby Care",
+      "price": 100,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 265,
+      "barcode": "4987176137524",
+      "name": "Pamper S7P",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 266,
+      "barcode": "4987176137548",
+      "name": "Pamper M6P",
+      "category": "Baby Care",
+      "price": 99,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 267,
+      "barcode": "8906002484041",
+      "name": "Pedigree Adult",
+      "category": "Pet Food & Care",
+      "price": 25,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 268,
+      "barcode": "8906002484027",
+      "name": "Pedigree Adult",
+      "category": "Pet Food & Care",
+      "price": 25,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 269,
+      "barcode": "8906002482832",
+      "name": "Pedigree Adult370g",
+      "category": "Pet Food & Care",
+      "price": 100,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 270,
+      "barcode": "8906002482962",
+      "name": "Pedigree Puppy370g",
+      "category": "Pet Food & Care",
+      "price": 110,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 271,
+      "barcode": "8906125483938",
+      "name": "Drools Dog Adult400g",
+      "category": "Pet Food & Care",
+      "price": 99,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 272,
+      "barcode": "8853301530743",
+      "name": "Pedigree Adult.gravy",
+      "category": "Pet Food & Care",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 273,
+      "barcode": "8853301530750",
+      "name": "Pedigree Pupp.gravy",
+      "category": "Pet Food & Care",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 274,
+      "barcode": "8853301015936",
+      "name": "Whishas Gravy",
+      "category": "Pet Food & Care",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 275,
+      "barcode": "8853301015912",
+      "name": "Whishas Gravy",
+      "category": "Pet Food & Care",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 276,
+      "barcode": "8853301015868",
+      "name": "Whishas Gravy",
+      "category": "Pet Food & Care",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 277,
+      "barcode": "8904083307037",
+      "name": "Milkymistcubes",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 3 times in inventory"
+    },
+    {
+      "rowId": 278,
+      "barcode": "8904083300595",
+      "name": "Milkymist Butt10p",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 279,
+      "barcode": "8906096573126",
+      "name": "Mom Gas Lighter",
+      "category": "General Merchandise",
+      "price": 199,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 280,
+      "barcode": "8908004996010",
+      "name": "Klik Gaslighter",
+      "category": "General Merchandise",
+      "price": 175,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 281,
+      "barcode": "8901571011339",
+      "name": "Iodex Spary60g",
+      "category": "Personal Care & Hygiene",
+      "price": 230,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 282,
+      "barcode": "8901177104909",
+      "name": "Moov Spary15g",
+      "category": "Personal Care & Hygiene",
+      "price": 92,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 283,
+      "barcode": "8906014520492",
+      "name": "Gokul Power",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 284,
+      "barcode": "4987176191380",
+      "name": "Vicksnose Relife2p",
+      "category": "Personal Care & Hygiene",
+      "price": 129,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 285,
+      "barcode": "4987176341846",
+      "name": "Vicksinhaler3p",
+      "category": "Personal Care & Hygiene",
+      "price": 189,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 286,
+      "barcode": "8901207037948",
+      "name": "Odomos Cream",
+      "category": "General Merchandise",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 287,
+      "barcode": "8901177102509",
+      "name": "Moov Ointment",
+      "category": "Personal Care & Hygiene",
+      "price": 68,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 288,
+      "barcode": "8901177103605",
+      "name": "Itchguard**",
+      "category": "Personal Care & Hygiene",
+      "price": 71,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 289,
+      "barcode": "8901248101103",
+      "name": "Boroplus Cream",
+      "category": "Personal Care & Hygiene",
+      "price": 42,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 290,
+      "barcode": "8901248701105",
+      "name": "Zandubalm",
+      "category": "Personal Care & Hygiene",
+      "price": 43,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 291,
+      "barcode": "8901803001541",
+      "name": "AmrutajanEPOWER",
+      "category": "Personal Care & Hygiene",
+      "price": 43,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 292,
+      "barcode": "8901803001190",
+      "name": "AMRUTAPAINBAM",
+      "category": "Personal Care & Hygiene",
+      "price": 42,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 293,
+      "barcode": "4987176168405",
+      "name": "Babyrub 25ml",
+      "category": "Baby Care",
+      "price": 125,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 294,
+      "barcode": "4987176191205",
+      "name": "Vickvapo25ml",
+      "category": "General Merchandise",
+      "price": 102,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 295,
+      "barcode": "89006245",
+      "name": "Iodox Bam",
+      "category": "General Merchandise",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 296,
+      "barcode": "8901012155080",
+      "name": "Gohnso BUDSS",
+      "category": "Personal Care & Hygiene",
+      "price": 154,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 297,
+      "barcode": "8901012155073",
+      "name": "GOHNSOBUDS",
+      "category": "Personal Care & Hygiene",
+      "price": 75,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 298,
+      "barcode": "8902915888822",
+      "name": "PLAYINGCARD",
+      "category": "Stationery & General Merchandise",
+      "price": 75,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 299,
+      "barcode": "8901057004008",
+      "name": "MUNIX Scissors",
+      "category": "Stationery & General Merchandise",
+      "price": 46,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 300,
+      "barcode": "4987176212474",
+      "name": "Gillettesaloon",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 301,
+      "barcode": "8905110009863",
+      "name": "Engage DEOSPARY",
+      "category": "Personal Care & Hygiene",
+      "price": 130,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 302,
+      "barcode": "8905110006855",
+      "name": "DEOSPARY",
+      "category": "Personal Care & Hygiene",
+      "price": 230,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 303,
+      "barcode": "4987176073440",
+      "name": "H&S Shampoo 72ml",
+      "category": "Personal Care & Hygiene",
+      "price": 84,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 304,
+      "barcode": "4902430716871",
+      "name": "H&S Conditioner 80ml",
+      "category": "Personal Care & Hygiene",
+      "price": 82,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 305,
+      "barcode": "B07S2WW2NZ",
+      "name": "Roma Secretdeo",
+      "category": "Personal Care & Hygiene",
+      "price": 399,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 306,
+      "barcode": "8901725959289",
+      "name": "Engage Spray",
+      "category": "Personal Care & Hygiene",
+      "price": 65,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 307,
+      "barcode": "8901138509217",
+      "name": "Himalay Face Wash",
+      "category": "Personal Care & Hygiene",
+      "price": 95,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 308,
+      "barcode": "8904041178631",
+      "name": "Garbag M Size",
+      "category": "Household Cleaning",
+      "price": 75,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 309,
+      "barcode": "8904041178624",
+      "name": "Garbag S Size",
+      "category": "Household Cleaning",
+      "price": 65,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 310,
+      "barcode": "8904041178600",
+      "name": "Garbag L Size",
+      "category": "Household Cleaning",
+      "price": 85,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 311,
+      "barcode": "8901860630708",
+      "name": "FEVICOL 500G",
+      "category": "Stationery & General Merchandise",
+      "price": 200,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 312,
+      "barcode": "8901860630500",
+      "name": "Fevicol120g",
+      "category": "Stationery & General Merchandise",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 313,
+      "barcode": "8901425076781",
+      "name": "Camlin Gule200g",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 314,
+      "barcode": "8901860630241",
+      "name": "10rs Fevicol",
+      "category": "Stationery & General Merchandise",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 315,
+      "barcode": "8901860630005",
+      "name": "5rs Fevicol",
+      "category": "Stationery & General Merchandise",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 316,
+      "barcode": "8901425024416",
+      "name": "Camel Acrylic 6pc",
+      "category": "Stationery & General Merchandise",
+      "price": 110,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 317,
+      "barcode": "8901425000427",
+      "name": "Camel Postcolour6pc",
+      "category": "Stationery & General Merchandise",
+      "price": 100,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 318,
+      "barcode": "8901425000434",
+      "name": "Camel Postcolour12pc",
+      "category": "Stationery & General Merchandise",
+      "price": 185,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 319,
+      "barcode": "8901425105443",
+      "name": "Camel Acrylic 12pc",
+      "category": "Stationery & General Merchandise",
+      "price": 220,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 320,
+      "barcode": "8901691000824",
+      "name": "Everedy AAAcell",
+      "category": "Stationery & General Merchandise",
+      "price": 18,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 321,
+      "barcode": "8906014385183",
+      "name": "Powercell AA",
+      "category": "Stationery & General Merchandise",
+      "price": 17,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 322,
+      "barcode": "8906014385152",
+      "name": "POWercell AA 10PC",
+      "category": "Stationery & General Merchandise",
+      "price": 170,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 323,
+      "barcode": "8901691026220",
+      "name": "Everedy AAAcell 10PC",
+      "category": "Stationery & General Merchandise",
+      "price": 180,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 324,
+      "barcode": "8901255000420",
+      "name": "PANASONIC AA",
+      "category": "Stationery & General Merchandise",
+      "price": 17,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 325,
+      "barcode": "8901255000444",
+      "name": "PANASONIC AA 10PC",
+      "category": "Stationery & General Merchandise",
+      "price": 170,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 326,
+      "barcode": "5000394083912",
+      "name": "DURECELL AAA10PC",
+      "category": "Stationery & General Merchandise",
+      "price": 220,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 327,
+      "barcode": "5000394178649",
+      "name": "DURECELL AAA12PC",
+      "category": "Stationery & General Merchandise",
+      "price": 180,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 328,
+      "barcode": "89003169",
+      "name": "Panasonic AAA",
+      "category": "Stationery & General Merchandise",
+      "price": 18,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 329,
+      "barcode": "89003183",
+      "name": "Panasonic 10pc AAA",
+      "category": "Stationery & General Merchandise",
+      "price": 180,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 330,
+      "barcode": "8906164392017",
+      "name": "Food Wrap500gm",
+      "category": "Household Cleaning",
+      "price": 350,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 331,
+      "barcode": "8901023019876",
+      "name": "Goorejrichcrem",
+      "category": "Personal Care & Hygiene",
+      "price": 37,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 332,
+      "barcode": "8901023028748",
+      "name": "Goorejrichcrem15rs",
+      "category": "Personal Care & Hygiene",
+      "price": 15,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 333,
+      "barcode": "8902979011136",
+      "name": "Indicaeasy15rs",
+      "category": "Personal Care & Hygiene",
+      "price": 15,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 334,
+      "barcode": "8902979027137",
+      "name": "Indicaeasy30rs",
+      "category": "Personal Care & Hygiene",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 335,
+      "barcode": "8901526211715",
+      "name": "Garnierburgundy",
+      "category": "Personal Care & Hygiene",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 336,
+      "barcode": "8901526211722",
+      "name": "GarniBROWN",
+      "category": "Personal Care & Hygiene",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 337,
+      "barcode": "8901526209910",
+      "name": "GARNI BLACK",
+      "category": "Personal Care & Hygiene",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 338,
+      "barcode": "8908011235140",
+      "name": "VIP Haircolou",
+      "category": "Personal Care & Hygiene",
+      "price": 51,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 339,
+      "barcode": "8901023029486",
+      "name": "Indicaeasy15rs",
+      "category": "Personal Care & Hygiene",
+      "price": 15,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 340,
+      "barcode": "8901023018688",
+      "name": "Indicaeasy30rs",
+      "category": "Personal Care & Hygiene",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 341,
+      "barcode": "8901526209903",
+      "name": "GARNI BLACK",
+      "category": "Personal Care & Hygiene",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 342,
+      "barcode": "815865000115",
+      "name": "Blackrose Powder",
+      "category": "Personal Care & Hygiene",
+      "price": 12,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 343,
+      "barcode": "8906016052922",
+      "name": "Blackrose Shampoo",
+      "category": "Personal Care & Hygiene",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 344,
+      "barcode": "8901491001038",
+      "name": "Lay Red Tango80g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 48,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 345,
+      "barcode": "8901491000772",
+      "name": "Lay Creantango80g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 48,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 346,
+      "barcode": "8901491503020",
+      "name": "Lay 10rs B",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 347,
+      "barcode": "8901491001854",
+      "name": "LAY 10RS",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 348,
+      "barcode": "8901491503037",
+      "name": "LAY 10RS",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 349,
+      "barcode": "8901491503051",
+      "name": "LAY 10RS",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 350,
+      "barcode": "8901491503013",
+      "name": "LAY 10RS",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 351,
+      "barcode": "8901491100274",
+      "name": "LAYS BLUE",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 352,
+      "barcode": "8901491100328",
+      "name": "LAY 20RS G",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 353,
+      "barcode": "8901491101837",
+      "name": "LAY 20RS Y",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 354,
+      "barcode": "8901491000208",
+      "name": "DORITOSS CHIP",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 355,
+      "barcode": "8901491103442",
+      "name": "KURKUR TOMA",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 356,
+      "barcode": "8901491990219",
+      "name": "DoritNacho10rs",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 357,
+      "barcode": "8901491990226",
+      "name": "DoritNacho10rs",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 358,
+      "barcode": "8901491103046",
+      "name": "Kurkurchillsty",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 359,
+      "barcode": "8901491103282",
+      "name": "Cheetoschee",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 360,
+      "barcode": "8901491103435",
+      "name": "Cheetosmasl",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 361,
+      "barcode": "8901491001076",
+      "name": "Layscream35rs",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 35,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 362,
+      "barcode": "8901491001069",
+      "name": "Laysmagic30",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 363,
+      "barcode": "8901262300759",
+      "name": "Dark Ice Cream",
+      "category": "General Merchandise",
+      "price": 18,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 364,
+      "barcode": "8909106048935",
+      "name": "Ice Cream Buttersct700ml",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 125,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 365,
+      "barcode": "8901030775925",
+      "name": "Ice Cream Strab 700ml",
+      "category": "General Merchandise",
+      "price": 125,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 366,
+      "barcode": "8909106048898",
+      "name": "Ice Mango 700ml",
+      "category": "General Merchandise",
+      "price": 135,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 367,
+      "barcode": "8901030735110",
+      "name": "Tub Ice Cr Butterscto 700ml",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 160,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 368,
+      "barcode": "8904083321521",
+      "name": "Rabdi Kulfi",
+      "category": "General Merchandise",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 369,
+      "barcode": "8721274500233",
+      "name": "Magnum Carampop",
+      "category": "General Merchandise",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 370,
+      "barcode": "8904083321019",
+      "name": "Capella Almoind",
+      "category": "General Merchandise",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 371,
+      "barcode": "8909106034921",
+      "name": "Magnum Almond",
+      "category": "General Merchandise",
+      "price": 80,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 372,
+      "barcode": "8909106034938",
+      "name": "Choclat Magum Truff",
+      "category": "Chocolates & Confectionery",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 373,
+      "barcode": "8904083321026",
+      "name": "Biscofficecream",
+      "category": "Tea, Coffee & Beverages",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 374,
+      "barcode": "8909106045101",
+      "name": "Feastcrackle Icecrm",
+      "category": "General Merchandise",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 375,
+      "barcode": "8904083320951",
+      "name": "Capelladueticecrem",
+      "category": "General Merchandise",
+      "price": 55,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 376,
+      "barcode": "8909106042285",
+      "name": "Magnumalmond Cone",
+      "category": "General Merchandise",
+      "price": 90,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 377,
+      "barcode": "8901030735103",
+      "name": "Alpho Mang700ml Tub",
+      "category": "General Merchandise",
+      "price": 160,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 378,
+      "barcode": "8901030735097",
+      "name": "Vanil Icevrm700mltub",
+      "category": "General Merchandise",
+      "price": 145,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 379,
+      "barcode": "8901439000598",
+      "name": "Butt Mushoom.Frozen",
+      "category": "Frozen Foods",
+      "price": 229,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 380,
+      "barcode": "8902756650022",
+      "name": "Potato Chee Froz400gm",
+      "category": "Frozen Foods",
+      "price": 229,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 381,
+      "barcode": "8902756311701",
+      "name": "G French Fry425g",
+      "category": "Frozen Foods",
+      "price": 117,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 382,
+      "barcode": "8902756340152",
+      "name": "G.Chicken Burgpatty300g",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 383,
+      "barcode": "8902756630017",
+      "name": "G Crisp Potatstarzz400g",
+      "category": "Frozen Foods",
+      "price": 126,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 384,
+      "barcode": "8906000610077",
+      "name": "McCain Smile Forz415gm",
+      "category": "Frozen Foods",
+      "price": 150,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 385,
+      "barcode": "8906000610725",
+      "name": "McCain Masl Fryss 420gm",
+      "category": "Frozen Foods",
+      "price": 175,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 386,
+      "barcode": "8902756311800",
+      "name": "G.Per-peri Frys400g",
+      "category": "General Merchandise",
+      "price": 126,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 387,
+      "barcode": "8902756663640",
+      "name": "G Chees Corn Nugg",
+      "category": "General Merchandise",
+      "price": 150,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 388,
+      "barcode": "8901968333358",
+      "name": "McCain Supr Wedges400g",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 389,
+      "barcode": "8906000610336",
+      "name": "McCain Alootikk400g",
+      "category": "Frozen Foods",
+      "price": 130,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 390,
+      "barcode": "8906000610053",
+      "name": "McCain Frech Fry420g",
+      "category": "General Merchandise",
+      "price": 125,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 391,
+      "barcode": "8906000610251",
+      "name": "McCain Veg Burgerpatt360g",
+      "category": "General Merchandise",
+      "price": 150,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 392,
+      "barcode": "8908022693113",
+      "name": "NAAN Fres2Go",
+      "category": "Frozen Foods",
+      "price": 155,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 393,
+      "barcode": "9501100600967",
+      "name": "Puffpastry 400g",
+      "category": "Frozen Foods",
+      "price": 250,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 394,
+      "barcode": "8901968333358",
+      "name": "But Fishbread Frozen",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 395,
+      "barcode": "8902756340152",
+      "name": "Chicken Burgpatty",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 396,
+      "barcode": "8902756351837",
+      "name": "G ChickNugg200g",
+      "category": "Frozen Foods",
+      "price": 150,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 397,
+      "barcode": "8901968333655",
+      "name": "BF Chicksalami200g",
+      "category": "Frozen Foods",
+      "price": 240,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 398,
+      "barcode": "8904083301110",
+      "name": "Pizzchee MOZZ",
+      "category": "General Merchandise",
+      "price": 150,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 399,
+      "barcode": "8906017112526",
+      "name": "Whip Cream Forzz500g",
+      "category": "Frozen Foods",
+      "price": 195,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 400,
+      "barcode": "8902756421929",
+      "name": "G.Chicken Garli Fing400g",
+      "category": "Frozen Foods",
+      "price": 257,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 401,
+      "barcode": "8902756780019",
+      "name": "G.Chicken Serekkebab400g",
+      "category": "Frozen Foods",
+      "price": 295,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 402,
+      "barcode": "8902756352056",
+      "name": "G Chickchees Nugg325g",
+      "category": "General Merchandise",
+      "price": 267,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 403,
+      "barcode": "8901968335802",
+      "name": "Spicychicksheekebab",
+      "category": "Frozen Foods",
+      "price": 195,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 404,
+      "barcode": "8902756671966",
+      "name": "G.Chickpopcorn400g",
+      "category": "Frozen Foods",
+      "price": 257,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 405,
+      "barcode": "8902756350083",
+      "name": "G.tando.chicknugg400g",
+      "category": "Frozen Foods",
+      "price": 271,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 406,
+      "barcode": "8902756301795",
+      "name": "G.Gree Peas500g",
+      "category": "General Merchandise",
+      "price": 160,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 407,
+      "barcode": "8901968333679",
+      "name": "BFbredfish Finger10pc",
+      "category": "General Merchandise",
+      "price": 275,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 408,
+      "barcode": "8901968333525",
+      "name": "BF.smok ChickHam",
+      "category": "General Merchandise",
+      "price": 340,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 409,
+      "barcode": "8901968333723",
+      "name": "BF.Chicksheekebab240g",
+      "category": "Frozen Foods",
+      "price": 185,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 410,
+      "barcode": "8906000610909",
+      "name": "McCain Potocheeshot",
+      "category": "General Merchandise",
+      "price": 265,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 411,
+      "barcode": "8938900105476",
+      "name": "Basfishfillets1kgs",
+      "category": "Frozen Foods",
+      "price": 500,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 412,
+      "barcode": "8904083300298",
+      "name": "Milkykhova 1kg",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 395,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 413,
+      "barcode": "8906140290023",
+      "name": "Greenpeas Frozen 200g",
+      "category": "Frozen Foods",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 414,
+      "barcode": "8902756291782",
+      "name": "Greenpeas Frozen 200g",
+      "category": "Frozen Foods",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 415,
+      "barcode": "8904083300281",
+      "name": "MilkymistKHOVA",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 110,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 416,
+      "barcode": "1",
+      "name": "RICH CREAM",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 417,
+      "barcode": "20001",
+      "name": "Apple Broom",
+      "category": "Household Cleaning",
+      "price": 210,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 418,
+      "barcode": "20003",
+      "name": "Canv8*10",
+      "category": "Stationery & General Merchandise",
+      "price": 90,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 419,
+      "barcode": "20005",
+      "name": "Gas Light",
+      "category": "General Merchandise",
+      "price": 199,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 420,
+      "barcode": "20002",
+      "name": "Canva Big",
+      "category": "Stationery & General Merchandise",
+      "price": 210,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 421,
+      "barcode": "20004",
+      "name": "Pamp38xl",
+      "category": "General Merchandise",
+      "price": 38,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 422,
+      "barcode": "20006",
+      "name": "Vaponewrub",
+      "category": "General Merchandise",
+      "price": 109,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 423,
+      "barcode": "20007",
+      "name": "Mult Floorclean 1lit",
+      "category": "Household Cleaning",
+      "price": 145,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 424,
+      "barcode": "10040",
+      "name": "Fresh Floor Wash 1lit",
+      "category": "Household Cleaning",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 425,
+      "barcode": "10041",
+      "name": "Ballon",
+      "category": "Stationery & General Merchandise",
+      "price": 190,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 426,
+      "barcode": "20008",
+      "name": "Colog Past100g",
+      "category": "General Merchandise",
+      "price": 76,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 427,
+      "barcode": "10084",
+      "name": "Odonil 1p Rm Fresh",
+      "category": "Household Cleaning",
+      "price": 58,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 428,
+      "barcode": "8901207042447",
+      "name": "Odonil 1box Rm Fresh",
+      "category": "Household Cleaning",
+      "price": 220,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 429,
+      "barcode": "8901207048005",
+      "name": "Odonil 1box Rm Fresh",
+      "category": "Household Cleaning",
+      "price": 220,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 430,
+      "barcode": "20009",
+      "name": "Dettol Sope100g",
+      "category": "Personal Care & Hygiene",
+      "price": 44,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 431,
+      "barcode": "10056",
+      "name": "Emil 100g",
+      "category": "General Merchandise",
+      "price": 29,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 432,
+      "barcode": "20010",
+      "name": "Kewra-water500ml",
+      "category": "Tea, Coffee & Beverages",
+      "price": 72,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 433,
+      "barcode": "20011",
+      "name": "Fruitcocktail Syrup",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Internal store SKU / short code (20011); Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 434,
+      "barcode": "8901439000291",
+      "name": "Fruitcocktail Syrup",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 199,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 435,
+      "barcode": "8904335606055",
+      "name": "Highprot.OATS Yoga",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 200,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 436,
+      "barcode": "7622202225093",
+      "name": "Silk Brownie140g",
+      "category": "General Merchandise",
+      "price": 267,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 437,
+      "barcode": "7622202842290",
+      "name": "Silkhazelnuts134g",
+      "category": "General Merchandise",
+      "price": 214,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 438,
+      "barcode": "7622202842429",
+      "name": "Silkfruitnuts129g",
+      "category": "General Merchandise",
+      "price": 214,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 439,
+      "barcode": "7614500010310",
+      "name": "Tobleron Honeyalmond",
+      "category": "Chocolates & Confectionery",
+      "price": 255,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 440,
+      "barcode": "7622300107949",
+      "name": "Tobleronemilkchotl",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 225,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 441,
+      "barcode": "8906020589414",
+      "name": "Insta ID Coffe50g",
+      "category": "Tea, Coffee & Beverages",
+      "price": 144,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 442,
+      "barcode": "7622202325960",
+      "name": "70%dark Bournille",
+      "category": "Chocolates & Confectionery",
+      "price": 150,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 443,
+      "barcode": "tang,mango750g",
+      "name": "Untitled Product",
+      "category": "General Merchandise",
+      "price": 249,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 444,
+      "barcode": "8901071705721",
+      "name": "Hersheyscreamymilk",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 137,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 445,
+      "barcode": "8901058020021",
+      "name": "Munchnutmax",
+      "category": "Chocolates & Confectionery",
+      "price": 25,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 446,
+      "barcode": "8000500066027",
+      "name": "Kinder Bueno",
+      "category": "Chocolates & Confectionery",
+      "price": 130,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 447,
+      "barcode": "8901725015343",
+      "name": "Fantastiu Roastalmond",
+      "category": "General Merchandise",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 448,
+      "barcode": "7622202326264",
+      "name": "SilkroastAlmond134g",
+      "category": "General Merchandise",
+      "price": 214,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 449,
+      "barcode": "7622202233944",
+      "name": "Silkchocolate144g",
+      "category": "Chocolates & Confectionery",
+      "price": 222,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 450,
+      "barcode": "7610400112932",
+      "name": "LindorMilk Smooth",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 475,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 451,
+      "barcode": "8901058898330",
+      "name": "Nescaf Chocodrink",
+      "category": "Tea, Coffee & Beverages",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 452,
+      "barcode": "8901071705684",
+      "name": "Hershys Darks38g",
+      "category": "General Merchandise",
+      "price": 65,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 453,
+      "barcode": "7622202325847",
+      "name": "Dark50%bounvill Rum",
+      "category": "General Merchandise",
+      "price": 134,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 454,
+      "barcode": "8902433031656",
+      "name": "Snickers Almond",
+      "category": "Chocolates & Confectionery",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 455,
+      "barcode": "7610400039796",
+      "name": "LINDOR37.5G",
+      "category": "Chocolates & Confectionery",
+      "price": 195,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 456,
+      "barcode": "6221134030204",
+      "name": "BOUNTY Imported",
+      "category": "Chocolates & Confectionery",
+      "price": 99,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 457,
+      "barcode": "8901058867855",
+      "name": "NesteICE TEA Drink",
+      "category": "Tea, Coffee & Beverages",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 458,
+      "barcode": "8906020580916",
+      "name": "ID Filtercoff Liqud",
+      "category": "Tea, Coffee & Beverages",
+      "price": 160,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 459,
+      "barcode": "8906020589209",
+      "name": "ID Filtercoff Liqud",
+      "category": "Tea, Coffee & Beverages",
+      "price": 144,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 460,
+      "barcode": "8901058020281",
+      "name": "Munch Brownimax",
+      "category": "Chocolates & Confectionery",
+      "price": 25,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 461,
+      "barcode": "8901123001764",
+      "name": "Perero Sticks",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 462,
+      "barcode": "8902433003820",
+      "name": "Galaxy Cookiecrumble",
+      "category": "Chocolates & Confectionery",
+      "price": 180,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 463,
+      "barcode": "7622202224997",
+      "name": "SilkPlumcake",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 107,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 464,
+      "barcode": "8902433008184",
+      "name": "Snickers Peantbrow",
+      "category": "Chocolates & Confectionery",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 465,
+      "barcode": "8901725112646",
+      "name": "Dark Fant Chocchunks",
+      "category": "General Merchandise",
+      "price": 75,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 466,
+      "barcode": "7622202326080",
+      "name": "Silk Oreo Dairymilk",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 214,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 467,
+      "barcode": "7622202326363",
+      "name": "Silk Mouss Dairymilk",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 214,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 468,
+      "barcode": "7622202324604",
+      "name": "Dairymilk Family",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 125,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 469,
+      "barcode": "8993039243352",
+      "name": "Marie DUO Biscuit",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 199,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 470,
+      "barcode": "8901071702195",
+      "name": "Hersh Dark Blueberry",
+      "category": "General Merchandise",
+      "price": 155,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 471,
+      "barcode": "8901071702218",
+      "name": "Hershy Dark Pomegranate",
+      "category": "General Merchandise",
+      "price": 155,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 472,
+      "barcode": "8908001658584",
+      "name": "O`Cean Fruit Drink500ml",
+      "category": "Tea, Coffee & Beverages",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 473,
+      "barcode": "8908001658607",
+      "name": "O`Cean Fruit Drink500ml",
+      "category": "Tea, Coffee & Beverages",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 474,
+      "barcode": "8908001658034",
+      "name": "O`Cean Fruit Drink500ml",
+      "category": "Tea, Coffee & Beverages",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 475,
+      "barcode": "8908001658591",
+      "name": "O`Cean Fruit Drink500ml",
+      "category": "Tea, Coffee & Beverages",
+      "price": 66,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 476,
+      "barcode": "8904335604983",
+      "name": "Yogabar Dryfruitmix",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 990,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 477,
+      "barcode": "8683666233511",
+      "name": "Bubble Tea Strawberry",
+      "category": "Tea, Coffee & Beverages",
+      "price": 399,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 478,
+      "barcode": "8683666233528",
+      "name": "Bubble Tea Mango",
+      "category": "Tea, Coffee & Beverages",
+      "price": 399,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 479,
+      "barcode": "8904335601593",
+      "name": "Yogabar Choco",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 230,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 480,
+      "barcode": "8902433008467",
+      "name": "Galaxysmoothmilk",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 180,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 481,
+      "barcode": "7622202325991",
+      "name": "50%darkbourvill",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 482,
+      "barcode": "8904335601951",
+      "name": "100% Rolled Oasts 1kg",
+      "category": "Staples, Rice & Grains",
+      "price": 439,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 483,
+      "barcode": "8901071702898",
+      "name": "Dark Almonds30g",
+      "category": "General Merchandise",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 484,
+      "barcode": "7622202271830",
+      "name": "Silk Bubbly Big",
+      "category": "General Merchandise",
+      "price": 214,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 485,
+      "barcode": "9331275006536",
+      "name": "Monetta Wafers",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 325,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 486,
+      "barcode": "8902433030932",
+      "name": "Boomer GUMS",
+      "category": "Chocolates & Confectionery",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 487,
+      "barcode": "8904083321736",
+      "name": "DARK Choclat Hazlnut",
+      "category": "Chocolates & Confectionery",
+      "price": 65,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 488,
+      "barcode": "8906020589254",
+      "name": "ID Filtercoff Liqud5PC",
+      "category": "Tea, Coffee & Beverages",
+      "price": 54,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 489,
+      "barcode": "8906020588127",
+      "name": "ID Filtercoff Liqud5PC",
+      "category": "Tea, Coffee & Beverages",
+      "price": 110,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 490,
+      "barcode": "8901071705707",
+      "name": "HERSH WholeALMO",
+      "category": "General Merchandise",
+      "price": 145,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 491,
+      "barcode": "8902433008504",
+      "name": "Galaxy Fruitnuts",
+      "category": "Chocolates & Confectionery",
+      "price": 180,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 492,
+      "barcode": "20011",
+      "name": "Galaxy Fruitnuts",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Internal store SKU / short code (20011); Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 493,
+      "barcode": "8901071705769",
+      "name": "Hersh Almonds40g",
+      "category": "General Merchandise",
+      "price": 62,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 494,
+      "barcode": "8902433005688",
+      "name": "Galaxy Fusion 70%",
+      "category": "Chocolates & Confectionery",
+      "price": 250,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 495,
+      "barcode": "7622202836572",
+      "name": "Oreoo Golden275g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 87,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 496,
+      "barcode": "8902433003134",
+      "name": "Snickers Buttersct",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 497,
+      "barcode": "8008857200194",
+      "name": "Spaghetti Pastas Italy",
+      "category": "Staples, Rice & Grains",
+      "price": 699,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 498,
+      "barcode": "8904083321668",
+      "name": "MILKchocolat Haz",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 65,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 499,
+      "barcode": "8904083321651",
+      "name": "Milkchocol Capella",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 500,
+      "barcode": "8902433007217",
+      "name": "Boomerkrunch GUM",
+      "category": "Chocolates & Confectionery",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 501,
+      "barcode": "8901071702256",
+      "name": "Dark Pomegranate Choclat",
+      "category": "Chocolates & Confectionery",
+      "price": 57,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 502,
+      "barcode": "8901071702249",
+      "name": "Dark Raspberry Chocol",
+      "category": "General Merchandise",
+      "price": 57,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 503,
+      "barcode": "8000500455876",
+      "name": "FerreroROCHER MOMENTS",
+      "category": "Chocolates & Confectionery",
+      "price": 179,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 504,
+      "barcode": "8901058023558",
+      "name": "Kit-kat Delight14mimi",
+      "category": "Chocolates & Confectionery",
+      "price": 220,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 505,
+      "barcode": "8901123005380",
+      "name": "Lotte Chocopiee",
+      "category": "Chocolates & Confectionery",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 506,
+      "barcode": "8906066202308",
+      "name": "Lemonconcenter",
+      "category": "General Merchandise",
+      "price": 79,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 507,
+      "barcode": "8000500126936",
+      "name": "FerreroRocher50g",
+      "category": "Chocolates & Confectionery",
+      "price": 169,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 508,
+      "barcode": "8906066831607",
+      "name": "Wafer Cubes Dark",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 150,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 509,
+      "barcode": "7622202326387",
+      "name": "Silk Ganaches Big",
+      "category": "General Merchandise",
+      "price": 214,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 510,
+      "barcode": "7610400112925",
+      "name": "Smooth Lindor6pcs MILK HAZELNUT",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 475,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 511,
+      "barcode": "8902433002779",
+      "name": "Skittles90g",
+      "category": "Chocolates & Confectionery",
+      "price": 99,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 512,
+      "barcode": "8699462609924",
+      "name": "LEXUS Hazelnut&milk",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 239,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 513,
+      "barcode": "8000500003787",
+      "name": "FerreroRocher200g",
+      "category": "Chocolates & Confectionery",
+      "price": 539,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 514,
+      "barcode": "7622202364907",
+      "name": "CookiesCADBURY",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 160,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 515,
+      "barcode": "8901058030228",
+      "name": "KitKat 14Rich Delight",
+      "category": "Chocolates & Confectionery",
+      "price": 375,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 516,
+      "barcode": "7622202051661",
+      "name": "Tang Orange750g",
+      "category": "Tea, Coffee & Beverages",
+      "price": 249,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 517,
+      "barcode": "8000500411469",
+      "name": "Ferro ROCHER90G",
+      "category": "Chocolates & Confectionery",
+      "price": 269,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 518,
+      "barcode": "7622202257575",
+      "name": "OREO Biscuit Family",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 274,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 519,
+      "barcode": "8901058898347",
+      "name": "Nescaf Intense Cafe",
+      "category": "Tea, Coffee & Beverages",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 520,
+      "barcode": "8901058899092",
+      "name": "Milo Drinkingcholot",
+      "category": "Chocolates & Confectionery",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 521,
+      "barcode": "8906009077277",
+      "name": "Sugar Free Cookies",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 522,
+      "barcode": "8000500396469",
+      "name": "FerreroROCHER185g",
+      "category": "Chocolates & Confectionery",
+      "price": 539,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 523,
+      "barcode": "8000500009673",
+      "name": "FerreroROCHERbox",
+      "category": "Chocolates & Confectionery",
+      "price": 879,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 524,
+      "barcode": "8901972086110",
+      "name": "Ticktime Crackers",
+      "category": "General Merchandise",
+      "price": 75,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 525,
+      "barcode": "7622202308659",
+      "name": "Biscofficecream",
+      "category": "Tea, Coffee & Beverages",
+      "price": 110,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 526,
+      "barcode": "8902433002809",
+      "name": "Skittles90g",
+      "category": "Chocolates & Confectionery",
+      "price": 99,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 527,
+      "barcode": "8901057600286",
+      "name": "Kohe-peeler",
+      "category": "Stationery & General Merchandise",
+      "price": 80,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 528,
+      "barcode": "8901057600231",
+      "name": "Kohe-straigh-peeler",
+      "category": "Stationery & General Merchandise",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 529,
+      "barcode": "8901057600262",
+      "name": "Kohehandle-peeler",
+      "category": "Stationery & General Merchandise",
+      "price": 65,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 530,
+      "barcode": "8906096573119",
+      "name": "Coconuto-pener",
+      "category": "Stationery & General Merchandise",
+      "price": 138,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 531,
+      "barcode": "8901057600095",
+      "name": "Kohe-paringnife",
+      "category": "Stationery & General Merchandise",
+      "price": 95,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 532,
+      "barcode": "8901057600026",
+      "name": "Kohe-knife",
+      "category": "Stationery & General Merchandise",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 533,
+      "barcode": "8901057600071",
+      "name": "Kohe-curved-nife",
+      "category": "Stationery & General Merchandise",
+      "price": 95,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 534,
+      "barcode": "8901071705264",
+      "name": "Jolly Lollipops",
+      "category": "Chocolates & Confectionery",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 535,
+      "barcode": "7622202237379",
+      "name": "Dailymilk Lollipops",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 536,
+      "barcode": "7622202819995",
+      "name": "Gems 5rs",
+      "category": "Chocolates & Confectionery",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 537,
+      "barcode": "8901393027600",
+      "name": "Alpenliebe Lollipops",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 538,
+      "barcode": "8901393019780",
+      "name": "Alpenliebe Lollipops",
+      "category": "Stationery & General Merchandise",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 539,
+      "barcode": "8901393026436",
+      "name": "Chupu Lollipos",
+      "category": "Chocolates & Confectionery",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 540,
+      "barcode": "8901071705288",
+      "name": "Jolly Lollipops",
+      "category": "Chocolates & Confectionery",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 541,
+      "barcode": "8901393026412",
+      "name": "Chupu Lollipos",
+      "category": "Chocolates & Confectionery",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 542,
+      "barcode": "8906069714785",
+      "name": "Sup Jumbo Bottel",
+      "category": "General Merchandise",
+      "price": 130,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 543,
+      "barcode": "8906057628056",
+      "name": "Schoolwaterbottal",
+      "category": "Stationery & General Merchandise",
+      "price": 100,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 544,
+      "barcode": "20012",
+      "name": "Steelpoto Peeler",
+      "category": "Stationery & General Merchandise",
+      "price": 150,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 545,
+      "barcode": "6953666093401",
+      "name": "8.5inc Scissors",
+      "category": "Stationery & General Merchandise",
+      "price": 250,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 546,
+      "barcode": "6901577690028",
+      "name": "6.3inc Scissors",
+      "category": "Stationery & General Merchandise",
+      "price": 65,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 547,
+      "barcode": "6941057466125",
+      "name": "Double Quick Pump",
+      "category": "Stationery & General Merchandise",
+      "price": 449,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 548,
+      "barcode": "4987176282927",
+      "name": "Gillette Fusion5shave",
+      "category": "Personal Care & Hygiene",
+      "price": 425,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 549,
+      "barcode": "4987176077776",
+      "name": "Gillettemach3",
+      "category": "Personal Care & Hygiene",
+      "price": 275,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 550,
+      "barcode": "4987176103222",
+      "name": "Gillette Fusion5shave",
+      "category": "Personal Care & Hygiene",
+      "price": 399,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 551,
+      "barcode": "4987176151643",
+      "name": "Gillette Vector3",
+      "category": "Personal Care & Hygiene",
+      "price": 149,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 552,
+      "barcode": "4987176357922",
+      "name": "Gillrtte Fusion5 B2",
+      "category": "General Merchandise",
+      "price": 649,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 553,
+      "barcode": "4987176300508",
+      "name": "Gillettemach3 B2",
+      "category": "Personal Care & Hygiene",
+      "price": 425,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 554,
+      "barcode": "4987176093714",
+      "name": "Gillette ShavGel60g",
+      "category": "Personal Care & Hygiene",
+      "price": 99,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 555,
+      "barcode": "4987176281227",
+      "name": "Gillette Brush",
+      "category": "Personal Care & Hygiene",
+      "price": 85,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 556,
+      "barcode": "4987176106018",
+      "name": "Gillrtte GEL 195g Spy",
+      "category": "General Merchandise",
+      "price": 325,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 557,
+      "barcode": "4902430722193",
+      "name": "Gillet FOAM 50g",
+      "category": "General Merchandise",
+      "price": 90,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 558,
+      "barcode": "8901103122144",
+      "name": "Fem Fair&soft60g",
+      "category": "General Merchandise",
+      "price": 85,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 559,
+      "barcode": "4987176278180",
+      "name": "Venus Gillett Smoot",
+      "category": "General Merchandise",
+      "price": 89,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 560,
+      "barcode": "20013",
+      "name": "Cinthol Shavingcream",
+      "category": "Personal Care & Hygiene",
+      "price": 25,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 561,
+      "barcode": "8901103101262",
+      "name": "Fem Bleach8g",
+      "category": "Personal Care & Hygiene",
+      "price": 37,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 562,
+      "barcode": "8909106048270",
+      "name": "Vaselin Moisturiser",
+      "category": "Personal Care & Hygiene",
+      "price": 130,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 563,
+      "barcode": "4987176280596",
+      "name": "GilletGuard B",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 564,
+      "barcode": "4987176258168",
+      "name": "GilletprestoRazo",
+      "category": "General Merchandise",
+      "price": 25,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 565,
+      "barcode": "4987176280541",
+      "name": "GilletGuard4p",
+      "category": "General Merchandise",
+      "price": 48,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 566,
+      "barcode": "4987176335142",
+      "name": "GilletGuard4p",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 567,
+      "barcode": "4987176198723",
+      "name": "Ambipur Car 60Day",
+      "category": "General Merchandise",
+      "price": 249,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 568,
+      "barcode": "4987176198730",
+      "name": "Ambipur Car 60Day",
+      "category": "General Merchandise",
+      "price": 249,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 569,
+      "barcode": "4987176198747",
+      "name": "Ambipur Car 60Day",
+      "category": "General Merchandise",
+      "price": 249,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 570,
+      "barcode": "4987176162021",
+      "name": "Ambipur Car 60Day",
+      "category": "General Merchandise",
+      "price": 349,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 571,
+      "barcode": "8904055140570",
+      "name": "Super-Max-Razors",
+      "category": "Personal Care & Hygiene",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 572,
+      "barcode": "42204244",
+      "name": "Nivea Cream 60ml",
+      "category": "General Merchandise",
+      "price": 150,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 573,
+      "barcode": "8901396389613",
+      "name": "Veet Wax Strip",
+      "category": "Personal Care & Hygiene",
+      "price": 120,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 574,
+      "barcode": "8904094400147",
+      "name": "Sootherbaby Nip",
+      "category": "Baby Care",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 575,
+      "barcode": "8904094400475",
+      "name": "Nipple Baby",
+      "category": "Baby Care",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 576,
+      "barcode": "8901396601784",
+      "name": "Veet HairRemoval30g",
+      "category": "Personal Care & Hygiene",
+      "price": 109,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 577,
+      "barcode": "4987176212474",
+      "name": "Gillet Wilkson 10N",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 578,
+      "barcode": "4987176212498",
+      "name": "Gillette50N",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 579,
+      "barcode": "8901526206377",
+      "name": "Garnier Burgundy",
+      "category": "Personal Care & Hygiene",
+      "price": 99,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 580,
+      "barcode": "4987176244420",
+      "name": "Ambipur Car 60Day",
+      "category": "General Merchandise",
+      "price": 349,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 581,
+      "barcode": "20014",
+      "name": "Mortein Machi100%",
+      "category": "Household Cleaning",
+      "price": 90,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 582,
+      "barcode": "7622202237942",
+      "name": "Dairymilk10rs",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 583,
+      "barcode": "8801038123097",
+      "name": "Eyebrow Razor",
+      "category": "Personal Care & Hygiene",
+      "price": 110,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 584,
+      "barcode": "8908011834114",
+      "name": "Razor 3 Ladi",
+      "category": "Personal Care & Hygiene",
+      "price": 390,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 585,
+      "barcode": "10067",
+      "name": "Alumini Foil9meter",
+      "category": "Household Cleaning",
+      "price": 90,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 586,
+      "barcode": "10093",
+      "name": "AluminiFOIL18Mts",
+      "category": "Household Cleaning",
+      "price": 195,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 587,
+      "barcode": "20015",
+      "name": "Anti-slipmat45*125c",
+      "category": "Stationery & General Merchandise",
+      "price": 155,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 588,
+      "barcode": "8906000510025",
+      "name": "Stumpr Ball 1pc",
+      "category": "Stationery & General Merchandise",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 589,
+      "barcode": "20016",
+      "name": "Shuttcock",
+      "category": "Stationery & General Merchandise",
+      "price": 22,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 590,
+      "barcode": "8908019293074",
+      "name": "Pollie Cleaner Bottle",
+      "category": "Household Cleaning",
+      "price": 220,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 591,
+      "barcode": "20017",
+      "name": "Oil Dispenser 1lit",
+      "category": "Stationery & General Merchandise",
+      "price": 290,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 592,
+      "barcode": "8904004400243",
+      "name": "Haldiram's Soyastick 42g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 593,
+      "barcode": "8904004423730",
+      "name": "Haldiram's Onionkoduba28g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 594,
+      "barcode": "8904004402827",
+      "name": "Haldiram's Panchratan Mix 23g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 595,
+      "barcode": "8904004402018",
+      "name": "Haldiram's All In One Mix 36g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 596,
+      "barcode": "8904004401073",
+      "name": "Haldiram's Khatta Meetha 55g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 597,
+      "barcode": "8904004403671",
+      "name": "Haldiram's Tastnuts38g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 598,
+      "barcode": "8904004400694",
+      "name": "Haldiram's Aloo Bhujia30g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 599,
+      "barcode": "8904004403725",
+      "name": "Haldiram's MonngDal35g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 600,
+      "barcode": "8904004402131",
+      "name": "Haldiram's Dryfruitmix200g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 115,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 601,
+      "barcode": "8904004412956",
+      "name": "Haldiram's Navratanmix200g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 602,
+      "barcode": "8904004402537",
+      "name": "Haldiram's MiniBhakawadi200g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 65,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 603,
+      "barcode": "8904004404647",
+      "name": "Haldiram's Saltpeanut 200g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 55,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 604,
+      "barcode": "8904004401158",
+      "name": "Haldiram's Khattameet200g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 55,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 605,
+      "barcode": "8904004400892",
+      "name": "Haldiram's Soyachips200g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 606,
+      "barcode": "8904004402834",
+      "name": "Haldiram's Panchratan Mix 200g",
+      "category": "General Merchandise",
+      "price": 90,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 607,
+      "barcode": "8904004404210",
+      "name": "Haldiram's Minisamosaa200g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 65,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 608,
+      "barcode": "8904004422900",
+      "name": "Haldiram's Buttermurukk135g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 55,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 609,
+      "barcode": "8904004400045",
+      "name": "Haldiram's Bhujisev200g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 610,
+      "barcode": "8904004403732",
+      "name": "Haldiram's Moongdal200g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 611,
+      "barcode": "8901277011312",
+      "name": "ParkAvenue Gromingkit",
+      "category": "Personal Care & Hygiene",
+      "price": 460,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 612,
+      "barcode": "101268",
+      "name": "RainTOP Carry Cote",
+      "category": "Stationery & General Merchandise",
+      "price": 165,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 613,
+      "barcode": "E0002R",
+      "name": "Mix Sabut Garamasla",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 614,
+      "barcode": "20018",
+      "name": "Pista Unrosted",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 280,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 615,
+      "barcode": "20019",
+      "name": "Cucinnamonstick 30rs",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 616,
+      "barcode": "8901499027634",
+      "name": "Multcornflacks",
+      "category": "Staples, Rice & Grains",
+      "price": 65,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 617,
+      "barcode": "8901719135149",
+      "name": "Monaco",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 618,
+      "barcode": "8901719135293",
+      "name": "Krack Jack",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 35,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 619,
+      "barcode": "8901719131769",
+      "name": "Parle Rusk 54g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 620,
+      "barcode": "8901719137914",
+      "name": "Parle Rusk 200g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 621,
+      "barcode": "8904083300397",
+      "name": "Milky. Straw 170ml",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 622,
+      "barcode": "8904083300403",
+      "name": "Milky. Choco 170ml",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 623,
+      "barcode": "8904083322573",
+      "name": "Milky. Vanil170ml",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 624,
+      "barcode": "8902080105045",
+      "name": "Pepsi 300ml",
+      "category": "Tea, Coffee & Beverages",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 625,
+      "barcode": "8901719123870",
+      "name": "Parle-g 250g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 626,
+      "barcode": "8904040300231",
+      "name": "Annapoorna. Chiili Powder 50g",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 627,
+      "barcode": "8904040301603",
+      "name": "Annapoorna. Cumin Powder 50g",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 39,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 628,
+      "barcode": "8906002081417",
+      "name": "Sakthi. Mutton 50g",
+      "category": "General Merchandise",
+      "price": 41,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 629,
+      "barcode": "8906002081615",
+      "name": "Sakthi. Biriyani 50g",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 630,
+      "barcode": "8904040300491",
+      "name": "Annapoorna. Fish Powder 50g",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 29,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 631,
+      "barcode": "8904040300187",
+      "name": "Annapoorna. Chicken Powder 50g",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 26,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 632,
+      "barcode": "8906002080311",
+      "name": "Sakthi. Sambar 50g",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 31,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 633,
+      "barcode": "8904040301078",
+      "name": "Annapoorna. Turm Powder 50g",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 24,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 634,
+      "barcode": "8904040300590",
+      "name": "Annapoorna. Garam Powder 50g",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 635,
+      "barcode": "8906002080618",
+      "name": "Sakthi. Rasam 50g",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 636,
+      "barcode": "8904040300132",
+      "name": "Annapoorna. Chic 65 50g",
+      "category": "General Merchandise",
+      "price": 43,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 637,
+      "barcode": "8904040300811",
+      "name": "Annapoorna. Pepper P 50g",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 90,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 638,
+      "barcode": "8906002080014",
+      "name": "Sakthi. Turmeric 50g",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 24,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 639,
+      "barcode": "8906002080113",
+      "name": "Sakthi. Chilli P50g",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 25,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 640,
+      "barcode": "8906002081813",
+      "name": "Sakthi. Garam P50g",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 641,
+      "barcode": "8906002080212",
+      "name": "Sakthi. Corian P50g",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 642,
+      "barcode": "8901719135149",
+      "name": "Untitled Product",
+      "action": "SKIP_INVALID_PRICE",
+      "reason": "Price (0) is invalid"
+    },
+    {
+      "rowId": 643,
+      "barcode": "8901063325760",
+      "name": "Britannia. Toast Rusk 200g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 644,
+      "barcode": "8901063371064",
+      "name": "Marie Gold 200g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 645,
+      "barcode": "8901063035256",
+      "name": "Britannia. Milk Bikis Sand 56g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 646,
+      "barcode": "8901063032446",
+      "name": "Britannia. Croissant 48g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 647,
+      "barcode": "8901063368675",
+      "name": "Britannia. Gobbles Cho",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 648,
+      "barcode": "8901063025509",
+      "name": "Britannia. Milk Bikis 114g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 649,
+      "barcode": "8901063325227",
+      "name": "Britannia. Toast Rusk 50g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 650,
+      "barcode": "8901063018389",
+      "name": "Britannia. Timepass 63g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 651,
+      "barcode": "8901063035263",
+      "name": "Britannia. Milk Bikis 57g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 652,
+      "barcode": "8901063004269",
+      "name": "Britannia. Good Cho 130g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 653,
+      "barcode": "8901063093638",
+      "name": "Britannia. Good Cas 60g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 654,
+      "barcode": "8901063367340",
+      "name": "Britannia. Golmaal 61g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 655,
+      "barcode": "8901063368668",
+      "name": "Britannia. Gobbles Fruit",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 656,
+      "barcode": "8901063142831",
+      "name": "Britannia. Nutri 58g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 657,
+      "barcode": "8901063033931",
+      "name": "Britannia. Treat Vani 60g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 658,
+      "barcode": "8901063371057",
+      "name": "Marie Gold 73g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 659,
+      "barcode": "8901063029408",
+      "name": "Britannia. Jimjam 62g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 660,
+      "barcode": "8901063367319",
+      "name": "Britannia.Mas Chas 42g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 661,
+      "barcode": "8901063370074",
+      "name": "Britannia. Good But 60g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 662,
+      "barcode": "8901063012349",
+      "name": "Britannia. Milk Bikis 150g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 663,
+      "barcode": "8901063371156",
+      "name": "Marie Gold 147g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 664,
+      "barcode": "8901063142817",
+      "name": "Britannia. Nutri 125g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 25,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 665,
+      "barcode": "8901063025448",
+      "name": "Britannia. Milk Bikis 66g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 666,
+      "barcode": "8901063093676",
+      "name": "Britannia. Good Cas 34g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 667,
+      "barcode": "8901063370050",
+      "name": "Britannia. Good But 34g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 668,
+      "barcode": "8901063367296",
+      "name": "Britannia. 50-50 75g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 669,
+      "barcode": "8901063139374",
+      "name": "Britannia. Bourbo 60g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 670,
+      "barcode": "8908008563102",
+      "name": "Briyas Peanut 340g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 175,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 671,
+      "barcode": "8904083301851",
+      "name": "Milky. Ghee 100ml",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 105,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 672,
+      "barcode": "8904083301820",
+      "name": "Milky. Ghee 500ml",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 480,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 673,
+      "barcode": "8904083301547",
+      "name": "Milky. Milkmaid 200g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 75,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 674,
+      "barcode": "8904083300670",
+      "name": "Milky. Butter 200g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 160,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 675,
+      "barcode": "8904083300144",
+      "name": "Milky Fresh Cream 250ml",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 100,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 676,
+      "barcode": "8908001588492",
+      "name": "Asal Coco Ladu",
+      "category": "Chocolates & Confectionery",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 677,
+      "barcode": "8904083309888",
+      "name": "Milky.cream Cheese",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 235,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 678,
+      "barcode": "8904083302339",
+      "name": "Milky. Yog Cereal",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 679,
+      "barcode": "8904083301585",
+      "name": "Milky. Yog Honey",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 680,
+      "barcode": "8904083302483",
+      "name": "Milky. Skyr 100g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 75,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 681,
+      "barcode": "8904083323174",
+      "name": "Milky. Skyr Blue",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 80,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 682,
+      "barcode": "8904083312086",
+      "name": "Milky. Shrikhand",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 683,
+      "barcode": "8904083314035",
+      "name": "Milky. Mishtidoi",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 35,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 684,
+      "barcode": "8908008563119",
+      "name": "Briyas Peanut Cr 340g",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 175,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 685,
+      "barcode": "8904083301844",
+      "name": "Milky. Ghee 50ml",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 53,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 686,
+      "barcode": "8906042150975",
+      "name": "Anil Soya Chunks 40g",
+      "category": "Staples, Rice & Grains",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 687,
+      "barcode": "8908008622151",
+      "name": "Alfa Tissue",
+      "category": "Stationery & General Merchandise",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 688,
+      "barcode": "4987176177179",
+      "name": "Old Spice Deo",
+      "category": "Personal Care & Hygiene",
+      "price": 75,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 689,
+      "barcode": "4902430907712",
+      "name": "Tide Lemon",
+      "category": "Household Cleaning",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 690,
+      "barcode": "4987176278562",
+      "name": "Gillette Vector+",
+      "category": "Personal Care & Hygiene",
+      "price": 105,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 691,
+      "barcode": "4987176303363",
+      "name": "Gillette Guard Cream",
+      "category": "Personal Care & Hygiene",
+      "price": 25,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 692,
+      "barcode": "4987176373403",
+      "name": "Tide Double Power",
+      "category": "Household Cleaning",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 693,
+      "barcode": "4987176355751",
+      "name": "Gillette Guard 3 In 1",
+      "category": "Personal Care & Hygiene",
+      "price": 125,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 694,
+      "barcode": "4987176301956",
+      "name": "Whisper Ultra Nights 7p",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 695,
+      "barcode": "4987176319517",
+      "name": "Whisper Choice 6p",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 696,
+      "barcode": "4987176324672",
+      "name": "Whisper Choice 10p",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 697,
+      "barcode": "4987176356062",
+      "name": "Oral B Extra Soft",
+      "category": "Personal Care & Hygiene",
+      "price": 22,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 698,
+      "barcode": "4987176286215",
+      "name": "Gillete Presto",
+      "category": "Personal Care & Hygiene",
+      "price": 25,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 699,
+      "barcode": "4987176342645",
+      "name": "Gillete Venus",
+      "category": "Personal Care & Hygiene",
+      "price": 99,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 700,
+      "barcode": "4987176286833",
+      "name": "Gillete Mach3",
+      "category": "Personal Care & Hygiene",
+      "price": 275,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 701,
+      "barcode": "4987176346360",
+      "name": "Pampers L 21p",
+      "category": "Baby Care",
+      "price": 374,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 702,
+      "barcode": "4987176300478",
+      "name": "Gillette Mach3 2p",
+      "category": "Personal Care & Hygiene",
+      "price": 349,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 703,
+      "barcode": "4987176373267",
+      "name": "Tide + Double",
+      "category": "Household Cleaning",
+      "price": 73,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 704,
+      "barcode": "4987176340740",
+      "name": "Gillette Shaving Cream",
+      "category": "Personal Care & Hygiene",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 705,
+      "barcode": "4987176294562",
+      "name": "Whisper Xl 6p",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 706,
+      "barcode": "4987176335142",
+      "name": "Gillette Guard 4p",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 707,
+      "barcode": "4987176293527",
+      "name": "Whisper Ultra Xl 7p",
+      "category": "Personal Care & Hygiene",
+      "price": 95,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 708,
+      "barcode": "4987176367853",
+      "name": "Whisper Choice 12p",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 709,
+      "barcode": "4987176215017",
+      "name": "Pampers L 12p",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 3 times in inventory"
+    },
+    {
+      "rowId": 710,
+      "barcode": "4987176212498",
+      "name": "Gillette Wilkinson",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 711,
+      "barcode": "4987176319180",
+      "name": "Whisper Choice 6p",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 712,
+      "barcode": "4987176335166",
+      "name": "Gillette Guard 7p",
+      "category": "Personal Care & Hygiene",
+      "price": 98,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 713,
+      "barcode": "4987176278579",
+      "name": "Gillette Vector+ 2p",
+      "category": "Personal Care & Hygiene",
+      "price": 99,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 714,
+      "barcode": "4987176332592",
+      "name": "Gillette Guard 1p",
+      "category": "Personal Care & Hygiene",
+      "price": 28,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 715,
+      "barcode": "4987176071392",
+      "name": "Pampers 2p NEW",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 716,
+      "barcode": "4987176071385",
+      "name": "Pampers M 2p",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 3 times in inventory"
+    },
+    {
+      "rowId": 717,
+      "barcode": "4987176071347",
+      "name": "Pampers L 2p",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 718,
+      "barcode": "4987176280596",
+      "name": "Gillette Guard 1p",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 719,
+      "barcode": "8904073812954",
+      "name": "Lunch Box",
+      "category": "Stationery & General Merchandise",
+      "price": 249,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 720,
+      "barcode": "6976541227753",
+      "name": "Marshmellow Heart",
+      "category": "Chocolates & Confectionery",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 721,
+      "barcode": "89007877",
+      "name": "Double Mint",
+      "category": "Chocolates & Confectionery",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 722,
+      "barcode": "8906059461576",
+      "name": "Jillies Jelly",
+      "category": "Chocolates & Confectionery",
+      "price": 95,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 723,
+      "barcode": "6281004135934",
+      "name": "Safari Crunch",
+      "category": "Snacks, Chips & Namkeen",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 724,
+      "barcode": "8904073812947",
+      "name": "Lunch Box",
+      "category": "Stationery & General Merchandise",
+      "price": 229,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 725,
+      "barcode": "6970001030815",
+      "name": "Pencil Box",
+      "category": "Stationery & General Merchandise",
+      "price": 190,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 726,
+      "barcode": "6979160193997",
+      "name": "Pencil Box",
+      "category": "Stationery & General Merchandise",
+      "price": 235,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 727,
+      "barcode": "8904083303077",
+      "name": "Milky Curd 1kg",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 138,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 728,
+      "barcode": "8904083310037",
+      "name": "Milky Garlic Spr",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 120,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 729,
+      "barcode": "8904083310020",
+      "name": "Milky Pepper Spr",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 120,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 730,
+      "barcode": "8904083304036",
+      "name": "Milky Cheddar",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 175,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 731,
+      "barcode": "8904083300625",
+      "name": "Milky Butter U 500g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 400,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 732,
+      "barcode": "8904083303015",
+      "name": "Milky Curd 400g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 733,
+      "barcode": "8904083300526",
+      "name": "Milky Butter S 500g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 400,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 734,
+      "barcode": "8904083301035",
+      "name": "Milky Mozzarella",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 170,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 735,
+      "barcode": "8904083307068",
+      "name": "Milky Cheese Blo",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 160,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 736,
+      "barcode": "8904083310013",
+      "name": "Milky Plain Spr",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 120,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 737,
+      "barcode": "8904083300656",
+      "name": "Milky Butter U 100g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 85,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 738,
+      "barcode": "8904083310129",
+      "name": "Milky Che Slice 10s",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 160,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 739,
+      "barcode": "8904083300519",
+      "name": "Milky Butter S 100g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 85,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 740,
+      "barcode": "8904083300021",
+      "name": "Milky Paneer200g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 135,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 741,
+      "barcode": "8904083310136",
+      "name": "Milky Che Slice 5s",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 85,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 742,
+      "barcode": "8904083307037",
+      "name": "Milky Cheese Cube",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 3 times in inventory"
+    },
+    {
+      "rowId": 743,
+      "barcode": "8904083300076",
+      "name": "Milky Paneer1kg",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 575,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 744,
+      "barcode": "8904083300045",
+      "name": "Milky Paneer500g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 335,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 745,
+      "barcode": "8904083306047",
+      "name": "Milky Curd 135g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 746,
+      "barcode": "8906036673428",
+      "name": "Nandhini Milk F",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 37,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 747,
+      "barcode": "8904083303039",
+      "name": "Milky Curd Cup 200g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 35,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 748,
+      "barcode": "8904083302070",
+      "name": "Milky Yogurt Man",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 749,
+      "barcode": "8904083300106",
+      "name": "Milky Pan High P",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 160,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 750,
+      "barcode": "8904083302063",
+      "name": "Milky Yogurt Stra",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 751,
+      "barcode": "8904083302438",
+      "name": "Milky G Yogurt 700g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 325,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 752,
+      "barcode": "8908008563003",
+      "name": "Milky Tofu",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 99,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 753,
+      "barcode": "8904083302292",
+      "name": "Milky G Yogurt 100g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 55,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 754,
+      "barcode": "8904083302100",
+      "name": "Milky Yogurt Blu",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 755,
+      "barcode": "8904083302346",
+      "name": "Milky G Yogurt 225g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 120,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 756,
+      "barcode": "8904083306085",
+      "name": "Milky Curd 400g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 42,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 757,
+      "barcode": "8904083302094",
+      "name": "Milky Yogurt Pea",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 758,
+      "barcode": "8901764011252",
+      "name": "Cocacola-org",
+      "category": "Tea, Coffee & Beverages",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 759,
+      "barcode": "8906350554786",
+      "name": "SMT Coco Oil 500ml",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 240,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 760,
+      "barcode": "8908026028423",
+      "name": "GEKS Pineapple",
+      "category": "Tea, Coffee & Beverages",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 761,
+      "barcode": "8901764041259",
+      "name": "Thumbsup",
+      "category": "Tea, Coffee & Beverages",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 762,
+      "barcode": "8908026028430",
+      "name": "GEKS Mixed",
+      "category": "Tea, Coffee & Beverages",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 763,
+      "barcode": "8901719137297",
+      "name": "RikRak Choco",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 764,
+      "barcode": "8901764031250",
+      "name": "Sprite",
+      "category": "Tea, Coffee & Beverages",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 765,
+      "barcode": "90162602",
+      "name": "Redbull",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "EAN-8 short barcode format; Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 766,
+      "barcode": "757953642923",
+      "name": "Rum Energy Shot",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 767,
+      "barcode": "8902080100026",
+      "name": "Lehar Soda",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 768,
+      "barcode": "8902080001361",
+      "name": "7up",
+      "category": "Tea, Coffee & Beverages",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 769,
+      "barcode": "9354201759634",
+      "name": "SMT Ging Oil 200ml",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 120,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 770,
+      "barcode": "8901719135248",
+      "name": "Krack Jack 56g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 771,
+      "barcode": "8901719129926",
+      "name": "Parle-g Oats& Berry",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 772,
+      "barcode": "8901719134852",
+      "name": "Parle-g 90g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 773,
+      "barcode": "8901719129179",
+      "name": "Parle-coconut",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 9,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 774,
+      "barcode": "8901719105913",
+      "name": "Hide & Seek 120g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 30,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 775,
+      "barcode": "8906125670246",
+      "name": "Gulas Jaggery Powder 500g",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 59,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 776,
+      "barcode": "8901719100369",
+      "name": "Hide & Seek 33g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 777,
+      "barcode": "8901719135118",
+      "name": "Monaco Salt 52g",
+      "category": "Biscuits, Bakery & Rusk",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 778,
+      "barcode": "8906140772598",
+      "name": "Thalir Rava 500g",
+      "category": "Staples, Rice & Grains",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 779,
+      "barcode": "8906042150074",
+      "name": "Anil Fing Mil 180g",
+      "category": "Staples, Rice & Grains",
+      "price": 28,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 780,
+      "barcode": "8906016976808",
+      "name": "Mayil Gram Flo 500g",
+      "category": "Staples, Rice & Grains",
+      "price": 80,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 781,
+      "barcode": "8908000582385",
+      "name": "SMT Coco Oil 100ml",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 60,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 782,
+      "barcode": "7898",
+      "name": "White Poha",
+      "category": "Staples, Rice & Grains",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 783,
+      "barcode": "8906042151149",
+      "name": "Anil Noodle 4pa",
+      "category": "Instant Food",
+      "price": 40,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 784,
+      "barcode": "8906008811117",
+      "name": "Fortune. Maida 500g",
+      "category": "Staples, Rice & Grains",
+      "price": 65,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 785,
+      "barcode": "8904505700187",
+      "name": "Kohinoor.ric Cl Gold 1kg",
+      "category": "General Merchandise",
+      "price": 235,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 786,
+      "barcode": "8906008814057",
+      "name": "Kohinoor.ric Sup Val 1kg",
+      "category": "General Merchandise",
+      "price": 240,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 787,
+      "barcode": "8906042150029",
+      "name": "Anil Vermi 180g",
+      "category": "Staples, Rice & Grains",
+      "price": 23,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 788,
+      "barcode": "8906007289139",
+      "name": "Fortune. Atta 1kg",
+      "category": "Staples, Rice & Grains",
+      "price": 107,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 789,
+      "barcode": "8904505701269",
+      "name": "Fortune. Sunflo Pouch",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 790,
+      "barcode": "8908002396331",
+      "name": "Mr.gold Coco Oil 500ml",
+      "action": "SKIP_DUPLICATE_FOR_REVIEW",
+      "reason": "Duplicate barcode detected: appears 2 times in inventory"
+    },
+    {
+      "rowId": 791,
+      "barcode": "8908000974128",
+      "name": "Sunland Sun Oil",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 114,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 792,
+      "barcode": "8906007289085",
+      "name": "Fortune. Atta 5kg",
+      "category": "Staples, Rice & Grains",
+      "price": 360,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 793,
+      "barcode": "8901262178792",
+      "name": "Amul Fre Fries 200g",
+      "category": "Frozen Foods",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 794,
+      "barcode": "8935112200005",
+      "name": "Redbull Kratingdaeng",
+      "category": "Tea, Coffee & Beverages",
+      "price": 125,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 795,
+      "barcode": "8901058898354",
+      "name": "Nescafe Chilled Latte",
+      "category": "Tea, Coffee & Beverages",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 796,
+      "barcode": "4792024019200",
+      "name": "Maggi Coco Milk P 100g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 149,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 797,
+      "barcode": "89080658",
+      "name": "Maggi Ketchup 190g",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 798,
+      "barcode": "4792024016476",
+      "name": "Maggi Coco Milk 180ml",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 80,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 799,
+      "barcode": "89080450",
+      "name": "Maggi Sauce 190g",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 75,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 800,
+      "barcode": "89080276",
+      "name": "Nes. Sunrise 45g",
+      "category": "Tea, Coffee & Beverages",
+      "price": 170,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 801,
+      "barcode": "8901058013658",
+      "name": "Maggi Hot&Swe Sau 500g",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 122,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 802,
+      "barcode": "8901058903959",
+      "name": "Milkmaid 380g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 149,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 803,
+      "barcode": "89009758",
+      "name": "Nes. Classic 24g",
+      "category": "General Merchandise",
+      "price": 124,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 804,
+      "barcode": "89080474",
+      "name": "Nes. Iced Frappe",
+      "category": "Tea, Coffee & Beverages",
+      "price": 50,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 805,
+      "barcode": "8901058011746",
+      "name": "Maggi Sauce 485g",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 113,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 806,
+      "barcode": "89009949",
+      "name": "Nes. Classic 45g",
+      "category": "General Merchandise",
+      "price": 235,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 807,
+      "barcode": "8901058026283",
+      "name": "Munch Chocofil",
+      "category": "Chocolates & Confectionery",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 808,
+      "barcode": "8901058002294",
+      "name": "Maggi Spi Man 61g",
+      "category": "Instant Food",
+      "price": 25,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 809,
+      "barcode": "8901058030792",
+      "name": "Maggi Veg Atta 55g",
+      "category": "Staples, Rice & Grains",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 810,
+      "barcode": "8901058003017",
+      "name": "MaggiPazzta 69g",
+      "category": "Instant Food",
+      "price": 35,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 811,
+      "barcode": "8901058006032",
+      "name": "Maggi Chilly Cuppa",
+      "category": "Instant Food",
+      "price": 55,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 812,
+      "barcode": "8901058006025",
+      "name": "Maggi Masala Cuppa",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 55,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 813,
+      "barcode": "8901058002270",
+      "name": "Maggi Spi Gar 61g",
+      "category": "Instant Food",
+      "price": 25,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 814,
+      "barcode": "4792024019224",
+      "name": "Maggi Coco Milk P 25g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 39,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 815,
+      "barcode": "8901058006148",
+      "name": "Maggi Chi Nood",
+      "category": "Instant Food",
+      "price": 20,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 816,
+      "barcode": "8901058016222",
+      "name": "Maggi Pichkoo 75g",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 15,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 817,
+      "barcode": "8901058019872",
+      "name": "Everyday Milk Po 400g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 255,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 818,
+      "barcode": "8901058021950",
+      "name": "Milkmaid 190g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 84,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 819,
+      "barcode": "8901058030778",
+      "name": "Everyday Milk Po 15g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 820,
+      "barcode": "8901058006124",
+      "name": "Maggi Chi Nood 304g",
+      "category": "Instant Food",
+      "price": 80,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 821,
+      "barcode": "8901058002997",
+      "name": "MaggiPazzta Mus69g",
+      "category": "Instant Food",
+      "price": 35,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 822,
+      "barcode": "8901058003079",
+      "name": "MaggiPazzta Che&to 69g",
+      "category": "Instant Food",
+      "price": 35,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 823,
+      "barcode": "8901058012651",
+      "name": "Maggi Hot&Swe Sau 75g",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 22,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 824,
+      "barcode": "8901058031232",
+      "name": "Everyday Milk Po 200g",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 129,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 825,
+      "barcode": "8901058003000",
+      "name": "MaggiPazzta Che69g",
+      "category": "Instant Food",
+      "price": 35,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 826,
+      "barcode": "89080795",
+      "name": "Maggi Magic Mas",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 5,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 827,
+      "barcode": "8901058002676",
+      "name": "Maggi Spi Man 244g",
+      "category": "Instant Food",
+      "price": 100,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 828,
+      "barcode": "8901058023800",
+      "name": "Maggi 600g",
+      "category": "Instant Food",
+      "price": 116,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 829,
+      "barcode": "8901058010565",
+      "name": "Maggi 450g",
+      "category": "Instant Food",
+      "price": 87,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 830,
+      "barcode": "8901058005790",
+      "name": "Maggi Special 300g",
+      "category": "Instant Food",
+      "price": 100,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 831,
+      "barcode": "8901058017670",
+      "name": "Maggi 300g",
+      "category": "Instant Food",
+      "price": 58,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 832,
+      "barcode": "8901058022223",
+      "name": "Maggi Veg Atta 290g",
+      "category": "Staples, Rice & Grains",
+      "price": 108,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 833,
+      "barcode": "8901207051173",
+      "name": "Dabur Honey 250g",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 125,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 834,
+      "barcode": "8901888090348",
+      "name": "Real Orange 1L",
+      "category": "Tea, Coffee & Beverages",
+      "price": 125,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 835,
+      "barcode": "8901396052005",
+      "name": "Cherry Polish 15g",
+      "category": "General Merchandise",
+      "price": 52,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 836,
+      "barcode": "8901888030351",
+      "name": "Real Pineapp 1L",
+      "category": "Tea, Coffee & Beverages",
+      "price": 135,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 837,
+      "barcode": "8901207004421",
+      "name": "Real Pomo 1L",
+      "category": "Tea, Coffee & Beverages",
+      "price": 122,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 838,
+      "barcode": "8901888000347",
+      "name": "Real Cranbe 1L",
+      "category": "Tea, Coffee & Beverages",
+      "price": 140,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 839,
+      "barcode": "8901207033735",
+      "name": "Odonil Citrus 220ml",
+      "category": "Household Cleaning",
+      "price": 169,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 840,
+      "barcode": "8901207004407",
+      "name": "Real Guava 1L",
+      "category": "Tea, Coffee & Beverages",
+      "price": 112,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 841,
+      "barcode": "8901207034046",
+      "name": "Odonil Sand 220ml",
+      "category": "Household Cleaning",
+      "price": 169,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 842,
+      "barcode": "8901287100013",
+      "name": "Myso. Soap 75g",
+      "category": "Personal Care & Hygiene",
+      "price": 38,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 843,
+      "barcode": "8901207014147",
+      "name": "Home. Coco Milk",
+      "category": "Dairy & Refrigerated Foods",
+      "price": 89,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 844,
+      "barcode": "8901207004414",
+      "name": "Real Litchi1L",
+      "category": "Tea, Coffee & Beverages",
+      "price": 120,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 845,
+      "barcode": "8901287208498",
+      "name": "Myso. Kleenol 1L",
+      "category": "Household Cleaning",
+      "price": 130,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 846,
+      "barcode": "8901157025200",
+      "name": "Hit Anti Roa 400ml",
+      "category": "Household Cleaning",
+      "price": 195,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 847,
+      "barcode": "8901396323372",
+      "name": "Dettol Handwash",
+      "category": "Personal Care & Hygiene",
+      "price": 99,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 848,
+      "barcode": "8901207021220",
+      "name": "Real Apple 1L",
+      "category": "Tea, Coffee & Beverages",
+      "price": 108,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 849,
+      "barcode": "8901207033704",
+      "name": "Odonil Rose 220ml",
+      "category": "Household Cleaning",
+      "price": 169,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 850,
+      "barcode": "8901314823304",
+      "name": "Colgate Max Mwash",
+      "category": "Personal Care & Hygiene",
+      "price": 88,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 851,
+      "barcode": "8850006962480",
+      "name": "Colgate Max Paste10r",
+      "category": "Personal Care & Hygiene",
+      "price": 10,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 852,
+      "barcode": "8901396476146",
+      "name": "Colin 500ml",
+      "category": "Household Cleaning",
+      "price": 120,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 853,
+      "barcode": "8901012166635",
+      "name": "Stayfree XL 6P",
+      "category": "Personal Care & Hygiene",
+      "price": 45,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 854,
+      "barcode": "8901207025372",
+      "name": "Dabur Honey 500G",
+      "category": "Oils, Vinegar & Condiments",
+      "price": 250,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 855,
+      "barcode": "8901207027321",
+      "name": "Dabur Red 200g",
+      "category": "Personal Care & Hygiene",
+      "price": 141,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 856,
+      "barcode": "8901396350309",
+      "name": "DettolAntiseptic 250ml",
+      "category": "Personal Care & Hygiene",
+      "price": 159,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 857,
+      "barcode": "8901396051008",
+      "name": "Cherry Polish 40g",
+      "category": "General Merchandise",
+      "price": 98,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 858,
+      "barcode": "8901396354604",
+      "name": "DettolAntiseptic 550ml",
+      "category": "Personal Care & Hygiene",
+      "price": 267.09,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 859,
+      "barcode": "8901440013082",
+      "name": "East. Chic Mas 50g",
+      "category": "General Merchandise",
+      "price": 35,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 860,
+      "barcode": "8901207033209",
+      "name": "Dabur Mesw. 100g",
+      "category": "Personal Care & Hygiene",
+      "price": 72,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 861,
+      "barcode": "8901440013037",
+      "name": "East. Sam Powder 50g",
+      "category": "Spices, Masalas & Seasonings",
+      "price": 36,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 862,
+      "barcode": "8901314695543",
+      "name": "Colgate Max Paste 81g",
+      "category": "Personal Care & Hygiene",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 863,
+      "barcode": "8901396122500",
+      "name": "Lizol Jas 500ml",
+      "category": "Household Cleaning",
+      "price": 129,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 864,
+      "barcode": "8901023025082",
+      "name": "Aer Power Poc 10g",
+      "category": "Household Cleaning",
+      "price": 70,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 865,
+      "barcode": "8901314916990",
+      "name": "Colgate. Paste 110g",
+      "category": "Personal Care & Hygiene",
+      "price": 73,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 866,
+      "barcode": "8901396112501",
+      "name": "Lizol Sand 500ml",
+      "category": "Household Cleaning",
+      "price": 129,
+      "action": "INSERT_NEW"
+    },
+    {
+      "rowId": 867,
+      "barcode": "8901396602316",
+      "name": "Dettol Icy Cool 100g",
+      "category": "Personal Care & Hygiene",
+      "price": 40,
+      "action": "INSERT_NEW"
+    }
+  ]
+}
