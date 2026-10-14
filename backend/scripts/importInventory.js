@@ -53,10 +53,28 @@ function parseArgs() {
             options.input = path.resolve(arg.split('=')[1]);
         } else if (arg === '--include-duplicates') {
             options.includeDuplicates = true;
+        } else if (arg === '--allow-production-write') {
+            options.allowProductionWrite = true;
         }
     });
 
     return options;
+}
+
+// Extract database name safely without exposing credentials
+function getSanitizedDbName(uri, conn) {
+    if (conn && conn.name) return conn.name;
+    if (!uri) return 'unspecified';
+    try {
+        const clean = uri.split('?')[0];
+        const lastSlash = clean.lastIndexOf('/');
+        if (lastSlash !== -1) {
+            return clean.substring(lastSlash + 1);
+        }
+    } catch {
+        // Fallback
+    }
+    return 'unknown_db';
 }
 
 async function runImport() {
@@ -85,6 +103,10 @@ async function runImport() {
             console.error(`ERROR: Unknown target environment '${options.target}'. Must be local, staging, production, or test. Exiting.`);
             process.exit(1);
         }
+        if (options.target === 'production' && !options.allowProductionWrite) {
+            console.error('CRITICAL SAFETY ERROR: Production writes require explicit --allow-production-write flag. Halting.');
+            process.exit(1);
+        }
     }
 
     if (!fs.existsSync(options.input)) {
@@ -97,18 +119,47 @@ async function runImport() {
 
     // Connect to database if apply mode or if database connection is available
     let dbConnected = false;
+    let targetDbName = 'offline_no_db';
     const uri = process.env.MONGODB_URI || process.env.MONGO_URI;
 
     if (uri && uri !== 'mongodb://localhost:27017' && !uri.includes('undefined')) {
         try {
             console.log('Connecting to database for schema validation and inventory comparison...');
-            await mongoose.connect(uri, { serverSelectionTimeoutMS: 5000 });
+            const conn = await mongoose.connect(uri, { serverSelectionTimeoutMS: 5000 });
             dbConnected = true;
-            console.log('Database connected.');
+            targetDbName = getSanitizedDbName(uri, conn.connection);
+            console.log(`Database connected. Targeted database name: [${targetDbName}]`);
+
+            // Isolation check: ensure staging does not point to a production database
+            if (options.target === 'staging' && (/prod/i.test(targetDbName) || /live/i.test(targetDbName))) {
+                console.error(`CRITICAL ISOLATION ERROR: Target is '${options.target}', but connected database name '${targetDbName}' indicates production! Aborting.`);
+                await mongoose.disconnect();
+                process.exit(1);
+            }
+
+            // Create automatic backup before apply
+            if (!options.dryRun) {
+                const backupDir = path.join(__dirname, '../data/backups');
+                if (!fs.existsSync(backupDir)) fs.mkdirSync(backupDir, { recursive: true });
+                const backupPath = path.join(backupDir, `backup_${targetDbName}_${Date.now()}.json`);
+                console.log(`Creating pre-migration database backup to ${backupPath}...`);
+                const existingProducts = await Product.find({}).lean();
+                const existingOrders = await Order.find({}).lean();
+                fs.writeFileSync(backupPath, JSON.stringify({ products: existingProducts, orders: existingOrders }, null, 2), 'utf8');
+                console.log(`Backup created successfully (${existingProducts.length} products, ${existingOrders.length} orders saved).`);
+            }
         } catch (err) {
+            if (!options.dryRun) {
+                console.error(`CRITICAL ERROR: Cannot --apply changes without an active database connection: ${err.message}`);
+                process.exit(1);
+            }
             console.warn(`Database connection unavailable (${err.message}). Proceeding in offline verification mode.`);
         }
     } else {
+        if (!options.dryRun) {
+            console.error('CRITICAL ERROR: Cannot --apply changes because no MONGODB_URI is configured. Halting.');
+            process.exit(1);
+        }
         console.log('No live MongoDB connection string configured. Running in offline dataset verification mode.');
     }
 
