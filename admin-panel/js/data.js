@@ -22,16 +22,16 @@ const SEED = {
   ],
 
   products: [
-    { id:"P-1001", name:"Fresh Alphonso Mangoes", sku:"FRT-MNG-01", category:"Fruits & Vegetables", price:420, stock:86,  status:"active",   icon:"🥭" },
-    { id:"P-1002", name:"Organic Tomatoes 1kg",   sku:"VEG-TOM-02", category:"Fruits & Vegetables", price:60,  stock:140, status:"active",   icon:"🍅" },
-    { id:"P-1003", name:"Toned Milk 1L",          sku:"DRY-MLK-03", category:"Dairy & Bakery",      price:58,  stock:5,   status:"low",      icon:"🥛" },
-    { id:"P-1004", name:"Whole Wheat Bread",      sku:"BKY-BRD-04", category:"Dairy & Bakery",      price:45,  stock:0,   status:"out",      icon:"🍞" },
-    { id:"P-1005", name:"Basmati Rice 5kg",       sku:"STP-RCE-05", category:"Staples & Grains",    price:620, stock:48,  status:"active",   icon:"🍚" },
-    { id:"P-1006", name:"Toor Dal 1kg",           sku:"STP-DAL-06", category:"Staples & Grains",    price:150, stock:72,  status:"active",   icon:"🫘" },
-    { id:"P-1007", name:"Masala Chips 150g",      sku:"SNK-CHP-07", category:"Snacks & Beverages",  price:40,  stock:210, status:"active",   icon:"🍟" },
-    { id:"P-1008", name:"Filter Coffee 500g",     sku:"BEV-COF-08", category:"Snacks & Beverages",  price:260, stock:33,  status:"active",   icon:"☕" },
-    { id:"P-1009", name:"Dish Wash Liquid 1L",    sku:"HHE-DSH-09", category:"Household Essentials",price:130, stock:18,  status:"active",   icon:"🧴" },
-    { id:"P-1010", name:"Herbal Shampoo 340ml",   sku:"PCR-SHM-10", category:"Personal Care",       price:210, stock:0,   status:"draft",    icon:"🧴" }
+    { id:"P-1001", name:"Fresh Alphonso Mangoes", sku:"FRT-MNG-01", category:"Fruits & Vegetables", price:420, stock:86,  status:"active",   icon:"🥭", image:"/images/prod_mango.webp" },
+    { id:"P-1002", name:"Organic Tomatoes 1kg",   sku:"VEG-TOM-02", category:"Fruits & Vegetables", price:60,  stock:140, status:"active",   icon:"🍅", image:"/images/prod_tomatoes.webp" },
+    { id:"P-1003", name:"Toned Milk 1L",          sku:"DRY-MLK-03", category:"Dairy & Bakery",      price:58,  stock:5,   status:"low",      icon:"🥛", image:"/images/prod_milk.webp" },
+    { id:"P-1004", name:"Whole Wheat Bread",      sku:"BKY-BRD-04", category:"Dairy & Bakery",      price:45,  stock:0,   status:"out",      icon:"🍞", image:"/images/prod_sourdough.webp" },
+    { id:"P-1005", name:"Basmati Rice 5kg",       sku:"STP-RCE-05", category:"Staples & Grains",    price:620, stock:48,  status:"active",   icon:"🍚", image:"/images/prod_makhana.webp" },
+    { id:"P-1006", name:"Toor Dal 1kg",           sku:"STP-DAL-06", category:"Staples & Grains",    price:150, stock:72,  status:"active",   icon:"🫘", image:"/images/prod_almonds.webp" },
+    { id:"P-1007", name:"Masala Chips 150g",      sku:"SNK-CHP-07", category:"Snacks & Beverages",  price:40,  stock:210, status:"active",   icon:"🍟", image:"/images/prod_carrots.webp" },
+    { id:"P-1008", name:"Filter Coffee 500g",     sku:"BEV-COF-08", category:"Snacks & Beverages",  price:260, stock:33,  status:"active",   icon:"☕", image:"/images/prod_strawberries.webp" },
+    { id:"P-1009", name:"Dish Wash Liquid 1L",    sku:"HHE-DSH-09", category:"Household Essentials",price:130, stock:18,  status:"active",   icon:"🧴", image:"/images/prod_household.webp" },
+    { id:"P-1010", name:"Herbal Shampoo 340ml",   sku:"PCR-SHM-10", category:"Personal Care",       price:210, stock:0,   status:"draft",    icon:"🧴", image:"/images/prod_household.webp" }
   ],
 
   orders: [
@@ -68,11 +68,22 @@ const SEED = {
 
 /* simple persisted store so edits in the demo UI survive a refresh */
 const Store = {
-  key: "gurkhacamp_admin_demo_v1",
+  key: "gurkhacamp_admin_demo_v2",
   load(){
     try{
-      const raw = localStorage.getItem(this.key);
-      if (raw) return JSON.parse(raw);
+      const raw = localStorage.getItem(this.key) || localStorage.getItem("gurkhacamp_admin_demo_v1");
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (parsed && Array.isArray(parsed.products)) {
+          parsed.products.forEach(p => {
+            if (!p.image) {
+              const seedMatch = SEED.products.find(s => s.id === p.id);
+              if (seedMatch && seedMatch.image) p.image = seedMatch.image;
+            }
+          });
+        }
+        return parsed;
+      }
     }catch(e){}
     return JSON.parse(JSON.stringify(SEED));
   },

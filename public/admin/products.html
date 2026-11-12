@@ -23,13 +23,20 @@ function productRows(){
   );
 }
 
+function renderThumb(p){
+  if (p.image) {
+    return `<img src="${p.image}" alt="${p.name}" class="thumb-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="thumb" style="display:none">${p.icon||'📦'}</div>`;
+  }
+  return `<div class="thumb">${p.icon||'📦'}</div>`;
+}
+
 function renderTable(){
   const rows = productRows();
   document.getElementById("tbody").innerHTML = rows.length ? rows.map(p => `
     <tr>
       <td>
         <div class="cell-prod">
-          <div class="thumb">${p.icon||"📦"}</div>
+          ${renderThumb(p)}
           <div><div class="nm">${p.name}</div><div class="sub">${p.sku}</div></div>
         </div>
       </td>
@@ -48,6 +55,39 @@ function renderTable(){
   document.getElementById("countLabel").textContent = `${rows.length} of ${DB.products.length} products`;
 }
 
+function updateImgPreview(url){
+  const img = document.getElementById("imgPreview");
+  const span = document.getElementById("imgPreviewPlaceholder");
+  const box = document.getElementById("imgPreviewBox");
+  if (!img || !span || !box) return;
+  if (!url) {
+    img.style.display = "none";
+    img.src = "";
+    span.style.display = "block";
+    box.classList.remove("has-img");
+    return;
+  }
+  img.onload = () => {
+    img.style.display = "block";
+    span.style.display = "none";
+    box.classList.add("has-img");
+  };
+  img.onerror = () => {
+    img.style.display = "none";
+    span.style.display = "block";
+    box.classList.remove("has-img");
+  };
+  img.src = url;
+}
+
+function setPresetImg(url){
+  const el = document.getElementById("f_image");
+  if (el) {
+    el.value = url;
+    updateImgPreview(url);
+  }
+}
+
 function openEdit(id){
   editId = id;
   const p = DB.products.find(x=>x.id===id);
@@ -58,6 +98,9 @@ function openEdit(id){
   document.getElementById("f_price").value = p ? p.price : "";
   document.getElementById("f_stock").value = p ? p.stock : "";
   document.getElementById("f_status").value = p ? p.status : "active";
+  const imgVal = p ? (p.image || "") : "";
+  document.getElementById("f_image").value = imgVal;
+  updateImgPreview(imgVal);
   document.getElementById("modalOverlay").classList.add("open");
 }
 
@@ -72,6 +115,7 @@ function saveProduct(e){
     price: Number(document.getElementById("f_price").value || 0),
     stock: Number(document.getElementById("f_stock").value || 0),
     status: document.getElementById("f_status").value,
+    image: document.getElementById("f_image").value.trim(),
     icon: "🛒"
   };
   if (!payload.name) return;
@@ -102,7 +146,7 @@ document.getElementById("pageContent").innerHTML = `
     <div>
       <div class="crumbs">Catalog / Products</div>
       <h1>Products</h1>
-      <p>Manage your catalog, pricing and stock levels.</p>
+      <p>Manage your catalog, images, pricing and stock levels.</p>
     </div>
     <button class="btn primary" onclick="openEdit(null)">${ICONS.plus} Add product</button>
   </div>
@@ -151,6 +195,27 @@ document.getElementById("pageContent").innerHTML = `
               <option value="out">Out of stock</option>
             </select>
           </div>
+          <div class="field">
+            <label>Product Image URL</label>
+            <div style="display:flex;gap:12px;align-items:flex-start">
+              <div id="imgPreviewBox" class="img-preview-box">
+                <span id="imgPreviewPlaceholder">📦</span>
+                <img id="imgPreview" src="" alt="Preview" style="display:none">
+              </div>
+              <div style="flex:1">
+                <input type="text" id="f_image" placeholder="https://images.unsplash.com/... or /images/prod_mango.webp">
+                <div class="hint">Paste any image URL (e.g. from Unsplash or <code>/images/prod_...</code>).</div>
+                <div class="url-chips">
+                  <span class="url-chip" onclick="setPresetImg('/images/prod_mango.webp')">🥭 Mango</span>
+                  <span class="url-chip" onclick="setPresetImg('/images/prod_tomatoes.webp')">🍅 Tomato</span>
+                  <span class="url-chip" onclick="setPresetImg('/images/prod_milk.webp')">🥛 Milk</span>
+                  <span class="url-chip" onclick="setPresetImg('/images/prod_sourdough.webp')">🍞 Bread</span>
+                  <span class="url-chip" onclick="setPresetImg('/images/prod_strawberries.webp')">🍓 Berry</span>
+                  <span class="url-chip" onclick="setPresetImg('/images/prod_avocado.webp')">🥑 Avocado</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="m-foot">
           <button type="button" class="btn" onclick="closeModal()">Cancel</button>
@@ -160,6 +225,12 @@ document.getElementById("pageContent").innerHTML = `
     </div>
   </div>
 `;
+
+// Wire live typing in Image URL field to live preview
+const imgInput = document.getElementById("f_image");
+if (imgInput) {
+  imgInput.addEventListener("input", (e) => updateImgPreview(e.target.value.trim()));
+}
 
 // URL Search parameter support (e.g. ?q=organic)
 const urlParams = new URLSearchParams(window.location.search);
