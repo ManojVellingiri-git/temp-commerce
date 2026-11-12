@@ -51,7 +51,8 @@ function removeCategory(id){
 }
 
 function renderGrid(){
-  document.getElementById("grid").innerHTML = DB.categories.map(c => `
+  const list = DB.categories;
+  document.getElementById("grid").innerHTML = list.length ? list.map(c => `
     <div class="panel" style="padding:16px 18px">
       <div style="display:flex;align-items:flex-start;justify-content:space-between">
         <div>
@@ -65,7 +66,7 @@ function renderGrid(){
         <button class="icon-mini" onclick="removeCategory('${c.id}')">${ICONS.trash}</button>
       </div>
     </div>
-  `).join("");
+  `).join("") : `<div class="panel empty-state" style="grid-column:1/-1"><div class="big-icon">🏷️</div>No categories found.</div>`;
 }
 
 document.getElementById("pageContent").innerHTML = `

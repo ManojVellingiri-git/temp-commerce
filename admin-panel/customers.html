@@ -63,12 +63,25 @@ document.getElementById("pageContent").innerHTML = `
       <div class="search-sm">${ICONS.search}<input id="searchInput" placeholder="Search by name or email…"></div>
       <span style="margin-left:auto;font-size:12.5px;color:var(--muted)" id="countLabel"></span>
     </div>
-    <table>
-      <thead><tr><th>Customer</th><th>Orders</th><th>Total spent</th><th>Joined</th><th>Status</th><th>Actions</th></tr></thead>
-      <tbody id="tbody"></tbody>
-    </table>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Customer</th><th>Orders</th><th>Total spent</th><th>Joined</th><th>Status</th><th>Actions</th></tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
   </div>
 `;
+
+// URL Search parameter support (e.g. ?q=ananya)
+const urlParams = new URLSearchParams(window.location.search);
+const initialQuery = urlParams.get("q") || urlParams.get("search");
+if (initialQuery) {
+  search = initialQuery.toLowerCase();
+  const searchEl = document.getElementById("searchInput");
+  if (searchEl) searchEl.value = initialQuery;
+  const globalEl = document.getElementById("globalSearch");
+  if (globalEl) globalEl.value = initialQuery;
+}
 
 renderTable();
 document.getElementById("searchInput").addEventListener("input", e=>{ search = e.target.value.toLowerCase(); renderTable(); });

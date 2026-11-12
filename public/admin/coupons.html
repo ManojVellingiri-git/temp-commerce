@@ -13,6 +13,15 @@
 renderShell("coupons.html", "Coupons");
 
 let editCode = null;
+let search = "";
+let statusFilter = "all";
+
+function rows(){
+  return DB.coupons.filter(c =>
+    (statusFilter === "all" || c.status === statusFilter) &&
+    c.code.toLowerCase().includes(search)
+  );
+}
 
 function openEdit(code){
   editCode = code;
@@ -64,7 +73,8 @@ function removeCoupon(code){
 }
 
 function renderTable(){
-  document.getElementById("tbody").innerHTML = DB.coupons.map(c => `
+  const list = rows();
+  document.getElementById("tbody").innerHTML = list.length ? list.map(c => `
     <tr>
       <td><b>${c.code}</b></td>
       <td>${c.type==="Percent" ? c.value+"% off" : fmtMoney(c.value)+" off"}</td>
@@ -79,7 +89,8 @@ function renderTable(){
         </div>
       </td>
     </tr>
-  `).join("");
+  `).join("") : `<tr><td colspan="7"><div class="empty-state"><div class="big-icon">🎟️</div>No coupons match your filter.</div></td></tr>`;
+  document.getElementById("countLabel").textContent = `${list.length} of ${DB.coupons.length} coupons`;
 }
 
 document.getElementById("pageContent").innerHTML = `
@@ -93,10 +104,22 @@ document.getElementById("pageContent").innerHTML = `
   </div>
 
   <div class="panel">
-    <table>
-      <thead><tr><th>Code</th><th>Discount</th><th>Min. order</th><th>Usage</th><th>Expires</th><th>Status</th><th>Actions</th></tr></thead>
-      <tbody id="tbody"></tbody>
-    </table>
+    <div class="table-toolbar">
+      <div class="search-sm">${ICONS.search}<input id="searchInput" placeholder="Search by coupon code…"></div>
+      <select class="select-sm" id="statusFilterSel">
+        <option value="all">All statuses</option>
+        <option value="active">Active</option>
+        <option value="paused">Paused</option>
+        <option value="expired">Expired</option>
+      </select>
+      <span style="margin-left:auto;font-size:12.5px;color:var(--muted)" id="countLabel"></span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Code</th><th>Discount</th><th>Min. order</th><th>Usage</th><th>Expires</th><th>Status</th><th>Actions</th></tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
   </div>
 
   <div class="modal-overlay" id="modalOverlay">
@@ -131,7 +154,20 @@ document.getElementById("pageContent").innerHTML = `
   </div>
 `;
 
+// URL Search parameter support (e.g. ?q=FRESH20)
+const urlParams = new URLSearchParams(window.location.search);
+const initialQuery = urlParams.get("q") || urlParams.get("search");
+if (initialQuery) {
+  search = initialQuery.toLowerCase();
+  const searchEl = document.getElementById("searchInput");
+  if (searchEl) searchEl.value = initialQuery;
+  const globalEl = document.getElementById("globalSearch");
+  if (globalEl) globalEl.value = initialQuery;
+}
+
 renderTable();
+document.getElementById("searchInput").addEventListener("input", e=>{ search = e.target.value.toLowerCase(); renderTable(); });
+document.getElementById("statusFilterSel").addEventListener("change", e=>{ statusFilter = e.target.value; renderTable(); });
 </script>
 </body>
 </html>

@@ -63,16 +63,20 @@ function renderShell(active, title, crumb){
   `).join("");
 
   document.body.insertAdjacentHTML("afterbegin", `
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
     <div class="app">
       <aside class="sidebar" id="sidebar">
         <div class="brand">
           <img src="/gurkhacamp-logo-white.png" alt="Gurkhacamp" style="height:36px;width:auto;object-fit:contain">
-          <div>
+          <div style="flex:1">
             <div class="name">Gurkhacamp Admin</div>
             <div class="sub">Control Panel</div>
           </div>
+          <button class="icon-mini" id="sidebarCloseBtn" style="background:transparent;border:none;color:#cfe3d6;cursor:pointer;display:none;width:28px;height:28px;align-items:center;justify-content:center" title="Close menu">
+            ${ICONS.close}
+          </button>
         </div>
-        <nav class="nav">${navHtml}</nav>
+        <nav class="nav" id="sidebarNav">${navHtml}</nav>
         <div class="foot">
           <div>Signed in as Admin &middot; v1.0</div>
           <a href="/" style="display:inline-flex;align-items:center;gap:6px;font-size:11px;color:#C7F36B;margin-top:8px;text-decoration:none;font-weight:600;">
@@ -83,14 +87,23 @@ function renderShell(active, title, crumb){
 
       <div class="main">
         <header class="topbar">
-          <button class="icon-btn" id="menuToggle" style="display:none"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+          <button class="icon-btn" id="menuToggle" title="Toggle navigation">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </button>
           <div class="page-title">${title}</div>
           <div class="search">
             ${ICONS.search}
             <input type="text" placeholder="Search orders, products, customers…" id="globalSearch">
           </div>
-          <div class="right">
-            <button class="icon-btn" title="Notifications">${ICONS.bell}<span class="dot"></span></button>
+          <div class="right" style="position:relative">
+            <button class="icon-btn" id="notifBtn" title="Notifications">${ICONS.bell}<span class="dot"></span></button>
+            <div class="notifications-popover" id="notificationsPopover">
+              <div class="popover-head">
+                <h4>Recent Store Activity</h4>
+                <span style="font-size:11px;color:var(--muted)">Live feed</span>
+              </div>
+              <div id="notifList"></div>
+            </div>
             <div class="user-chip">
               <div class="av">AD</div>
               <div class="meta"><div class="n">Admin User</div><div class="r">Super Admin</div></div>
@@ -103,6 +116,111 @@ function renderShell(active, title, crumb){
     </div>
     <div class="toast" id="toast"></div>
   `);
+
+  // Mobile Drawer Toggle
+  const sidebar = document.getElementById("sidebar");
+  const backdrop = document.getElementById("sidebarBackdrop");
+  const menuToggle = document.getElementById("menuToggle");
+  const sidebarClose = document.getElementById("sidebarCloseBtn");
+
+  function openSidebar(){
+    sidebar.classList.add("open");
+    backdrop.classList.add("open");
+  }
+  function closeSidebar(){
+    sidebar.classList.remove("open");
+    backdrop.classList.remove("open");
+  }
+
+  if (menuToggle) menuToggle.addEventListener("click", openSidebar);
+  if (backdrop) backdrop.addEventListener("click", closeSidebar);
+  if (sidebarClose) sidebarClose.addEventListener("click", closeSidebar);
+  document.querySelectorAll("#sidebarNav a").forEach(a => {
+    a.addEventListener("click", () => {
+      if (window.innerWidth <= 860) closeSidebar();
+    });
+  });
+
+  // Notifications Popover
+  const notifBtn = document.getElementById("notifBtn");
+  const notifPopover = document.getElementById("notificationsPopover");
+  const notifList = document.getElementById("notifList");
+
+  if (notifBtn && notifPopover) {
+    if (typeof DB !== "undefined" && DB.activity) {
+      notifList.innerHTML = DB.activity.slice(0, 5).map(act => `
+        <div class="item">
+          <div style="width:7px;height:7px;border-radius:50%;background:var(--success);margin-top:5px;flex:none"></div>
+          <div>
+            <div class="item-text">${act.text}</div>
+            <div class="item-time">${act.time}</div>
+          </div>
+        </div>
+      `).join("");
+    }
+    notifBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      notifPopover.classList.toggle("open");
+    });
+    document.addEventListener("click", (e) => {
+      if (!notifPopover.contains(e.target) && !notifBtn.contains(e.target)) {
+        notifPopover.classList.remove("open");
+      }
+    });
+  }
+
+  // Global Search Handlers
+  const globalSearch = document.getElementById("globalSearch");
+  if (globalSearch) {
+    // If page has a local #searchInput, wire live synchronization
+    globalSearch.addEventListener("input", (e) => {
+      const localInput = document.getElementById("searchInput");
+      if (localInput) {
+        localInput.value = e.target.value;
+        localInput.dispatchEvent(new Event("input", { bubbles: true }));
+      }
+    });
+
+    globalSearch.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        const val = e.target.value.trim();
+        const localInput = document.getElementById("searchInput");
+        if (localInput) {
+          localInput.value = val;
+          localInput.dispatchEvent(new Event("input", { bubbles: true }));
+        } else if (val) {
+          // Redirect to products with query
+          location.href = `products.html?q=${encodeURIComponent(val)}`;
+        }
+      }
+    });
+  }
+
+  // Global Modal backdrop click & Escape key dismiss
+  document.addEventListener("click", (e) => {
+    if (e.target && e.target.classList.contains("modal-overlay")) {
+      if (typeof closeModal === "function") {
+        closeModal();
+      } else {
+        e.target.classList.remove("open");
+      }
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      const openModal = document.querySelector(".modal-overlay.open");
+      if (openModal) {
+        if (typeof closeModal === "function") {
+          closeModal();
+        } else {
+          openModal.classList.remove("open");
+        }
+      }
+      if (notifPopover) notifPopover.classList.remove("open");
+      if (sidebar && sidebar.classList.contains("open")) closeSidebar();
+    }
+  });
 
   document.getElementById("logoutBtn").addEventListener("click", () => {
     sessionStorage.removeItem("gc_admin_session");

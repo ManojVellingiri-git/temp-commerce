@@ -116,10 +116,12 @@ document.getElementById("pageContent").innerHTML = `
       </select>
       <span style="margin-left:auto;font-size:12.5px;color:var(--muted)" id="countLabel"></span>
     </div>
-    <table>
-      <thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Stock</th><th>Status</th><th>Actions</th></tr></thead>
-      <tbody id="tbody"></tbody>
-    </table>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Stock</th><th>Status</th><th>Actions</th></tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
   </div>
 
   <div class="modal-overlay" id="modalOverlay">
@@ -158,6 +160,17 @@ document.getElementById("pageContent").innerHTML = `
     </div>
   </div>
 `;
+
+// URL Search parameter support (e.g. ?q=organic)
+const urlParams = new URLSearchParams(window.location.search);
+const initialQuery = urlParams.get("q") || urlParams.get("search");
+if (initialQuery) {
+  filterText = initialQuery.toLowerCase();
+  const searchEl = document.getElementById("searchInput");
+  if (searchEl) searchEl.value = initialQuery;
+  const globalEl = document.getElementById("globalSearch");
+  if (globalEl) globalEl.value = initialQuery;
+}
 
 renderTable();
 document.getElementById("searchInput").addEventListener("input", e=>{ filterText = e.target.value.toLowerCase(); renderTable(); });
