@@ -66,9 +66,9 @@ function renderShell(active, title, crumb){
     <div class="app">
       <aside class="sidebar" id="sidebar">
         <div class="brand">
-          <img src="/gurkhacamp-logo-white.png" alt="Gurkhacamp" style="height:36px;width:auto;object-fit:contain">
+          <img src="/gurkhacamp-logo-white.png" alt="Gurkhahills" style="height:36px;width:auto;object-fit:contain">
           <div style="flex:1">
-            <div class="name">Gurkhacamp Admin</div>
+            <div class="name">Gurkhahills Admin</div>
             <div class="sub">Control Panel</div>
           </div>
           <button class="icon-mini" id="sidebarCloseBtn" style="background:transparent;border:none;color:#cfe3d6;cursor:pointer;display:none;width:28px;height:28px;align-items:center;justify-content:center" title="Close menu">

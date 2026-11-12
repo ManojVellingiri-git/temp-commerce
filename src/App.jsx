@@ -599,7 +599,7 @@ export default function App() {
                 <div>
                   <h3 className="text-lg font-extrabold text-[#123D2A]">Ananya Sundaram</h3>
                   <p className="text-xs text-[#48A85A] font-bold">
-                    Gurkhacamp Privé Member • {currentLocation.city}
+                    Gurkhahills Privé Member • {currentLocation.city}
                   </p>
                 </div>
               </div>
@@ -725,7 +725,7 @@ export default function App() {
               </button>
             </div>
             <p className="text-sm text-[#777D75] leading-relaxed mb-5">
-              Gurkhacamp Shopping Complex operates a premium, 100% batch-traceable cold chain across Coimbatore, Bengaluru, Mumbai, Hyderabad, and New Delhi. Every order is backed by our instant doorstep replacement guarantee.
+              Gurkhahills Shopping Complex operates a premium, 100% batch-traceable cold chain across Coimbatore, Bengaluru, Mumbai, Hyderabad, and New Delhi. Every order is backed by our instant doorstep replacement guarantee.
             </p>
             <button
               type="button"

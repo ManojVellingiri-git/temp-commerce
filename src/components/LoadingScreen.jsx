@@ -52,10 +52,10 @@ export default function LoadingScreen({ onComplete }) {
       className="fixed inset-0 z-[120] flex flex-col items-center justify-between px-6 py-10 transition-opacity duration-500"
       style={{ backgroundColor: '#123D2A', color: '#F8F7EF' }}
       role="status"
-      aria-label="Gurkhacamp loading sequence"
+      aria-label="Gurkhahills loading sequence"
     >
       <div className="w-full max-w-7xl flex items-center justify-between text-xs uppercase tracking-[0.22em] opacity-80">
-        <span>Gurkhacamp Shopping Complex</span>
+        <span>Gurkhahills Shopping Complex</span>
         <span>Premium Daily Purveyors</span>
       </div>
 
@@ -63,7 +63,7 @@ export default function LoadingScreen({ onComplete }) {
         <div className="mb-6 fc-float-slow">
           <img
             src="/gurkhacamp-logo-white.png"
-            alt="Gurkhacamp Shopping Complex"
+            alt="Gurkhahills Shopping Complex"
             className="h-32 sm:h-44 lg:h-52 w-auto object-contain"
           />
         </div>
@@ -74,7 +74,7 @@ export default function LoadingScreen({ onComplete }) {
           Shopping Complex & Fresh Purveyors
         </p>
         <h1 className="fc-font-serif text-3xl sm:text-5xl font-normal tracking-tight mb-6">
-          Gurkhacamp<span style={{ color: '#C7F36B' }}>.</span>
+          Gurkhahills<span style={{ color: '#C7F36B' }}>.</span>
         </h1>
         <div className="w-64 sm:w-80 h-1.5 rounded-full overflow-hidden bg-white/15 mb-3">
           <div

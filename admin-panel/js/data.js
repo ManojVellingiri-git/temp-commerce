@@ -6,7 +6,7 @@
 
 const SEED = {
   store: {
-    name: "Gurkhacamp Shopping Complex",
+    name: "Gurkhahills Shopping Complex",
     tagline: "Farm-fresh groceries, everyday essentials & lifestyle goods",
     currency: "₹",
     themeColor: "#123D2A"

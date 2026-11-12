@@ -37,11 +37,11 @@ export default function WhatsAppWidget({ currentLocation }) {
   const quickPrompts = [
     {
       label: '🛒 Help Placing Order',
-      msg: `Hello Gurkhacamp! I'd like help placing an order for delivery to ${currentLocation?.area || 'Coimbatore'}.`
+      msg: `Hello Gurkhahills! I'd like help placing an order for delivery to ${currentLocation?.area || 'Coimbatore'}.`
     },
     {
       label: '🚚 Delivery & ETA Inquiry',
-      msg: `Hi Gurkhacamp Concierge, could you check the delivery ETA for ${currentLocation?.city || 'my location'}?`
+      msg: `Hi Gurkhahills Concierge, could you check the delivery ETA for ${currentLocation?.city || 'my location'}?`
     },
     {
       label: '🌿 Fresh Morning Harvest',
@@ -49,12 +49,12 @@ export default function WhatsAppWidget({ currentLocation }) {
     },
     {
       label: '💬 Speak to Concierge',
-      msg: `Hello Gurkhacamp Shopping Complex, I have an inquiry and would like to chat with a representative.`
+      msg: `Hello Gurkhahills Shopping Complex, I have an inquiry and would like to chat with a representative.`
     }
   ];
 
   const handleSend = (textToSend) => {
-    const message = textToSend || customMessage || `Hello Gurkhacamp Shopping Complex! I'm reaching out from your online store.`;
+    const message = textToSend || customMessage || `Hello Gurkhahills Shopping Complex! I'm reaching out from your online store.`;
     openWhatsAppDirect(message);
     setIsOpen(false);
     setCustomMessage('');
@@ -84,7 +84,7 @@ export default function WhatsAppWidget({ currentLocation }) {
                 </div>
                 <div>
                   <h4 className="font-extrabold text-sm text-white flex items-center gap-1.5">
-                    Gurkhacamp Concierge
+                    Gurkhahills Concierge
                     <Sparkles className="w-3.5 h-3.5 text-[#C7F36B]" />
                   </h4>
                   <p className="text-[11px] text-[#C7F36B] font-semibold flex items-center gap-1">
@@ -112,7 +112,7 @@ export default function WhatsAppWidget({ currentLocation }) {
           <div className="p-4 bg-[#F8F7EF]/60 space-y-3 max-h-[360px] overflow-y-auto">
             <div className="bg-white p-3.5 rounded-2xl border border-[#123D2A]/10 text-xs text-[#20251F] leading-relaxed shadow-sm">
               <p className="font-bold text-[#123D2A] mb-1">
-                👋 Welcome to Gurkhacamp Shopping Complex!
+                👋 Welcome to Gurkhahills Shopping Complex!
               </p>
               <p className="text-[#777D75]">
                 How may our personal store shoppers assist you today? Select a quick option below or type your message to chat directly on WhatsApp.
@@ -176,7 +176,7 @@ export default function WhatsAppWidget({ currentLocation }) {
           setHasUnreadPulse(false);
         }}
         className="group relative flex items-center gap-2.5 px-4 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white shadow-[0_12px_32px_rgba(37,211,102,0.45)] hover:shadow-[0_16px_40px_rgba(37,211,102,0.6)] transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none"
-        aria-label="Open WhatsApp live chat with Gurkhacamp"
+        aria-label="Open WhatsApp live chat with Gurkhahills"
       >
         <WhatsAppIcon className="w-6 h-6 fill-current shrink-0" />
         <span className="font-extrabold text-xs tracking-wide hidden sm:inline">

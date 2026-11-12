@@ -25,7 +25,7 @@ export default function Footer({ onSelectCategory, onNavigate, onOpenInfoModal }
             <div className="flex items-center -ml-2">
               <img
                 src="/gurkhacamp-logo-white.png"
-                alt="Gurkhacamp Shopping Complex"
+                alt="Gurkhahills Shopping Complex"
                 className="h-20 sm:h-24 lg:h-28 w-auto object-contain"
               />
             </div>
@@ -43,12 +43,12 @@ export default function Footer({ onSelectCategory, onNavigate, onOpenInfoModal }
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[#C7F36B]" />
-                <span>concierge@gurkhacamp.com</span>
+                <span>concierge@gurkhahills.com</span>
               </div>
               <div className="pt-2">
                 <button
                   type="button"
-                  onClick={() => openWhatsAppDirect("Hello Gurkhacamp! I'm reaching out from your online store.")}
+                  onClick={() => openWhatsAppDirect("Hello Gurkhahills! I'm reaching out from your online store.")}
                   className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#25D366]/15 hover:bg-[#25D366] text-[#25D366] hover:text-white transition-all text-xs font-bold border border-[#25D366]/30 group"
                 >
                   <WhatsAppIcon className="w-4 h-4 fill-current" />
@@ -160,7 +160,7 @@ export default function Footer({ onSelectCategory, onNavigate, onOpenInfoModal }
               <li>
                 <button
                   type="button"
-                  onClick={() => onOpenInfoModal('Careers at Gurkhacamp')}
+                  onClick={() => onOpenInfoModal('Careers at Gurkhahills')}
                   className="hover:text-[#C7F36B] transition-colors"
                 >
                   Careers in Agronomy
@@ -197,7 +197,7 @@ export default function Footer({ onSelectCategory, onNavigate, onOpenInfoModal }
                   <button
                     key={soc}
                     type="button"
-                    onClick={() => onOpenInfoModal(`Gurkhacamp on ${soc}`)}
+                    onClick={() => onOpenInfoModal(`Gurkhahills on ${soc}`)}
                     className="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#C7F36B] hover:text-[#123D2A] text-xs font-extrabold transition-colors"
                   >
                     {soc}
@@ -210,7 +210,7 @@ export default function Footer({ onSelectCategory, onNavigate, onOpenInfoModal }
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60">
           <div>
-            © {new Date().getFullYear()} Gurkhacamp Shopping Complex. All rights reserved. Crafted as an interactive e-commerce showcase.
+            © {new Date().getFullYear()} Gurkhahills Shopping Complex. All rights reserved. Crafted as an interactive e-commerce showcase.
           </div>
           <div className="flex flex-wrap items-center gap-2">
             {['UPI Instant', 'Visa', 'Mastercard', 'RuPay', 'NetBanking', 'COD'].map((pay) => (

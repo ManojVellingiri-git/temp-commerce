@@ -35,7 +35,7 @@ export default function CartDrawer({
   const suggestions = INITIAL_PRODUCTS.filter((p) => !cartIds.has(p.id)).slice(0, 2);
 
   const handleWhatsAppOrder = () => {
-    let text = `*New Order Request — Gurkhacamp Shopping Complex*\n\n`;
+    let text = `*New Order Request — Gurkhahills Shopping Complex*\n\n`;
     text += `*Items:*\n`;
     cartItems.forEach((item, idx) => {
       text += `${idx + 1}. ${item.name} (${item.selectedWeight || item.weight}) x ${item.qty} = ₹${item.price * item.qty}\n`;

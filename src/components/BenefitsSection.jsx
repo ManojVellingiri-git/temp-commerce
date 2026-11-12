@@ -64,11 +64,11 @@ export default function BenefitsSection() {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.22em] text-[#48A85A] mb-3">
-            <Award className="w-4 h-4" /> The Gurkhacamp Standard
+            <Award className="w-4 h-4" /> The Gurkhahills Standard
           </div>
           <h2 className="fc-section-heading font-extrabold text-[#123D2A] tracking-tight mb-4">
             Why Discerning Kitchens Choose{' '}
-            <span className="fc-font-serif italic font-normal text-[#48A85A]">Gurkhacamp.</span>
+            <span className="fc-font-serif italic font-normal text-[#48A85A]">Gurkhahills.</span>
           </h2>
           <p className="fc-body-text text-[#777D75]">
             We replaced warm warehouse storage and plastic cling-wrap with precision cold-chain agronomy and reusable glass & linen.

@@ -188,7 +188,7 @@ export default function ProductQuickView({
             <button
               type="button"
               onClick={() => {
-                openWhatsAppDirect(`Hello Gurkhacamp! I'm interested in *${product.name}* (${selectedWeight || product.weight}, ₹${product.price}). Could you verify availability and express delivery?`);
+                openWhatsAppDirect(`Hello Gurkhahills! I'm interested in *${product.name}* (${selectedWeight || product.weight}, ₹${product.price}). Could you verify availability and express delivery?`);
               }}
               className="w-12 h-12 rounded-2xl border border-[#25D366]/40 bg-[#25D366]/10 text-[#0f5132] hover:bg-[#25D366] hover:text-white flex items-center justify-center transition-all shrink-0 shadow-xs"
               aria-label="Inquire about this product on WhatsApp"

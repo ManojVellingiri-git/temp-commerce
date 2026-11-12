@@ -80,11 +80,11 @@ export default function Navbar({
               type="button"
               onClick={() => onNavigate('hero-section')}
               className="flex items-center text-left group focus:outline-none shrink-0"
-              aria-label="Gurkhacamp Shopping Complex Home"
+              aria-label="Gurkhahills Shopping Complex Home"
             >
               <img
                 src="/gurkhacamp-logo.png"
-                alt="Gurkhacamp Shopping Complex"
+                alt="Gurkhahills Shopping Complex"
                 className="h-14 sm:h-16 md:h-20 lg:h-22 w-auto max-w-[220px] object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </button>
@@ -272,7 +272,7 @@ export default function Navbar({
               type="button"
               onClick={onOpenSearch}
               className="flex items-center gap-2 px-3 sm:px-3.5 py-2.5 rounded-full bg-white border border-[#123D2A]/12 text-[#20251F] hover:border-[#48A85A] transition-all shadow-sm"
-              aria-label="Search Gurkhacamp products"
+              aria-label="Search Gurkhahills products"
             >
               <Search className="w-4 h-4 text-[#123D2A]" />
               <span className="hidden md:inline text-xs font-medium text-[#777D75] pr-2">
@@ -362,7 +362,7 @@ export default function Navbar({
                 <div className="flex items-center gap-2.5">
                   <img
                     src="/gurkhacamp-logo.png"
-                    alt="Gurkhacamp Shopping Complex"
+                    alt="Gurkhahills Shopping Complex"
                     className="h-14 sm:h-16 w-auto object-contain"
                   />
                 </div>

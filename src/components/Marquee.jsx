@@ -25,7 +25,7 @@ export default function Marquee() {
 
   return (
     <section
-      aria-label="Gurkhacamp Guarantees and Benefits"
+      aria-label="Gurkhahills Guarantees and Benefits"
       className="py-4 border-y border-[#123D2A]/15 overflow-hidden select-none"
       style={{ backgroundColor: '#123D2A', color: '#F8F7EF' }}
     >

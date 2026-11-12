@@ -40,7 +40,7 @@ export default function SearchOverlay({ isOpen, onClose, onAddToCart, onQuickVie
       className="fixed inset-0 z-[105] bg-[#20251F]/75 backdrop-blur-md flex flex-col items-center p-4 sm:p-8 overflow-y-auto"
       role="dialog"
       aria-modal="true"
-      aria-label="Search Gurkhacamp Shopping Complex"
+      aria-label="Search Gurkhahills Shopping Complex"
     >
       <div className="w-full max-w-4xl bg-[#F8F7EF] rounded-[32px] p-6 sm:p-8 shadow-2xl border border-[#123D2A]/15 my-auto">
         <div className="flex items-center gap-3 pb-5 border-b border-[#123D2A]/12">

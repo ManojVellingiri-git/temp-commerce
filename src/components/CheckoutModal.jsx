@@ -96,7 +96,7 @@ export default function CheckoutModal({
               }}
               className="px-8 py-3.5 rounded-full font-extrabold text-sm bg-[#123D2A] text-[#C7F36B]"
             >
-              Return to Gurkhacamp Store
+              Return to Gurkhahills Store
             </button>
           </div>
         ) : (
