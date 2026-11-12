@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Settings · Gurkhacamp Admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+renderShell("settings.html", "Settings");
+
+function saveSettings(e){
+  e.preventDefault();
+  DB.store.name = document.getElementById("s_name").value;
+  DB.store.tagline = document.getElementById("s_tagline").value;
+  DB.store.currency = document.getElementById("s_currency").value;
+  persist();
+  showToast("Settings saved");
+}
+
+document.getElementById("pageContent").innerHTML = `
+  <div class="page-head">
+    <div>
+      <div class="crumbs">System / Settings</div>
+      <h1>Settings</h1>
+      <p>Store details, admin users, and integration points.</p>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="panel">
+      <div class="panel-head"><h3>Store profile</h3></div>
+      <form class="panel-body" onsubmit="saveSettings(event)">
+        <div class="field"><label>Store name</label><input type="text" id="s_name" value="${DB.store.name}"></div>
+        <div class="field"><label>Tagline</label><input type="text" id="s_tagline" value="${DB.store.tagline}"></div>
+        <div class="field-row">
+          <div class="field"><label>Currency symbol</label><input type="text" id="s_currency" value="${DB.store.currency}"></div>
+          <div class="field"><label>Theme color</label><input type="text" value="${DB.store.themeColor}" readonly style="color:var(--muted)"></div>
+        </div>
+        <button class="btn primary" type="submit">Save changes</button>
+      </form>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head"><h3>Admin users</h3></div>
+      <div class="panel-body" style="padding-top:6px">
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)">
+          <div class="avatar">AD</div>
+          <div style="flex:1"><div style="font-weight:700;font-size:13px">Admin User</div><div style="font-size:11.5px;color:var(--muted)">Super Admin</div></div>
+          ${statusPill("active")}
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:10px 0">
+          <div class="avatar" style="background:var(--gold);color:var(--green-950)">CM</div>
+          <div style="flex:1"><div style="font-weight:700;font-size:13px">Catalog Manager</div><div style="font-size:11.5px;color:var(--muted)">Editor</div></div>
+          ${statusPill("active")}
+        </div>
+        <button class="btn sm" style="margin-top:12px;width:100%;justify-content:center">${ICONS.plus} Invite admin</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:16px">
+    <div class="panel-head"><h3>Connect to your backend</h3><span class="sub">Replace the demo data layer</span></div>
+    <div class="panel-body">
+      <p style="margin:0 0 10px;font-size:13px;color:var(--muted)">
+        This panel ships with mock data saved to <code>localStorage</code> so every screen works standalone.
+        To go live, point the functions in <code>js/data.js</code> at your real API (e.g. the routes already
+        running behind <b>temp-commerce.onrender.com</b>) — replace <code>DB</code> with <code>fetch()</code> calls
+        to endpoints like <code>/api/admin/products</code>, <code>/api/admin/orders</code>, <code>/api/admin/customers</code>
+        and <code>/api/admin/coupons</code>, and swap <code>sessionStorage</code> auth in <code>app.js</code> for your
+        real login/JWT flow.
+      </p>
+    </div>
+  </div>
+`;
+</script>
+</body>
+</html>

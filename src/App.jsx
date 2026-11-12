@@ -663,6 +663,16 @@ export default function App() {
                   No recent demo orders in this session yet.
                 </div>
               )}
+
+              <a
+                href="/admin/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 p-3.5 rounded-2xl bg-[#123D2A] text-[#C7F36B] hover:bg-[#48A85A] hover:text-white transition-all flex items-center justify-between font-extrabold text-xs shadow-sm"
+              >
+                <span>Open Store Admin Portal</span>
+                <span>&rarr;</span>
+              </a>
             </div>
           </div>
         </div>

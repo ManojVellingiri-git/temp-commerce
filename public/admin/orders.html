@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Orders · Gurkhacamp Admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+renderShell("orders.html", "Orders");
+
+let statusFilter = "all";
+let search = "";
+const STATUSES = ["pending","processing","shipped","delivered","cancelled"];
+
+function rows(){
+  return DB.orders.filter(o =>
+    (statusFilter==="all" || o.status===statusFilter) &&
+    (o.id.toLowerCase().includes(search) || o.customer.toLowerCase().includes(search))
+  );
+}
+
+function renderTable(){
+  const list = rows();
+  document.getElementById("tbody").innerHTML = list.length ? list.map(o => `
+    <tr>
+      <td><b>${o.id}</b></td>
+      <td>${o.customer}</td>
+      <td>${o.items} items</td>
+      <td>${fmtMoney(o.total)}</td>
+      <td>${o.payment}</td>
+      <td>
+        <select class="select-sm" onchange="updateStatus('${o.id}', this.value)">
+          ${STATUSES.map(s=>`<option value="${s}" ${s===o.status?"selected":""}>${s[0].toUpperCase()+s.slice(1)}</option>`).join("")}
+        </select>
+      </td>
+      <td>${o.date}</td>
+      <td><div class="row-actions"><button class="icon-mini" onclick="viewOrder('${o.id}')" title="View">${ICONS.eye}</button></div></td>
+    </tr>
+  `).join("") : `<tr><td colspan="8"><div class="empty-state"><div class="big-icon">🧾</div>No orders match your filters.</div></td></tr>`;
+  document.getElementById("countLabel").textContent = `${list.length} of ${DB.orders.length} orders`;
+}
+
+function updateStatus(id, status){
+  const o = DB.orders.find(x=>x.id===id);
+  o.status = status;
+  if (status==="cancelled") o.payment = "Refunded";
+  persist();
+  renderTable();
+  showToast(`${id} marked as ${status}`);
+}
+
+function viewOrder(id){
+  const o = DB.orders.find(x=>x.id===id);
+  document.getElementById("modalTitle").textContent = `Order ${o.id}`;
+  document.getElementById("modalBody").innerHTML = `
+    <div class="field-row">
+      <div><div class="hint">Customer</div><div style="font-weight:700">${o.customer}</div></div>
+      <div><div class="hint">Date</div><div style="font-weight:700">${o.date}</div></div>
+    </div>
+    <div class="field-row" style="margin-top:14px">
+      <div><div class="hint">Items</div><div style="font-weight:700">${o.items}</div></div>
+      <div><div class="hint">Total</div><div style="font-weight:700">${fmtMoney(o.total)}</div></div>
+    </div>
+    <div class="field-row" style="margin-top:14px">
+      <div><div class="hint">Payment</div><div style="font-weight:700">${o.payment}</div></div>
+      <div><div class="hint">Status</div>${statusPill(o.status)}</div>
+    </div>
+    <div style="margin-top:18px;padding-top:14px;border-top:1px solid var(--border)">
+      <div class="hint" style="margin-bottom:8px">Demo build — wire this panel to your orders API to show real line items, address and tracking.</div>
+    </div>
+  `;
+  document.getElementById("modalOverlay").classList.add("open");
+}
+function closeModal(){ document.getElementById("modalOverlay").classList.remove("open"); }
+
+document.getElementById("pageContent").innerHTML = `
+  <div class="page-head">
+    <div>
+      <div class="crumbs">Sales / Orders</div>
+      <h1>Orders</h1>
+      <p>Track, update and fulfil customer orders.</p>
+    </div>
+    <button class="btn" onclick="showToast('Export started — demo only')">${ICONS.box} Export CSV</button>
+  </div>
+
+  <div class="panel">
+    <div class="table-toolbar">
+      <div class="search-sm">${ICONS.search}<input id="searchInput" placeholder="Search by order ID or customer…"></div>
+      <select class="select-sm" id="statusFilterSel">
+        <option value="all">All statuses</option>
+        ${STATUSES.map(s=>`<option value="${s}">${s[0].toUpperCase()+s.slice(1)}</option>`).join("")}
+      </select>
+      <span style="margin-left:auto;font-size:12.5px;color:var(--muted)" id="countLabel"></span>
+    </div>
+    <table>
+      <thead><tr><th>Order</th><th>Customer</th><th>Items</th><th>Total</th><th>Payment</th><th>Status</th><th>Date</th><th></th></tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="m-head"><h3 id="modalTitle">Order</h3><button class="close-x" onclick="closeModal()">${ICONS.close}</button></div>
+      <div class="m-body" id="modalBody"></div>
+      <div class="m-foot"><button class="btn primary" onclick="closeModal()">Close</button></div>
+    </div>
+  </div>
+`;
+
+renderTable();
+document.getElementById("searchInput").addEventListener("input", e=>{ search = e.target.value.toLowerCase(); renderTable(); });
+document.getElementById("statusFilterSel").addEventListener("change", e=>{ statusFilter = e.target.value; renderTable(); });
+</script>
+</body>
+</html>

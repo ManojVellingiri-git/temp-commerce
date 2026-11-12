@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dashboard · Gurkhacamp Admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+renderShell("index.html", "Dashboard");
+
+const revenue = DB.orders.reduce((s,o)=>o.status!=="cancelled"?s+o.total:s,0);
+const lowStock = DB.products.filter(p=>p.status==="low"||p.status==="out").length;
+const pendingOrders = DB.orders.filter(o=>o.status==="pending"||o.status==="processing").length;
+
+const maxV = Math.max(...DB.weeklySales.map(d=>d.v));
+const barsHtml = DB.weeklySales.map(d => `
+  <div class="bar" style="height:${(d.v/maxV*100)}%">
+    <span>${d.d}</span>
+  </div>`).join("");
+
+document.getElementById("pageContent").innerHTML = `
+  <div class="page-head">
+    <div>
+      <div class="crumbs">Overview</div>
+      <h1>Welcome back, Admin</h1>
+      <p>Here's what's happening at ${DB.store.name} today.</p>
+    </div>
+    <div style="display:flex;gap:10px">
+      <a class="btn" href="orders.html">${ICONS.cart} View orders</a>
+      <a class="btn primary" href="products.html">${ICONS.plus} Add product</a>
+    </div>
+  </div>
+
+  <div class="grid-stats">
+    <div class="stat-card">
+      <div class="top"><div class="label">Total revenue</div>
+        <div class="icon" style="background:#e4f3e9;color:var(--success)">${ICONS.cart}</div></div>
+      <div class="value">${fmtMoney(revenue)}</div>
+      <div class="delta up">▲ 12.4% vs last week</div>
+    </div>
+    <div class="stat-card">
+      <div class="top"><div class="label">Orders</div>
+        <div class="icon" style="background:#fdf2dd;color:var(--warn)">${ICONS.ticket}</div></div>
+      <div class="value">${DB.orders.length}</div>
+      <div class="delta up">▲ 4 new today</div>
+    </div>
+    <div class="stat-card">
+      <div class="top"><div class="label">Customers</div>
+        <div class="icon" style="background:#e9edf8;color:#3a56c4">${ICONS.users}</div></div>
+      <div class="value">${DB.customers.length}</div>
+      <div class="delta up">▲ 2 this week</div>
+    </div>
+    <div class="stat-card">
+      <div class="top"><div class="label">Low / out of stock</div>
+        <div class="icon" style="background:#fdecea;color:var(--danger)">${ICONS.box}</div></div>
+      <div class="value">${lowStock}</div>
+      <div class="delta down">Needs restock</div>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Sales this week</h3>
+        <span class="sub">Orders placed, Mon – Sun</span>
+      </div>
+      <div class="panel-body">
+        <div class="chart-box">${barsHtml}</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Recent activity</h3>
+      </div>
+      <div class="panel-body" style="padding:10px 18px">
+        ${DB.activity.map(a => `
+          <div style="display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)">
+            <div class="avatar" style="background:var(--green-700);width:28px;height:28px;font-size:10px">●</div>
+            <div>
+              <div style="font-size:12.8px">${a.text}</div>
+              <div style="font-size:11px;color:var(--muted);margin-top:2px">${a.time}</div>
+            </div>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:16px">
+    <div class="panel-head">
+      <h3>Recent orders</h3>
+      <a href="orders.html" class="btn sm">View all</a>
+    </div>
+    <table>
+      <thead><tr><th>Order</th><th>Customer</th><th>Items</th><th>Total</th><th>Payment</th><th>Status</th><th>Date</th></tr></thead>
+      <tbody>
+        ${DB.orders.slice(0,5).map(o => `
+          <tr>
+            <td><b>${o.id}</b></td>
+            <td>${o.customer}</td>
+            <td>${o.items}</td>
+            <td>${fmtMoney(o.total)}</td>
+            <td>${o.payment}</td>
+            <td>${statusPill(o.status)}</td>
+            <td>${o.date}</td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+  </div>
+`;
+</script>
+</body>
+</html>

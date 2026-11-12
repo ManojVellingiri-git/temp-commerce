@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Categories · Gurkhacamp Admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+renderShell("categories.html", "Categories");
+
+let editId = null;
+
+function openEdit(id){
+  editId = id;
+  const c = DB.categories.find(x=>x.id===id);
+  document.getElementById("modalTitle").textContent = c ? "Edit category" : "Add category";
+  document.getElementById("f_name").value = c ? c.name : "";
+  document.getElementById("f_active").checked = c ? c.active : true;
+  document.getElementById("modalOverlay").classList.add("open");
+}
+function closeModal(){ document.getElementById("modalOverlay").classList.remove("open"); }
+
+function saveCategory(e){
+  e.preventDefault();
+  const name = document.getElementById("f_name").value.trim();
+  const active = document.getElementById("f_active").checked;
+  if (!name) return;
+  if (editId){
+    const c = DB.categories.find(x=>x.id===editId);
+    c.name = name; c.active = active;
+    showToast("Category updated");
+  } else {
+    DB.categories.unshift({ id:"c"+Date.now(), name, active, products:0 });
+    showToast("Category added");
+  }
+  persist();
+  closeModal();
+  renderGrid();
+}
+
+function removeCategory(id){
+  if (!confirm("Delete this category?")) return;
+  DB.categories = DB.categories.filter(c=>c.id!==id);
+  persist();
+  renderGrid();
+  showToast("Category deleted");
+}
+
+function renderGrid(){
+  document.getElementById("grid").innerHTML = DB.categories.map(c => `
+    <div class="panel" style="padding:16px 18px">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between">
+        <div>
+          <div style="font-weight:700;font-size:14.5px">${c.name}</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:3px">${c.products} products</div>
+        </div>
+        ${statusPill(c.active?"active":"draft")}
+      </div>
+      <div class="row-actions" style="margin-top:14px">
+        <button class="icon-mini" onclick="openEdit('${c.id}')">${ICONS.edit}</button>
+        <button class="icon-mini" onclick="removeCategory('${c.id}')">${ICONS.trash}</button>
+      </div>
+    </div>
+  `).join("");
+}
+
+document.getElementById("pageContent").innerHTML = `
+  <div class="page-head">
+    <div>
+      <div class="crumbs">Catalog / Categories</div>
+      <h1>Categories</h1>
+      <p>Group products so shoppers can browse your store easily.</p>
+    </div>
+    <button class="btn primary" onclick="openEdit(null)">${ICONS.plus} Add category</button>
+  </div>
+
+  <div id="grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px"></div>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="m-head"><h3 id="modalTitle">Add category</h3><button class="close-x" onclick="closeModal()">${ICONS.close}</button></div>
+      <form onsubmit="saveCategory(event)">
+        <div class="m-body">
+          <div class="field"><label>Category name</label><input type="text" id="f_name" required></div>
+          <div class="field toggle">
+            <input type="checkbox" id="f_active" style="width:16px;height:16px" checked>
+            <label style="margin:0">Visible to customers</label>
+          </div>
+        </div>
+        <div class="m-foot">
+          <button type="button" class="btn" onclick="closeModal()">Cancel</button>
+          <button type="submit" class="btn primary">Save category</button>
+        </div>
+      </form>
+    </div>
+  </div>
+`;
+
+renderGrid();
+</script>
+<style>@media(max-width:900px){#grid{grid-template-columns:1fr 1fr !important}}@media(max-width:560px){#grid{grid-template-columns:1fr !important}}</style>
+</body>
+</html>

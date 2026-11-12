@@ -175,6 +175,17 @@ export default function Footer({ onSelectCategory, onNavigate, onOpenInfoModal }
                   Privacy & Terms
                 </button>
               </li>
+              <li>
+                <a
+                  href="/admin/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#C7F36B] transition-colors inline-flex items-center gap-1.5"
+                >
+                  <span>Admin Portal</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
+              </li>
             </ul>
 
             <div className="pt-4">
