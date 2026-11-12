@@ -13,9 +13,9 @@ import {
   FREE_DELIVERY_THRESHOLD
 } from '../data/freshcartData';
 
-export default function Hero({ onShopNow, onExploreCategories, onQuickAddProduct, onOpenFilmModal, currentLocation }) {
+export default function Hero({ onShopNow, onExploreCategories, onQuickAddProduct, onOpenFilmModal, currentLocation, heroProduct }) {
   const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
-  const heroMango = INITIAL_PRODUCTS[0];
+  const heroMango = heroProduct || INITIAL_PRODUCTS[0];
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();

@@ -3,7 +3,8 @@ import {
   Leaf, Compass, Search, Heart, ShoppingBag, Check, X
 } from 'lucide-react';
 import {
-  SCENE_IMAGES, CATEGORIES, INITIAL_PRODUCTS, DELIVERY_LOCATIONS
+  SCENE_IMAGES, CATEGORIES, INITIAL_PRODUCTS, DELIVERY_LOCATIONS,
+  getLiveProducts, ADMIN_STORAGE_KEY
 } from './data/freshcartData';
 import { safeGetStorage, safeSetStorage } from './utils/storage';
 import LoadingScreen from './components/LoadingScreen';
@@ -40,6 +41,26 @@ export default function App() {
   const [sortBy, setSortBy] = useState('featured');
   const [onlyOrganic, setOnlyOrganic] = useState(false);
   const [under200, setUnder200] = useState(false);
+
+  // Live products synchronized with Admin Panel & Cloudflare R2
+  const [products, setProducts] = useState(getLiveProducts);
+
+  useEffect(() => {
+    const handleStorage = (e) => {
+      if (!e || !e.key || e.key === ADMIN_STORAGE_KEY) {
+        setProducts(getLiveProducts());
+      }
+    };
+    window.addEventListener('storage', handleStorage);
+    // Periodic synchronization ensures edits in another tab or iframe update seamlessly
+    const syncTimer = setInterval(() => {
+      setProducts(getLiveProducts());
+    }, 2500);
+    return () => {
+      window.removeEventListener('storage', handleStorage);
+      clearInterval(syncTimer);
+    };
+  }, []);
 
   const [cartItems, setCartItems] = useState(() =>
     safeGetStorage('freshcart_cart_v1', [
@@ -194,7 +215,7 @@ export default function App() {
 
   const handleAddBundle = useCallback(
     (productIds, bundleLabel) => {
-      const itemsToAdd = INITIAL_PRODUCTS.filter((p) => productIds.includes(p.id));
+      const itemsToAdd = products.filter((p) => productIds.includes(p.id));
       setCartItems((prev) => {
         const next = [...prev];
         itemsToAdd.forEach((prod) => {
@@ -212,12 +233,12 @@ export default function App() {
       showToast(`Added ${bundleLabel} (${itemsToAdd.length} items) to basket!`);
       setCartOpen(true);
     },
-    [showToast]
+    [products, showToast]
   );
 
   const handleToggleWishlist = useCallback(
     (productId) => {
-      const prod = INITIAL_PRODUCTS.find((p) => p.id === productId);
+      const prod = products.find((p) => p.id === productId);
       setWishlistIds((prev) => {
         const exists = prev.includes(productId);
         if (exists) {
@@ -229,11 +250,11 @@ export default function App() {
         }
       });
     },
-    [showToast]
+    [products, showToast]
   );
 
   const filteredProducts = useMemo(() => {
-    let list = INITIAL_PRODUCTS.filter((prod) => {
+    let list = products.filter((prod) => {
       const matchesCat =
         selectedCategory === 'All' ||
         prod.category === selectedCategory ||
@@ -258,7 +279,7 @@ export default function App() {
       list = [...list].sort((a, b) => b.rating - a.rating);
     }
     return list;
-  }, [selectedCategory, searchQuery, sortBy, onlyOrganic, under200]);
+  }, [products, selectedCategory, searchQuery, sortBy, onlyOrganic, under200]);
 
   const cartMap = useMemo(() => {
     const map = {};
@@ -328,6 +349,7 @@ export default function App() {
           onQuickAddProduct={(prod) => handleAddToCart(prod, 1, prod.weight)}
           onOpenFilmModal={() => setFilmModalOpen(true)}
           currentLocation={currentLocation}
+          heroProduct={products[0]}
         />
 
         <Marquee />
@@ -367,6 +389,7 @@ export default function App() {
         <SeasonalFreshnessSection
           onAddBundle={handleAddBundle}
           onQuickViewProduct={(prod) => setQuickViewProduct(prod)}
+          allProducts={products}
         />
 
         <BenefitsSection />
@@ -472,6 +495,7 @@ export default function App() {
           setCheckoutOpen(true);
         }}
         onQuickAddSuggestion={(prod) => handleAddToCart(prod, 1, prod.weight)}
+        allProducts={products}
       />
 
       <WishlistDrawer
@@ -484,6 +508,7 @@ export default function App() {
           setWishlistOpen(false);
           setCartOpen(true);
         }}
+        allProducts={products}
       />
 
       <SearchOverlay
@@ -491,6 +516,7 @@ export default function App() {
         onClose={() => setSearchOpen(false)}
         onAddToCart={handleAddToCart}
         onQuickView={(prod) => setQuickViewProduct(prod)}
+        allProducts={products}
       />
 
       <CheckoutModal

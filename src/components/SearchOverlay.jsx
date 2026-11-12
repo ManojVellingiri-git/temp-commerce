@@ -12,7 +12,13 @@ import {
   FREE_DELIVERY_THRESHOLD
 } from '../data/freshcartData';
 
-export default function SearchOverlay({ isOpen, onClose, onAddToCart, onQuickView }) {
+export default function SearchOverlay({
+  isOpen,
+  onClose,
+  onAddToCart,
+  onQuickView,
+  allProducts = INITIAL_PRODUCTS
+}) {
   const [query, setQuery] = useState('');
   const inputRef = useRef(null);
 
@@ -25,7 +31,8 @@ export default function SearchOverlay({ isOpen, onClose, onAddToCart, onQuickVie
   if (!isOpen) return null;
 
   const suggestions = ['Alphonso Mango', 'Sourdough', 'A2 Milk', 'Avocado', 'Spinach', 'Salmon'];
-  const filtered = INITIAL_PRODUCTS.filter((p) => {
+  const productList = allProducts && allProducts.length > 0 ? allProducts : INITIAL_PRODUCTS;
+  const filtered = productList.filter((p) => {
     if (!query.trim()) return true;
     const q = query.toLowerCase();
     return (

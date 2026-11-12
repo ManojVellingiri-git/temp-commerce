@@ -17,11 +17,13 @@ export default function WishlistDrawer({
   onClose,
   wishlistIds,
   onToggleWishlist,
-  onMoveToCart
+  onMoveToCart,
+  allProducts = INITIAL_PRODUCTS
 }) {
   if (!isOpen) return null;
 
-  const wishProducts = INITIAL_PRODUCTS.filter((p) => wishlistIds.includes(p.id));
+  const productList = allProducts && allProducts.length > 0 ? allProducts : INITIAL_PRODUCTS;
+  const wishProducts = productList.filter((p) => wishlistIds.includes(p.id));
 
   return (
     <div className="fixed inset-0 z-[100] flex justify-end" role="dialog" aria-modal="true" aria-label="Saved Wishlist">

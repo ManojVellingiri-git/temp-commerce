@@ -186,18 +186,34 @@ function saveProduct(e){
     price: Number(document.getElementById("f_price").value || 0),
     stock: Number(document.getElementById("f_stock").value || 0),
     status: document.getElementById("f_status").value,
-    image: document.getElementById("f_image").value.trim(),
+    image: document.getElementById("f_image").value.trim() || "/images/prod_mango.webp",
     icon: "🛒"
   };
   if (!payload.name) return;
   if (editId) {
     const p = DB.products.find(x=>x.id===editId);
-    Object.assign(p, payload);
-    showToast("Product updated");
+    if (p) {
+      Object.assign(p, payload);
+      p.originalPrice = p.originalPrice || Math.round(p.price * 1.2);
+      p.badge = p.status === "low" ? "Low Stock" : (p.status === "out" ? "Sold Out" : (p.badge || "Fresh"));
+    }
+    showToast("Product updated and synced with Storefront");
   } else {
-    payload.id = "P-" + Math.floor(Math.random()*9000+1000);
+    payload.id = "fc-" + Date.now().toString().slice(-4);
+    payload.subtitle = `${payload.category} • Fresh Selection`;
+    payload.weight = "1 Pack";
+    payload.weightOptions = ["1 Pack"];
+    payload.originalPrice = Math.round(payload.price * 1.2);
+    payload.discount = "15% OFF";
+    payload.badge = payload.status === "low" ? "Low Stock" : (payload.status === "out" ? "Sold Out" : "Fresh");
+    payload.rating = 4.9;
+    payload.reviews = 1;
+    payload.isOrganic = payload.category === "Organic Products";
+    payload.isBestSeller = false;
+    payload.harvestTime = "Fresh Today";
+    payload.description = payload.name;
     DB.products.unshift(payload);
-    showToast("Product added");
+    showToast("Product added and published to Storefront");
   }
   persist();
   closeModal();
@@ -304,9 +320,13 @@ document.getElementById("pageContent").innerHTML = `
 
                 <div class="url-chips">
                   <span class="url-chip" onclick="setPresetImg('${currentCfDomain}/products/alphonso-mango.webp')">🥭 R2 Mango</span>
+                  <span class="url-chip" onclick="setPresetImg('${currentCfDomain}/products/strawberries.webp')">🍓 R2 Berries</span>
+                  <span class="url-chip" onclick="setPresetImg('${currentCfDomain}/products/avocado.webp')">🥑 R2 Avocado</span>
                   <span class="url-chip" onclick="setPresetImg('${currentCfDomain}/products/organic-tomatoes.webp')">🍅 R2 Tomato</span>
                   <span class="url-chip" onclick="setPresetImg('${currentCfDomain}/products/farm-milk.webp')">🥛 R2 Milk</span>
-                  <span class="url-chip" onclick="setPresetImg('/images/prod_mango.webp')">Local /images</span>
+                  <span class="url-chip" onclick="setPresetImg('${currentCfDomain}/products/norwegian-salmon.webp')">🐟 R2 Salmon</span>
+                  <span class="url-chip" onclick="setPresetImg('/images/prod_mango.webp')">Local Mango</span>
+                  <span class="url-chip" onclick="setPresetImg('/images/prod_sourdough.webp')">Local Sourdough</span>
                 </div>
               </div>
             </div>

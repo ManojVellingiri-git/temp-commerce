@@ -9,3 +9,4 @@ bucket_name = "gurkhahills-products"
 
 [vars]
 PUBLIC_DOMAIN = "https://pub-r2.gurkhahills.com"
+

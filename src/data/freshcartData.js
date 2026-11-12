@@ -485,6 +485,52 @@ export const INITIAL_PRODUCTS = [
   }
 ];
 
+export const ADMIN_STORAGE_KEY = 'gurkhacamp_admin_demo_v4';
+
+export function getLiveProducts() {
+  if (typeof window === 'undefined') return INITIAL_PRODUCTS;
+  try {
+    const raw = localStorage.getItem(ADMIN_STORAGE_KEY);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (parsed && Array.isArray(parsed.products) && parsed.products.length > 0) {
+        return parsed.products.map((p) => {
+          const fallback = INITIAL_PRODUCTS.find((x) => x.id === p.id) || {};
+          return {
+            ...fallback,
+            ...p,
+            id: p.id || fallback.id,
+            name: p.name || fallback.name,
+            sku: p.sku || fallback.sku || 'SKU-' + (p.id || '001'),
+            category: p.category || fallback.category || 'General',
+            secondaryCategory: p.secondaryCategory || fallback.secondaryCategory || p.category,
+            price: Number(p.price) || fallback.price || 99,
+            originalPrice: Number(p.originalPrice) || fallback.originalPrice || Math.round((Number(p.price) || 99) * 1.2),
+            discount: p.discount || fallback.discount || '15% OFF',
+            stock: Number(p.stock) || 0,
+            status: p.status || fallback.status || 'active',
+            image: p.image || fallback.image || '/images/prod_mango.webp',
+            icon: p.icon || fallback.icon || '🛒',
+            weight: p.weight || fallback.weight || '1 pack',
+            weightOptions: (p.weightOptions && p.weightOptions.length > 0) ? p.weightOptions : (fallback.weightOptions || [p.weight || '1 pack']),
+            subtitle: p.subtitle || fallback.subtitle || `${p.category} • Fresh Selection`,
+            description: p.description || fallback.description || p.name,
+            badge: p.badge || fallback.badge || (p.status === 'low' ? 'Low Stock' : (p.status === 'out' ? 'Sold Out' : 'Fresh')),
+            rating: p.rating || fallback.rating || 4.9,
+            reviews: p.reviews || fallback.reviews || 120,
+            isOrganic: p.isOrganic ?? (p.category === 'Organic Products'),
+            isBestSeller: p.isBestSeller ?? fallback.isBestSeller ?? false,
+            harvestTime: p.harvestTime || fallback.harvestTime || 'Fresh stock'
+          };
+        });
+      }
+    }
+  } catch (e) {
+    console.error('Error reading live products from admin storage:', e);
+  }
+  return INITIAL_PRODUCTS;
+}
+
 export const SEASONAL_CURATIONS = [
   {
     id: 'fruits',

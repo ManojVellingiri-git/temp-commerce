@@ -12,13 +12,14 @@ import {
   FREE_DELIVERY_THRESHOLD
 } from '../data/freshcartData';
 
-export default function SeasonalFreshnessSection({ onAddBundle, onQuickViewProduct }) {
+export default function SeasonalFreshnessSection({ onAddBundle, onQuickViewProduct, allProducts = INITIAL_PRODUCTS }) {
   const [activeTabId, setActiveTabId] = useState('fruits');
   const activeCuration =
     SEASONAL_CURATIONS.find((c) => c.id === activeTabId) || SEASONAL_CURATIONS[0];
 
+  const productList = allProducts && allProducts.length > 0 ? allProducts : INITIAL_PRODUCTS;
   const bundleProducts = activeCuration.bundleIds
-    .map((id) => INITIAL_PRODUCTS.find((p) => p.id === id))
+    .map((id) => productList.find((p) => p.id === id))
     .filter(Boolean);
 
   return (
@@ -73,7 +74,7 @@ export default function SeasonalFreshnessSection({ onAddBundle, onQuickViewProdu
               />
 
               {activeCuration.hotspots.map((spot, idx) => {
-                const prod = INITIAL_PRODUCTS.find((p) => p.id === spot.productId);
+                const prod = productList.find((p) => p.id === spot.productId);
                 return (
                   <button
                     key={idx}

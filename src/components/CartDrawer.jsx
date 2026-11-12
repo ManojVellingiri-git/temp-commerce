@@ -21,7 +21,8 @@ export default function CartDrawer({
   onRemoveItem,
   onClearCart,
   onProceedToCheckout,
-  onQuickAddSuggestion
+  onQuickAddSuggestion,
+  allProducts = INITIAL_PRODUCTS
 }) {
   if (!isOpen) return null;
 
@@ -32,7 +33,8 @@ export default function CartDrawer({
   const progressPct = Math.min(100, Math.round((subtotal / FREE_DELIVERY_THRESHOLD) * 100));
 
   const cartIds = new Set(cartItems.map((c) => c.id));
-  const suggestions = INITIAL_PRODUCTS.filter((p) => !cartIds.has(p.id)).slice(0, 2);
+  const productList = allProducts && allProducts.length > 0 ? allProducts : INITIAL_PRODUCTS;
+  const suggestions = productList.filter((p) => !cartIds.has(p.id)).slice(0, 2);
 
   const handleWhatsAppOrder = () => {
     let text = `*New Order Request — Gurkhahills Shopping Complex*\n\n`;
