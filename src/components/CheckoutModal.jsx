@@ -16,7 +16,6 @@ export default function CheckoutModal({
   isOpen,
   onClose,
   cartItems,
-  appliedPromo,
   currentLocation,
   onCompleteDemoOrder
 }) {
@@ -30,14 +29,8 @@ export default function CheckoutModal({
   if (!isOpen) return null;
 
   const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.qty, 0);
-  const discountAmount =
-    appliedPromo === 'FRESH25'
-      ? Math.round(subtotal * 0.25)
-      : appliedPromo === 'WELCOME150' && subtotal >= 300
-      ? 150
-      : 0;
   const deliveryFee = subtotal === 0 || subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : 49;
-  const total = Math.max(0, subtotal - discountAmount + deliveryFee);
+  const total = subtotal + deliveryFee;
 
   const handlePlaceOrder = (e) => {
     e.preventDefault();
@@ -236,12 +229,6 @@ export default function CheckoutModal({
                     <span>Subtotal</span>
                     <span className="font-bold text-[#20251F]">₹{subtotal}</span>
                   </div>
-                  {discountAmount > 0 && (
-                    <div className="flex justify-between text-[#48A85A] font-bold">
-                      <span>Discount ({appliedPromo})</span>
-                      <span>-₹{discountAmount}</span>
-                    </div>
-                  )}
                   <div className="flex justify-between text-[#777D75]">
                     <span>4°C Cold-Bag Delivery Fee</span>
                     <span className="font-bold text-[#20251F]">

@@ -12,7 +12,7 @@ import {
   FREE_DELIVERY_THRESHOLD
 } from '../data/freshcartData';
 
-export default function Newsletter({ onApplyPromo }) {
+export default function Newsletter() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
   const [error, setError] = useState('');
@@ -20,12 +20,11 @@ export default function Newsletter({ onApplyPromo }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!email || !email.includes('@')) {
-      setError('Please enter a valid email address to unlock your ₹150 harvest voucher.');
+      setError('Please enter a valid email address to subscribe.');
       return;
     }
     setError('');
     setSubscribed(true);
-    onApplyPromo('WELCOME150');
   };
 
   return (
@@ -54,7 +53,7 @@ export default function Newsletter({ onApplyPromo }) {
               </h2>
 
               <p className="fc-body-lg text-[#20251F]/80 max-w-xl mb-8">
-                Join 48,000+ home chefs receiving weekly peak-season harvest alerts, farm-to-table recipes, and first access to limited Ratnagiri & Nilgiri micro-lots. Plus, receive ₹150 off your next basket.
+                Join 48,000+ home chefs receiving weekly peak-season harvest alerts, farm-to-table recipes, and first access to limited Ratnagiri & Nilgiri micro-lots.
               </p>
 
               {subscribed ? (
@@ -68,7 +67,7 @@ export default function Newsletter({ onApplyPromo }) {
                         You’re on the Dawn Dispatch list!
                       </div>
                       <div className="text-xs text-white/85">
-                        Voucher <strong>WELCOME150</strong> (₹150 OFF) has been automatically applied to your cart.
+                        Thank you for subscribing. Weekly estate harvest digests will be sent directly to your inbox.
                       </div>
                     </div>
                   </div>

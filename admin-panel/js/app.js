@@ -13,7 +13,6 @@ const NAV = [
   { group:"Sales", links:[
     { href:"orders.html",    label:"Orders",     icon:"cart" },
     { href:"customers.html", label:"Customers",  icon:"users" },
-    { href:"coupons.html",   label:"Coupons",    icon:"ticket" },
   ]},
   { group:"System", links:[
     { href:"settings.html",  label:"Settings",   icon:"gear" },

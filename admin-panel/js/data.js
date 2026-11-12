@@ -52,18 +52,11 @@ const SEED = {
     { id:"U-405", name:"Rahul Dev",       email:"rahul.dev@example.com",     orders:9,  spent:9870,  joined:"2025-08-11", status:"active" }
   ],
 
-  coupons: [
-    { code:"WELCOME50", type:"Flat ₹", value:50,  minOrder:300,  used:231, limit:1000, status:"active",  expires:"2026-12-31" },
-    { code:"FRESH10",   type:"Percent", value:10, minOrder:500,  used:88,  limit:500,  status:"active",  expires:"2026-11-30" },
-    { code:"BULKFEST",  type:"Percent", value:15, minOrder:1500, used:40,  limit:200,  status:"paused",  expires:"2026-11-20" },
-    { code:"LAUNCH100", type:"Flat ₹",  value:100,minOrder:800,  used:400, limit:400,  status:"expired", expires:"2026-10-01" }
-  ],
-
   activity: [
     { text:"Order <b>GC-98231</b> marked as delivered", time:"8 min ago" },
     { text:"New product <b>Herbal Shampoo 340ml</b> saved as draft", time:"42 min ago" },
     { text:"Stock alert: <b>Toned Milk 1L</b> fell below threshold (5 left)", time:"1 hr ago" },
-    { text:"Coupon <b>BULKFEST</b> was paused", time:"3 hr ago" },
+    { text:"New bulk order placed from RS Puram", time:"3 hr ago" },
     { text:"New customer <b>Rahul Dev</b> signed up", time:"Yesterday" }
   ],
 

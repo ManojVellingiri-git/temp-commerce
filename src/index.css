@@ -428,7 +428,6 @@ input, select, textarea {
 
   #categories-section,
   #shop-section,
-  #campaign-section,
   #benefits-section,
   #newsletter-section {
     padding-top: 3.25rem;
@@ -437,7 +436,6 @@ input, select, textarea {
 
   #categories-section > div,
   #shop-section > div,
-  #campaign-section > div,
   #benefits-section > div,
   #newsletter-section > div {
     padding-left: 18px;

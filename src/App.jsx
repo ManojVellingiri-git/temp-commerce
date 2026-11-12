@@ -16,7 +16,6 @@ import Marquee from './components/Marquee';
 import CategorySection from './components/CategorySection';
 import ProductCard from './components/ProductCard';
 import ProductGrid from './components/ProductGrid';
-import CampaignSection from './components/CampaignSection';
 import SeasonalFreshnessSection from './components/SeasonalFreshnessSection';
 import BenefitsSection from './components/BenefitsSection';
 import BatchTraceabilityLedger from './components/BatchTraceabilityLedger';
@@ -51,7 +50,6 @@ export default function App() {
   const [wishlistIds, setWishlistIds] = useState(() =>
     safeGetStorage('freshcart_wishlist_v1', ['fc-01', 'fc-04', 'fc-10'])
   );
-  const [appliedPromo, setAppliedPromo] = useState('FRESH25');
   const [cartBump, setCartBump] = useState(false);
 
   const [cartOpen, setCartOpen] = useState(false);
@@ -87,7 +85,6 @@ export default function App() {
         { id: 'home', elId: 'hero-section' },
         { id: 'categories', elId: 'categories-section' },
         { id: 'shop', elId: 'shop-section' },
-        { id: 'offers', elId: 'campaign-section' },
         { id: 'about', elId: 'benefits-section' },
         { id: 'contact', elId: 'newsletter-section' }
       ];
@@ -367,19 +364,6 @@ export default function App() {
           }}
         />
 
-        <CampaignSection
-          onApplyPromo={(code) => {
-            setAppliedPromo(code);
-            showToast(`Promo code ${code} activated!`);
-          }}
-          appliedPromo={appliedPromo}
-          onAddBundle={handleAddBundle}
-          onShopCategory={(cat) => {
-            setSelectedCategory(cat);
-            handleNavigate('shop-section');
-          }}
-        />
-
         <SeasonalFreshnessSection
           onAddBundle={handleAddBundle}
           onQuickViewProduct={(prod) => setQuickViewProduct(prod)}
@@ -389,12 +373,7 @@ export default function App() {
 
         <Testimonials />
 
-        <Newsletter
-          onApplyPromo={(code) => {
-            setAppliedPromo(code);
-            showToast(`Welcome voucher ${code} applied!`);
-          }}
-        />
+        <Newsletter />
       </main>
 
       {/* Top Scroll Progress Bar */}
@@ -488,11 +467,6 @@ export default function App() {
         onUpdateQty={handleUpdateQty}
         onRemoveItem={handleRemoveCartItem}
         onClearCart={() => setCartItems([])}
-        appliedPromo={appliedPromo}
-        onApplyPromo={(code) => {
-          setAppliedPromo(code);
-          if (code) showToast(`Promo code ${code} applied`);
-        }}
         onProceedToCheckout={() => {
           setCartOpen(false);
           setCheckoutOpen(true);
@@ -523,7 +497,6 @@ export default function App() {
         isOpen={checkoutOpen}
         onClose={() => setCheckoutOpen(false)}
         cartItems={cartItems}
-        appliedPromo={appliedPromo}
         currentLocation={currentLocation}
         onCompleteDemoOrder={(order) => {
           setLastDemoOrder(order);

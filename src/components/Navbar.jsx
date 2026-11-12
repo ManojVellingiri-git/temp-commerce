@@ -36,7 +36,6 @@ export default function Navbar({
     { id: 'home', label: 'Home', target: 'hero-section' },
     { id: 'shop', label: 'Shop', target: 'shop-section' },
     { id: 'categories', label: 'Categories', target: 'categories-section', hasMega: true },
-    { id: 'offers', label: 'Offers', target: 'campaign-section', badge: '25% OFF' },
     { id: 'about', label: 'About', target: 'benefits-section' },
     { id: 'contact', label: 'Contact', target: 'newsletter-section' }
   ];
@@ -71,13 +70,6 @@ export default function Navbar({
               <span className="hidden md:inline text-[#777D75]">
                 Free cold-bag delivery on orders above <strong className="text-[#123D2A]">₹499</strong>
               </span>
-              <button
-                type="button"
-                onClick={() => onNavigate('campaign-section')}
-                className="underline font-semibold text-[#123D2A] hover:text-[#48A85A] transition-colors"
-              >
-                Use Code: FRESH25
-              </button>
             </div>
           </div>
         </div>

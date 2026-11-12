@@ -20,24 +20,14 @@ export default function CartDrawer({
   onUpdateQty,
   onRemoveItem,
   onClearCart,
-  appliedPromo,
-  onApplyPromo,
   onProceedToCheckout,
   onQuickAddSuggestion
 }) {
-  const [promoInput, setPromoInput] = useState('');
-
   if (!isOpen) return null;
 
   const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.qty, 0);
-  const discountAmount =
-    appliedPromo === 'FRESH25'
-      ? Math.round(subtotal * 0.25)
-      : appliedPromo === 'WELCOME150' && subtotal >= 300
-      ? 150
-      : 0;
   const deliveryFee = subtotal === 0 || subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : 49;
-  const total = Math.max(0, subtotal - discountAmount + deliveryFee);
+  const total = subtotal + deliveryFee;
   const amountToFreeDelivery = Math.max(0, FREE_DELIVERY_THRESHOLD - subtotal);
   const progressPct = Math.min(100, Math.round((subtotal / FREE_DELIVERY_THRESHOLD) * 100));
 
@@ -51,9 +41,6 @@ export default function CartDrawer({
       text += `${idx + 1}. ${item.name} (${item.selectedWeight || item.weight}) x ${item.qty} = ₹${item.price * item.qty}\n`;
     });
     text += `\n*Item Subtotal:* ₹${subtotal}\n`;
-    if (discountAmount > 0) {
-      text += `*Privilege Discount (${appliedPromo}):* -₹${discountAmount}\n`;
-    }
     text += `*4°C Delivery:* ${deliveryFee === 0 ? 'FREE' : '₹' + deliveryFee}\n`;
     text += `*Total Payable:* ₹${total}\n\n`;
     text += `Please confirm availability and dispatch window. Thank you!`;
@@ -248,49 +235,11 @@ export default function CartDrawer({
 
         {cartItems.length > 0 && (
           <div className="p-6 bg-white border-t border-[#123D2A]/12 space-y-4">
-            <div className="flex gap-2">
-              <input
-                type="text"
-                value={promoInput}
-                onChange={(e) => setPromoInput(e.target.value.toUpperCase())}
-                placeholder="Promo code (try FRESH25)"
-                aria-label="Promo code"
-                className="flex-1 px-3.5 py-2 rounded-xl bg-[#F8F7EF] border border-[#123D2A]/15 text-xs font-bold uppercase"
-              />
-              <button
-                type="button"
-                onClick={() => {
-                  if (promoInput) onApplyPromo(promoInput);
-                }}
-                className="px-4 py-2 rounded-xl bg-[#123D2A] text-[#C7F36B] text-xs font-extrabold uppercase"
-              >
-                Apply
-              </button>
-            </div>
-            {appliedPromo && (
-              <div className="flex items-center justify-between text-xs bg-[#EBF4E6] text-[#123D2A] px-3 py-1.5 rounded-lg font-bold">
-                <span>✓ Code {appliedPromo} active</span>
-                <button
-                  type="button"
-                  onClick={() => onApplyPromo('')}
-                  className="underline text-[#777D75]"
-                >
-                  Remove
-                </button>
-              </div>
-            )}
-
             <div className="space-y-1.5 text-xs">
               <div className="flex justify-between text-[#777D75]">
                 <span>Item Subtotal</span>
                 <span className="font-bold text-[#20251F]">₹{subtotal}</span>
               </div>
-              {discountAmount > 0 && (
-                <div className="flex justify-between text-[#48A85A] font-bold">
-                  <span>Harvest Privilege ({appliedPromo})</span>
-                  <span>-₹{discountAmount}</span>
-                </div>
-              )}
               <div className="flex justify-between text-[#777D75]">
                 <span>4°C Cold-Bag Delivery</span>
                 <span className="font-bold text-[#20251F]">
