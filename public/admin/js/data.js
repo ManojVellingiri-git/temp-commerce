@@ -12,6 +12,13 @@ const SEED = {
     themeColor: "#123D2A"
   },
 
+  cloudflare: {
+    enabled: true,
+    r2PublicDomain: "https://pub-r2.gurkhahills.com",
+    bucketName: "gurkhahills-products",
+    uploadEndpoint: ""
+  },
+
   categories: [
     { id: "c1", name: "Fruits & Vegetables", products: 42, active: true },
     { id: "c2", name: "Dairy & Bakery",       products: 27, active: true },
@@ -74,13 +81,16 @@ const Store = {
       const raw = localStorage.getItem(this.key) || localStorage.getItem("gurkhacamp_admin_demo_v1");
       if (raw) {
         const parsed = JSON.parse(raw);
-        if (parsed && Array.isArray(parsed.products)) {
-          parsed.products.forEach(p => {
-            if (!p.image) {
-              const seedMatch = SEED.products.find(s => s.id === p.id);
-              if (seedMatch && seedMatch.image) p.image = seedMatch.image;
-            }
-          });
+        if (parsed) {
+          if (!parsed.cloudflare) parsed.cloudflare = { ...SEED.cloudflare };
+          if (Array.isArray(parsed.products)) {
+            parsed.products.forEach(p => {
+              if (!p.image) {
+                const seedMatch = SEED.products.find(s => s.id === p.id);
+                if (seedMatch && seedMatch.image) p.image = seedMatch.image;
+              }
+            });
+          }
         }
         return parsed;
       }

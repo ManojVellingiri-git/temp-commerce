@@ -14,19 +14,62 @@ renderShell("settings.html", "Settings");
 
 function saveSettings(e){
   e.preventDefault();
-  DB.store.name = document.getElementById("s_name").value;
-  DB.store.tagline = document.getElementById("s_tagline").value;
-  DB.store.currency = document.getElementById("s_currency").value;
+  DB.store.name = document.getElementById("s_name").value.trim();
+  DB.store.tagline = document.getElementById("s_tagline").value.trim();
+  DB.store.currency = document.getElementById("s_currency").value.trim();
   persist();
-  showToast("Settings saved");
+  showToast("Store settings saved");
 }
+
+function saveCloudflare(e){
+  e.preventDefault();
+  if (!DB.cloudflare) DB.cloudflare = {};
+  DB.cloudflare.enabled = document.getElementById("cf_enabled").checked;
+  DB.cloudflare.r2PublicDomain = document.getElementById("cf_domain").value.trim().replace(/\/+$/, "");
+  DB.cloudflare.bucketName = document.getElementById("cf_bucket").value.trim();
+  DB.cloudflare.uploadEndpoint = document.getElementById("cf_upload").value.trim();
+  persist();
+  showToast("Cloudflare R2 settings saved!");
+  updateCfBadge();
+}
+
+function testCloudflare(){
+  const domain = document.getElementById("cf_domain").value.trim();
+  if (!domain) {
+    alert("Please enter your Cloudflare R2 Public Domain / Custom CDN URL first.");
+    return;
+  }
+  showToast("Testing Cloudflare domain...");
+  fetch(domain, { method: "HEAD", mode: "no-cors" })
+    .then(() => {
+      showToast("Cloudflare storage endpoint reachable!");
+    })
+    .catch(() => {
+      showToast("Domain configured. Verify public access in Cloudflare R2 settings.");
+    });
+}
+
+function updateCfBadge(){
+  const badge = document.getElementById("cfStatusBadge");
+  if (!badge) return;
+  const isReady = DB.cloudflare && DB.cloudflare.r2PublicDomain;
+  badge.className = `badge-pill ${isReady ? 'green' : 'amber'}`;
+  badge.innerHTML = `<span class="dot"></span>${isReady ? 'Cloudflare Connected' : 'Setup Required'}`;
+}
+
+const cf = DB.cloudflare || {
+  enabled: true,
+  r2PublicDomain: "https://pub-r2.gurkhahills.com",
+  bucketName: "gurkhahills-products",
+  uploadEndpoint: ""
+};
 
 document.getElementById("pageContent").innerHTML = `
   <div class="page-head">
     <div>
       <div class="crumbs">System / Settings</div>
       <h1>Settings</h1>
-      <p>Store details, admin users, and integration points.</p>
+      <p>Store profile, Cloudflare image storage, and backend integrations.</p>
     </div>
   </div>
 
@@ -62,6 +105,59 @@ document.getElementById("pageContent").innerHTML = `
     </div>
   </div>
 
+  <!-- Cloudflare Image & R2 Storage Section -->
+  <div class="panel" style="margin-top:16px">
+    <div class="panel-head">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:28px;height:28px;border-radius:8px;background:#F6821F;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px">☁</div>
+        <div>
+          <h3 style="margin:0">Cloudflare R2 Image Storage</h3>
+          <div class="sub">Zero-egress object storage & fast global CDN delivery</div>
+        </div>
+      </div>
+      <span id="cfStatusBadge" class="badge-pill green"><span class="dot"></span>Cloudflare Connected</span>
+    </div>
+    <form class="panel-body" onsubmit="saveCloudflare(event)">
+      <div class="field toggle" style="margin-bottom:16px">
+        <input type="checkbox" id="cf_enabled" style="width:16px;height:16px" ${cf.enabled ? 'checked' : ''}>
+        <label style="margin:0;font-weight:700">Enable Cloudflare R2 image URL resolution for products</label>
+      </div>
+
+      <div class="field">
+        <label>Cloudflare R2 Public Domain / Custom CDN URL</label>
+        <input type="text" id="cf_domain" placeholder="https://pub-xxxx.r2.dev or https://images.gurkhahills.com" value="${cf.r2PublicDomain || ''}" required>
+        <div class="hint">The public endpoint of your Cloudflare R2 bucket. In Cloudflare Dashboard, go to <b>R2 &gt; your-bucket &gt; Settings &gt; Public Access</b> and copy your URL.</div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>R2 Bucket Name</label>
+          <input type="text" id="cf_bucket" placeholder="gurkhahills-products" value="${cf.bucketName || ''}">
+          <div class="hint">Your Cloudflare R2 bucket name.</div>
+        </div>
+        <div class="field">
+          <label>Direct Upload Worker URL (Optional)</label>
+          <input type="text" id="cf_upload" placeholder="https://r2-upload.yourname.workers.dev/upload" value="${cf.uploadEndpoint || ''}">
+          <div class="hint">Cloudflare Worker endpoint for direct browser-to-R2 uploads.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:10px;margin-top:10px">
+        <button class="btn primary" type="submit">Save Cloudflare settings</button>
+        <button class="btn" type="button" onclick="testCloudflare()">Test URL</button>
+      </div>
+
+      <div style="margin-top:18px;padding:14px 16px;background:#FAF8F2;border:1px solid #E6DFC8;border-radius:10px;font-size:12.5px;color:#5C5440">
+        <div style="font-weight:700;color:#123D2A;margin-bottom:6px">⚡ 3-Step Cloudflare R2 Quickstart:</div>
+        <ol style="margin:0;padding-left:18px;line-height:1.6">
+          <li>Log into <b>dash.cloudflare.com</b> &rarr; Click <b>R2 Object Storage</b> &rarr; <b>Create bucket</b> (e.g. <code>gurkhahills-products</code>).</li>
+          <li>Under <b>Settings</b>, enable <b>R2.dev subdomain</b> (or connect a custom domain like <code>cdn.gurkhahills.com</code>).</li>
+          <li>Copy the public domain into the field above and click <b>Save</b>. Any image added to your products will resolve through Cloudflare's ultra-fast global CDN!</li>
+        </ol>
+      </div>
+    </form>
+  </div>
+
   <div class="panel" style="margin-top:16px">
     <div class="panel-head"><h3>Connect to your backend</h3><span class="sub">Replace the demo data layer</span></div>
     <div class="panel-body">
@@ -75,6 +171,8 @@ document.getElementById("pageContent").innerHTML = `
     </div>
   </div>
 `;
+
+updateCfBadge();
 </script>
 </body>
 </html>

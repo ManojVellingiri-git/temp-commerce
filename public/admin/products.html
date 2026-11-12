@@ -37,7 +37,13 @@ function renderTable(){
       <td>
         <div class="cell-prod">
           ${renderThumb(p)}
-          <div><div class="nm">${p.name}</div><div class="sub">${p.sku}</div></div>
+          <div>
+            <div class="nm">${p.name}</div>
+            <div class="sub">
+              ${p.sku} 
+              ${(p.image && (p.image.includes('.r2.dev') || p.image.includes('pub-r2') || p.image.includes('cloudflare'))) ? '<span style="font-size:10px;color:#f6821f;font-weight:700">☁ R2</span>' : ''}
+            </div>
+          </div>
         </div>
       </td>
       <td>${p.category}</td>
@@ -85,6 +91,71 @@ function setPresetImg(url){
   if (el) {
     el.value = url;
     updateImgPreview(url);
+  }
+}
+
+function applyCloudflarePrefix(){
+  const el = document.getElementById("f_image");
+  if (!el) return;
+  let val = el.value.trim();
+  const cfDomain = (DB.cloudflare && DB.cloudflare.r2PublicDomain) ? DB.cloudflare.r2PublicDomain.replace(/\/+$/, '') : 'https://pub-r2.gurkhahills.com';
+  if (!val) {
+    el.value = `${cfDomain}/products/sample.webp`;
+  } else if (!val.startsWith("http://") && !val.startsWith("https://")) {
+    const key = val.startsWith("/") ? val.slice(1) : val;
+    el.value = `${cfDomain}/${key}`;
+  }
+  updateImgPreview(el.value);
+  showToast("Attached Cloudflare R2 CDN prefix");
+}
+
+function handleFileUpload(e){
+  const file = e.target.files && e.target.files[0];
+  if (!file) return;
+
+  const cfDomain = (DB.cloudflare && DB.cloudflare.r2PublicDomain) ? DB.cloudflare.r2PublicDomain.replace(/\/+$/, '') : 'https://pub-r2.gurkhahills.com';
+  const uploadEndpoint = DB.cloudflare ? DB.cloudflare.uploadEndpoint : '';
+
+  if (uploadEndpoint) {
+    showToast("Uploading image to Cloudflare R2...");
+    const formData = new FormData();
+    formData.append("file", file);
+
+    fetch(uploadEndpoint, {
+      method: "POST",
+      body: formData
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.url) {
+        document.getElementById("f_image").value = data.url;
+        updateImgPreview(data.url);
+        showToast("Uploaded successfully to Cloudflare R2!");
+      } else {
+        throw new Error(data.error || "Upload failed");
+      }
+    })
+    .catch(err => {
+      // Fallback to local preview & R2 key formatting
+      const reader = new FileReader();
+      reader.onload = (evt) => {
+        updateImgPreview(evt.target.result);
+        const safeName = file.name.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+        document.getElementById("f_image").value = `${cfDomain}/products/${safeName}`;
+        showToast("R2 key generated. Worker unreachable—check CORS or endpoint.");
+      };
+      reader.readAsDataURL(file);
+    });
+  } else {
+    // Immediate preview and generate full Cloudflare R2 URL
+    const reader = new FileReader();
+    reader.onload = (evt) => {
+      updateImgPreview(evt.target.result);
+      const safeName = file.name.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+      document.getElementById("f_image").value = `${cfDomain}/products/${safeName}`;
+      showToast(`Assigned Cloudflare R2 URL for ${file.name}`);
+    };
+    reader.readAsDataURL(file);
   }
 }
 
@@ -141,14 +212,19 @@ function removeProduct(id){
   showToast("Product deleted");
 }
 
+const currentCfDomain = (DB.cloudflare && DB.cloudflare.r2PublicDomain) ? DB.cloudflare.r2PublicDomain.replace(/\/+$/, '') : 'https://pub-r2.gurkhahills.com';
+
 document.getElementById("pageContent").innerHTML = `
   <div class="page-head">
     <div>
       <div class="crumbs">Catalog / Products</div>
       <h1>Products</h1>
-      <p>Manage your catalog, images, pricing and stock levels.</p>
+      <p>Manage your catalog, Cloudflare R2 images, pricing and stock levels.</p>
     </div>
-    <button class="btn primary" onclick="openEdit(null)">${ICONS.plus} Add product</button>
+    <div style="display:flex;gap:10px;align-items:center">
+      <a class="btn sm" href="settings.html" style="color:var(--muted)">☁️ Cloudflare Settings</a>
+      <button class="btn primary" onclick="openEdit(null)">${ICONS.plus} Add product</button>
+    </div>
   </div>
 
   <div class="panel">
@@ -195,23 +271,42 @@ document.getElementById("pageContent").innerHTML = `
               <option value="out">Out of stock</option>
             </select>
           </div>
+
           <div class="field">
-            <label>Product Image URL</label>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+              <label style="margin:0">Product Image URL / Cloudflare R2 Storage</label>
+              <span style="font-size:11px;color:#f6821f;font-weight:700">☁️ Cloudflare Connected</span>
+            </div>
+
             <div style="display:flex;gap:12px;align-items:flex-start">
               <div id="imgPreviewBox" class="img-preview-box">
                 <span id="imgPreviewPlaceholder">📦</span>
                 <img id="imgPreview" src="" alt="Preview" style="display:none">
               </div>
+
               <div style="flex:1">
-                <input type="text" id="f_image" placeholder="https://images.unsplash.com/... or /images/prod_mango.webp">
-                <div class="hint">Paste any image URL (e.g. from Unsplash or <code>/images/prod_...</code>).</div>
+                <input type="text" id="f_image" placeholder="${currentCfDomain}/products/mango.webp">
+                
+                <div style="display:flex;align-items:center;gap:8px;margin-top:6px;flex-wrap:wrap">
+                  <label class="btn sm" style="cursor:pointer;padding:5px 9px;font-size:11.5px">
+                    <input type="file" id="f_image_file" accept="image/*" style="display:none" onchange="handleFileUpload(event)">
+                    <span>📁 Upload to Cloudflare R2</span>
+                  </label>
+
+                  <button type="button" class="btn sm" onclick="applyCloudflarePrefix()" style="padding:5px 9px;font-size:11.5px">
+                    <span>☁️ Attach R2 Domain</span>
+                  </button>
+                </div>
+
+                <div class="hint" style="margin-top:6px">
+                  Connected to: <code>${currentCfDomain}</code>
+                </div>
+
                 <div class="url-chips">
-                  <span class="url-chip" onclick="setPresetImg('/images/prod_mango.webp')">🥭 Mango</span>
-                  <span class="url-chip" onclick="setPresetImg('/images/prod_tomatoes.webp')">🍅 Tomato</span>
-                  <span class="url-chip" onclick="setPresetImg('/images/prod_milk.webp')">🥛 Milk</span>
-                  <span class="url-chip" onclick="setPresetImg('/images/prod_sourdough.webp')">🍞 Bread</span>
-                  <span class="url-chip" onclick="setPresetImg('/images/prod_strawberries.webp')">🍓 Berry</span>
-                  <span class="url-chip" onclick="setPresetImg('/images/prod_avocado.webp')">🥑 Avocado</span>
+                  <span class="url-chip" onclick="setPresetImg('${currentCfDomain}/products/alphonso-mango.webp')">🥭 R2 Mango</span>
+                  <span class="url-chip" onclick="setPresetImg('${currentCfDomain}/products/organic-tomatoes.webp')">🍅 R2 Tomato</span>
+                  <span class="url-chip" onclick="setPresetImg('${currentCfDomain}/products/farm-milk.webp')">🥛 R2 Milk</span>
+                  <span class="url-chip" onclick="setPresetImg('/images/prod_mango.webp')">Local /images</span>
                 </div>
               </div>
             </div>

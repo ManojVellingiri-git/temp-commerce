@@ -1,0 +1,11 @@
+name = "gurkhahills-r2-upload"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Bind your Cloudflare R2 Bucket
+[[r2_buckets]]
+binding = "MY_BUCKET"
+bucket_name = "gurkhahills-products"
+
+[vars]
+PUBLIC_DOMAIN = "https://pub-r2.gurkhahills.com"
