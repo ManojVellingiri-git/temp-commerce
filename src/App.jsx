@@ -31,10 +31,12 @@ import CheckoutModal from './components/CheckoutModal';
 import WhatsAppWidget from './components/WhatsAppWidget';
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const scrolledRef = useRef(false);
   const [activeSection, setActiveSection] = useState('home');
+  const activeSectionRef = useRef('home');
+  const progressBarRef = useRef(null);
 
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
@@ -44,18 +46,31 @@ export default function App() {
 
   // Live products synchronized with Admin Panel & Cloudflare R2
   const [products, setProducts] = useState(getLiveProducts);
+  const lastRawRef = useRef('');
 
   useEffect(() => {
+    try {
+      lastRawRef.current = localStorage.getItem(ADMIN_STORAGE_KEY) || '';
+    } catch (e) {}
+
     const handleStorage = (e) => {
       if (!e || !e.key || e.key === ADMIN_STORAGE_KEY) {
         setProducts(getLiveProducts());
       }
     };
     window.addEventListener('storage', handleStorage);
-    // Periodic synchronization ensures edits in another tab or iframe update seamlessly
+
+    // Only update state if admin data actually changed (avoids useless re-renders)
     const syncTimer = setInterval(() => {
-      setProducts(getLiveProducts());
-    }, 2500);
+      try {
+        const currentRaw = localStorage.getItem(ADMIN_STORAGE_KEY) || '';
+        if (currentRaw !== lastRawRef.current) {
+          lastRawRef.current = currentRaw;
+          setProducts(getLiveProducts());
+        }
+      } catch (e) {}
+    }, 4000);
+
     return () => {
       window.removeEventListener('storage', handleStorage);
       clearInterval(syncTimer);
@@ -95,29 +110,47 @@ export default function App() {
   }, [wishlistIds]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const y = window.scrollY;
-      setScrolled(y > 36);
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const pct = docHeight > 0 ? Math.min(100, Math.round((y / docHeight) * 100)) : 0;
-      setScrollProgress(pct);
+    let ticking = false;
 
-      const sectionMap = [
-        { id: 'home', elId: 'hero-section' },
-        { id: 'categories', elId: 'categories-section' },
-        { id: 'shop', elId: 'shop-section' },
-        { id: 'about', elId: 'benefits-section' },
-        { id: 'contact', elId: 'newsletter-section' }
-      ];
-      for (let i = sectionMap.length - 1; i >= 0; i--) {
-        const el = document.getElementById(sectionMap[i].elId);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 220) {
-            setActiveSection(sectionMap[i].id);
-            break;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const y = window.scrollY;
+          const isScrolled = y > 36;
+          if (isScrolled !== scrolledRef.current) {
+            scrolledRef.current = isScrolled;
+            setScrolled(isScrolled);
           }
-        }
+
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const pct = docHeight > 0 ? Math.min(100, Math.round((y / docHeight) * 100)) : 0;
+          if (progressBarRef.current) {
+            progressBarRef.current.style.width = `${pct}%`;
+          }
+
+          const sectionMap = [
+            { id: 'home', elId: 'hero-section' },
+            { id: 'categories', elId: 'categories-section' },
+            { id: 'shop', elId: 'shop-section' },
+            { id: 'about', elId: 'benefits-section' },
+            { id: 'contact', elId: 'newsletter-section' }
+          ];
+          for (let i = sectionMap.length - 1; i >= 0; i--) {
+            const el = document.getElementById(sectionMap[i].elId);
+            if (el) {
+              const rect = el.getBoundingClientRect();
+              if (rect.top <= 220) {
+                if (activeSectionRef.current !== sectionMap[i].id) {
+                  activeSectionRef.current = sectionMap[i].id;
+                  setActiveSection(sectionMap[i].id);
+                }
+                break;
+              }
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
     const handleKeyDown = (e) => {
@@ -405,9 +438,10 @@ export default function App() {
         aria-hidden="true"
       >
         <div
-          className="h-full transition-all duration-150"
+          ref={progressBarRef}
+          className="h-full transition-all duration-75"
           style={{
-            width: `${scrollProgress}%`,
+            width: '0%',
             background: 'linear-gradient(90deg, #48A85A 0%, #C7F36B 100%)'
           }}
         />

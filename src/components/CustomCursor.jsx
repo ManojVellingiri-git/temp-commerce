@@ -15,6 +15,7 @@ import {
 export default function CustomCursor() {
   const cursorRef = useRef(null);
   const [hovered, setHovered] = useState(false);
+  const hoveredRef = useRef(false);
   const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
@@ -24,19 +25,30 @@ export default function CustomCursor() {
     if (!isFinePointer || prefersReduced) return;
 
     setEnabled(true);
+    let rafId = null;
+
     const moveCursor = (e) => {
-      if (cursorRef.current) {
-        cursorRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
-      }
-      const target = e.target;
-      if (target && target.closest) {
-        const isInteractive = Boolean(target.closest('button, a, input, select, [data-cursor-hover]'));
-        setHovered(isInteractive);
-      }
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        if (cursorRef.current) {
+          cursorRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+        }
+        const target = e.target;
+        if (target && target.closest) {
+          const isInteractive = Boolean(target.closest('button, a, input, select, [data-cursor-hover]'));
+          if (isInteractive !== hoveredRef.current) {
+            hoveredRef.current = isInteractive;
+            setHovered(isInteractive);
+          }
+        }
+      });
     };
 
     window.addEventListener('mousemove', moveCursor, { passive: true });
-    return () => window.removeEventListener('mousemove', moveCursor);
+    return () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      window.removeEventListener('mousemove', moveCursor);
+    };
   }, []);
 
   if (!enabled) return null;

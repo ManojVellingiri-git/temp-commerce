@@ -40,6 +40,7 @@ export default function ProductCard({
             src={product.image}
             alt={product.name}
             loading="lazy"
+            decoding="async"
             onClick={() => onQuickView(product)}
             className="w-full h-full object-cover cursor-pointer transition-transform duration-700 ease-out group-hover:scale-110"
           />

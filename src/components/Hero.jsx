@@ -14,21 +14,38 @@ import {
 } from '../data/freshcartData';
 
 export default function Hero({ onShopNow, onExploreCategories, onQuickAddProduct, onOpenFilmModal, currentLocation, heroProduct }) {
-  const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
   const heroMango = heroProduct || INITIAL_PRODUCTS[0];
+  const heroRef = useRef(null);
+  const rafRef = useRef(null);
 
   const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 16;
-    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 16;
-    setMouseOffset({ x, y });
+    if (!heroRef.current) return;
+    const clientX = e.clientX;
+    const clientY = e.clientY;
+    if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    rafRef.current = requestAnimationFrame(() => {
+      if (!heroRef.current) return;
+      const rect = heroRef.current.getBoundingClientRect();
+      const x = ((clientX - rect.left) / rect.width - 0.5) * 16;
+      const y = ((clientY - rect.top) / rect.height - 0.5) * 16;
+      heroRef.current.style.setProperty('--mx', `${x.toFixed(1)}px`);
+      heroRef.current.style.setProperty('--my', `${y.toFixed(1)}px`);
+    });
+  };
+
+  const handleMouseLeave = () => {
+    if (heroRef.current) {
+      heroRef.current.style.setProperty('--mx', '0px');
+      heroRef.current.style.setProperty('--my', '0px');
+    }
   };
 
   return (
     <section
       id="hero-section"
+      ref={heroRef}
       onMouseMove={handleMouseMove}
-      onMouseLeave={() => setMouseOffset({ x: 0, y: 0 })}
+      onMouseLeave={handleMouseLeave}
       className="relative overflow-hidden pt-4 pb-16 lg:pt-8 lg:pb-24"
     >
       <div
@@ -147,7 +164,7 @@ export default function Hero({ onShopNow, onExploreCategories, onQuickAddProduct
             <div
               className="relative mx-auto max-w-lg lg:max-w-none transition-transform duration-200 ease-out"
               style={{
-                transform: `translate3d(${mouseOffset.x * 0.5}px, ${mouseOffset.y * 0.5}px, 0)`
+                transform: 'translate3d(calc(var(--mx, 0px) * 0.5), calc(var(--my, 0px) * 0.5), 0)'
               }}
             >
               <div
@@ -158,6 +175,8 @@ export default function Hero({ onShopNow, onExploreCategories, onQuickAddProduct
                   <img
                     src={SCENE_IMAGES.hero}
                     alt="Artisanal woven basket overflowing with fresh organic vegetables, heirloom tomatoes, avocados, strawberries, sourdough bread, and farm milk"
+                    fetchpriority="high"
+                    decoding="async"
                     className="w-full h-full object-cover scale-105 transition-transform duration-700 hover:scale-110"
                   />
                   <div
@@ -195,7 +214,7 @@ export default function Hero({ onShopNow, onExploreCategories, onQuickAddProduct
               <div
                 className="mt-4 sm:mt-0 flex items-center justify-between sm:justify-start gap-3.5 bg-white/95 backdrop-blur-xl p-3 pr-4 rounded-2xl shadow-[0_20px_50px_rgba(18,61,42,0.22)] border border-[#123D2A]/10 sm:absolute sm:-bottom-6 sm:-left-6 z-20 fc-float-medium"
                 style={{
-                  transform: `translate3d(${mouseOffset.x * -0.8}px, ${mouseOffset.y * -0.8}px, 0)`
+                  transform: 'translate3d(calc(var(--mx, 0px) * -0.8), calc(var(--my, 0px) * -0.8), 0)'
                 }}
               >
                 <img
@@ -238,7 +257,7 @@ export default function Hero({ onShopNow, onExploreCategories, onQuickAddProduct
               <div
                 className="hidden sm:flex items-center gap-3 bg-[#C7F36B] text-[#123D2A] px-4 py-3 rounded-2xl shadow-xl border border-[#123D2A]/15 absolute -top-5 -right-4 z-20 fc-float-fast"
                 style={{
-                  transform: `translate3d(${mouseOffset.x * 0.7}px, ${mouseOffset.y * -0.6}px, 0)`
+                  transform: 'translate3d(calc(var(--mx, 0px) * 0.7), calc(var(--my, 0px) * -0.6), 0)'
                 }}
               >
                 <div className="w-10 h-10 rounded-xl bg-[#123D2A] text-[#C7F36B] flex items-center justify-center shrink-0">

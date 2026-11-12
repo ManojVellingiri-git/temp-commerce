@@ -6,5 +6,19 @@ export default defineConfig({
   server: {
     port: 5173,
     host: true
+  },
+  build: {
+    target: 'es2020',
+    cssCodeSplit: true,
+    chunkSizeWarningLimit: 600,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom'],
+          'vendor-animation': ['gsap', 'framer-motion'],
+          'vendor-icons': ['lucide-react']
+        }
+      }
+    }
   }
 });
